@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Glee | Home</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  
+  <header class="header">
+    <div class="container-fluid">
+      <div class="header__inner">
+        <a class="logo header__logo" href="#">
+          <img class="logo__img" src="images/logo.png" alt="logo">
+        </a>
+
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link anim-effect">Home +</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link anim-effect">About</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link anim-effect">Services</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link anim-effect">Pages +</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link anim-effect">News</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link anim-effect">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="user-nav">
+          <button class="user-nav__btn search-btn" type="button">
+            <span class="sr-only">search</span>
+          </button>
+
+          <div class="user-nav__box">
+            <a class="user-nav__link user-nav__link--liked" href="#">
+              <span class="sr-only">liked products</span>
+              <span class="user-nav__num">0</span>
+            </a>
+            <span class="user-nav__line"></span>
+            <a class="user-nav__link user-nav__link--basket" href="#">
+              <span class="sr-only">basket</span>
+              <span class="user-nav__num">0</span>
+            </a>
+          </div>
+
+          <button class="user-nav__btn menu-btn" type="button">
+            <span class="sr-only">user menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
