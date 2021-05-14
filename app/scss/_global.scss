@@ -45,3 +45,26 @@
 body {
   font-size: 16px;
 }
+
+.main-btn {
+  padding: 23px 60px 23px 23px;
+  @extend %rubik-500;
+  min-width: 200px;
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../images/icons/arrow-left-btn.png');
+    width: 22px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+}
