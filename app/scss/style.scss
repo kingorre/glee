@@ -45,7 +45,7 @@
     outline: transparent;
     transition: background-color 0.4s, box-shadow 0.4s;
     &::before {
-      @extend %bg-before;
+      @extend %bg-pseudo;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -80,7 +80,7 @@
     border: 1px solid transparent;
     transition: transform 0.4s, border-color 0.4s;
     &::before {
-      @extend %bg-before;
+      @extend %bg-pseudo;
       width: 19px;
       height: 17px;
       left: 50%;
@@ -123,7 +123,7 @@
     &::before {
       position: absolute;
       content: '';
-      top: -16px;
+      top: -50%;
       width: 1px;
       height: 32px;
       background-color: rgba(#fff, 0.4);
@@ -165,10 +165,10 @@
       z-index: 0;
       width: 634px;
       height: 634px;
-      border-radius: 50%;
       top: 50%;
-      transform: translateY(-50%);
       right: 185px;
+      transform: translateY(-50%);
+      border-radius: 50%;
       background-image: linear-gradient( 90deg, transparent 0%, rgb(255,255,255) 100%);
     }
   }
@@ -263,18 +263,25 @@
 .benefits {
   &__items {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color: rgba($bg-main, 0.3);
-    padding: 36px 0 39px;
-    position: relative;
+    background-color: rgba($bg-main, 0.3);    
   }
   &__item {
-    padding-left: 74px;
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    &:not(:last-child) {
+      border-right: 1px solid rgba(36, 63, 77, 0.1);
+    }
+  }
+  &__inner {
+    padding: 36px 0 39px 74px;
     position: relative;
     width: 304px;
     &::before {
-      @extend %bg-before;
+      @extend %bg-pseudo;
       width: 55px;
       height: 50px;
       left: 0;
@@ -282,14 +289,14 @@
       background-position: left top;
     }
   }
-  &__item--support::before {
+  &__inner--support::before {
     background-image: url('../images/icons/support.png');
   }
   
-  &__item--delivery::before {
+  &__inner--delivery::before {
     background-image: url('../images/icons/delivery.png');
   }
-  &__item--payment::before {
+  &__inner--payment::before {
     background-image: url('../images/icons/payment.png');
   }
   
@@ -351,7 +358,7 @@
     height: 200px;
     margin-bottom: 70px;
     object-fit: contain;
-    object-position: bottom center;
+    object-position: bottom;
   }
   &__name {
     @extend %dmsans-500;
@@ -412,6 +419,5 @@
     }
   }
 }
-
 
 @import 'media';
