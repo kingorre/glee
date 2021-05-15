@@ -18,7 +18,7 @@
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -43,7 +43,7 @@
 }
 
 body {
-  font-size: 16px;
+  @extend %rubik-400;
 }
 
 .main-btn {
@@ -66,5 +66,28 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 20px;
+  }
+}
+
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  @extend %dmsans-700;
+  font-size: 16px;
+  line-height: 1;
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    color: #8b8b8b;
+    border-top: 2px solid transparent;
   }
 }

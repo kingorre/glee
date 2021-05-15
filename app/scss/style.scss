@@ -45,13 +45,10 @@
     outline: transparent;
     transition: background-color 0.4s, box-shadow 0.4s;
     &::before {
-      position: absolute;
-      content: '';
+      @extend %bg-before;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-repeat: no-repeat;
-      background-size: contain;
     }
     &:focus {
       box-shadow: 0 0 8px 1px #000;
@@ -63,7 +60,7 @@
       box-shadow: inset 0 0 8px 1px #000;
     }
   }
-  &__box {
+  &__links {
     margin-right: 21px;
     padding: 0 10px;
     width: 178px;
@@ -83,15 +80,13 @@
     border: 1px solid transparent;
     transition: transform 0.4s, border-color 0.4s;
     &::before {
-      content: '';
-      position: absolute;
+      @extend %bg-before;
       width: 19px;
       height: 17px;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-repeat: no-repeat;
-      background-size: contain;
+      
     }
     &:focus {
       transform: scale(1.2);
@@ -153,6 +148,10 @@
   }
 }
 
+
+.h1-title {
+  display: none;
+}
 // ------------- SHOP SLIDER-----------------//
   
 .shop-slider {
@@ -224,10 +223,11 @@
 }
 
 .slick-dots {
+  position: absolute;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  transform: translateY(-75px);
+  width: 100%;
+  bottom: 45px;
   .slick-active {
     background-color: #fff;
     border-radius: 50%;
@@ -258,6 +258,160 @@
   }
 }
 
+// ---------------- BENEFITS ---------------//
+
+.benefits {
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba($bg-main, 0.3);
+    padding: 36px 0 39px;
+    position: relative;
+  }
+  &__item {
+    padding-left: 74px;
+    position: relative;
+    width: 304px;
+    &::before {
+      @extend %bg-before;
+      width: 55px;
+      height: 50px;
+      left: 0;
+      top: 11px;
+      background-position: left top;
+    }
+  }
+  &__item--support::before {
+    background-image: url('../images/icons/support.png');
+  }
+  
+  &__item--delivery::before {
+    background-image: url('../images/icons/delivery.png');
+  }
+  &__item--payment::before {
+    background-image: url('../images/icons/payment.png');
+  }
+  
+  &__title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: 414141;
+  }
+  &__text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #585858;
+  }
+}
+
+// ---------------- WEEK PRODUCTS ---------------//
+
+.week-products {
+  padding: 70px 0 40px;
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__filters {
+    margin-bottom: 80px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 270px;
+    height: 380px;
+    padding: 30px 17px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 16px;
+    line-height: 2;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    }
+  }
+  &__img {
+    height: 200px;
+    margin-bottom: 70px;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+  &__name {
+    @extend %dmsans-500;
+    color: $name;
+  }
+  &__price {
+    @extend %dmsans-700;
+    color: a3bbc8;
+  }
+  &__actions {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  &__action:not(:last-child) {
+    margin-right: 15px;
+  }
+  &__link {
+    display: block;
+    text-align: center;
+  }
+  &__btn,
+  &__link {
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.15);
+    border: none;
+    padding-top: 8px;
+    position: relative;
+    outline: transparent;
+    transition: background-color 0.4s, box-shadow 0.4s;
+  }
+  &__btn:focus,
+  &__link:focus {
+    box-shadow: 0 3px 15px 3px rgba(37, 37, 37, 0.3);
+  }
+  &__btn:hover,
+  &__link:hover {
+    background-color: $accent;
+    path {
+      fill: #fff;
+    }
+  }
+  &__btn:active,
+  &__link:active {
+    box-shadow: inset 0 3px 15px 3px rgba(37, 37, 37, 0.3);
+  }
+  &__item:hover {
+    .week-products__actions {
+      opacity: 1;
+    }
+  }
+}
 
 
 @import 'media';
