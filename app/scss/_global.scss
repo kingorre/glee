@@ -11,6 +11,15 @@
   white-space: nowrap;
 }
 
+.logo {
+  &__img {
+    object-fit: contain;
+    height: 39px;
+    width: 139px;
+    object-position: left center;
+  }
+}
+
 .container-fluid {
   max-width: 1800px;
   margin: 0 auto;
@@ -42,8 +51,56 @@
   }
 }
 
+.anim-footer {
+  border-bottom: 1px solid transparent;
+  border-radius: 2px;
+  outline: transparent;
+  transition: box-shadow 0.4s, border-color 0.4s, color 0.4s, background-color 0.5s;
+  &:focus {
+    box-shadow: 0 4px 9px black;
+  }
+  &:hover {
+    border-bottom: 1px solid $accent;
+  }
+  &:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
 body {
   @extend %rubik-400;
+}
+
+.round-btn {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  outline: transparent;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  z-index: 10;
+  svg {
+    transition: fill 0.4s;
+  }
+  &:focus {
+    box-shadow: 0 0 8px 1px #000;
+  }
+  &:hover {
+    background-color: $accent;
+    svg {
+      fill: #fff;
+    }
+  }
+  &:active {
+    box-shadow: inset 0 0 8px 1px #000;
+  }
 }
 
 .main-btn {
@@ -53,10 +110,13 @@ body {
   font-size: 15px;
   line-height: 1;
   color: #fff;
-  background-color: transparent;
+  background-color: $accent;
   border: none;
+  border-radius: 5px;
   text-align: left;
   position: relative;
+  border: 1px solid transparent;
+  transition: background-color 0.4s, box-shadow 0.4s, color 0.4s;
   &::before {
     position: absolute;
     content: '';
@@ -67,15 +127,27 @@ body {
     transform: translateY(-50%);
     right: 20px;
   }
+  &:focus {
+    box-shadow: 0 0 3px 1px #000;
+  }
+  &:hover {
+    background-color: transparent;
+    border: 1px solid rgba(36, 63, 77, 0.4);
+    color: #687f88;
+  }
+  &:active {
+    box-shadow: inset 0 0 10px 1px #000;
+  }
 }
 
 .title {
   @extend %dmsans-700;
   font-size: 36px;
   line-height: 1;
+  text-align: center;
 }
 
-.filters {
+.mix-filter {
   display: flex;
   justify-content: center;
   @extend %dmsans-700;
