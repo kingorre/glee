@@ -5,28 +5,32 @@
 
 .header {
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 48px 0 45px;
   }
+
   &__logo {
-    margin-right: 154px;
+    margin-right: 155px;
   }
 }
 
 .menu {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   &__list {
     display: flex;
-    padding-bottom: 12px;
   }
+
   &__item:not(:last-child) {
     margin-right: 24px;
   }
+  
   &__link {
-    padding: 5px;
+    padding: 13px 5px;
     @extend %rubik-500;
-    color: #436372;
+    color: $text-grey;
     font-size: 15px;
     line-height: 1;
   }
@@ -34,29 +38,33 @@
 
 .user-nav {
   display: flex;
-  &__btn {
-    width: 51px;
-    height: 51px;
-  }
-  &__btn--search {
+
+  &__search-btn {
     margin-right: 20px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
-  &__search-svg {
-    width: 16px;
-    height: 16px;
-  }
-  &__menu-svg {
+  
+  &__menu-btn {
+
+    svg {
     width: 21px;
     height: 21px;
+    }
   }
+
   &__links {
+    display: flex;
     margin-right: 20px;
     width: 178px;
     height: 51px;
     border-radius: 25px;
     background-color: $bg-main;
-    display: flex;
   }
+
   &__link {
     position: relative;
     display: flex;
@@ -67,6 +75,7 @@
     border: 1px solid transparent;
     outline: transparent;
     transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+
     &:focus {
       box-shadow: inset 0 0 6px 1px $accent;
     }
@@ -76,17 +85,22 @@
     &:active {
       transform: scale(0.8);
     }
+
+    svg {
+      transform: translateY(5px);
+      width: 19px;
+      height: 17px;
+    }
+
+    &--liked {
+      border-radius: 25px 0 0 25px;
+    }
+
+    &--basket {
+      border-radius: 0 25px 25px 0;
+    }
   }
-  &__link-svg {
-    width: 19px;
-    height: 17px;
-  }
-  &__link--liked {
-    border-radius: 25px 0 0 25px;
-  }
-  &__link--basket {
-    border-radius: 0 25px 25px 0;
-  }
+
   &__line {
     position: relative;
     &::before {
@@ -98,42 +112,33 @@
       background-color: rgba(#fff, 0.4);
     }
   }
+
   &__num {
     color: #000;
     position: absolute;
-    @extend %dmsans-400;
-    font-size: 10px;
-    line-height: 1.6;
     width: 16px;
     height: 16px;
     right: 25px;
-    top: 5px;
+    top: 10px;
+    text-align: center;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 1.6;
     background-color: #fff;
     border-radius: 50%;
-    text-align: center;
   }
 }
 
 // ------------- SHOP SLIDER-----------------//
   
 .shop-slider {
+
   &__wrapper {
     background-color: $bg-main;
     position: relative;
     padding: 215px 15px 280px;
-    &::before {
-      position: absolute;
-      content: '';
-      z-index: 0;
-      width: 634px;
-      height: 634px;
-      top: 50%;
-      right: 185px;
-      transform: translateY(-50%);
-      border-radius: 50%;
-      background-image: linear-gradient( 90deg, transparent 0%, rgb(255,255,255) 100%);
-    }
   }
+
   &__item {
     max-width: 1200px;
     margin: 0 auto;
@@ -143,13 +148,16 @@
     position: relative;
     z-index: 10;
   }
+
   &__content {
     max-width: 415px;
+
     p {
       @extend %line-clamp;
       -webkit-line-clamp: 2;
     }
   }
+
   &__title {
     @extend %rubik-500;
     color: $name;
@@ -158,79 +166,91 @@
     line-height: 1;
     text-transform: uppercase;
   }
+
   &__text {
     @extend %rubik-400;
-    color: #436372;
+    color: $text-grey;
     margin-bottom: 35px;
     max-width: 385px;
     font-size: 18px;
     line-height: 1.7;
   }
-  &__img {
-    align-self: flex-end;
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
     max-width: 640px;
-    max-height: 450px;
-    object-fit: contain;
-    object-position: center;
-  }
-  &__btn {
-    border: 1px solid transparent;
-    &:focus {
-      box-shadow: 0 0 3px 1px #000;
+    height: 327px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 0;
+      width: 634px;
+      height: 634px;
+      bottom: -195px;
+      right: -115px;
+      border-radius: 50%;
+      background-image: linear-gradient( 90deg, transparent 0%, rgb(255,255,255) 100%);
     }
-    &:hover {
-      background-color: transparent;
-      border: 1px solid rgba(36, 63, 77, 0.4);
-      color: #687f88;
-      .shop-slider__btn-svg {
-        fill: $accent;
+  }
+
+  &__img {
+    display: block;
+    position: relative;
+    align-self: flex-end;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 45px;
+
+    .slick-active {
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    button {
+      @extend %rubik-500;
+      font-size: 11px;
+      padding: 0;
+      line-height: 1;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(#fff, 0.3);
+      border: none;
+      outline: transparent;
+
+      &:focus {
+        box-shadow: 0 0 3px 1px $name;
+      }
+
+      &:hover {
+        background-color: $name;
+        color: #fff
+      }
+
+      &:active {
+        box-shadow: inset 0 0 2px 1px #fff;
       }
     }
-    &:active {
-      box-shadow: inset 0 0 10px 1px #000;
+
+    li:not(:last-child) {
+      margin-right: 12px;
     }
-  }
-  &__btn-svg {
-    fill: #fff;
   }
 }
 
-.slick-dots {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  bottom: 45px;
-  .slick-active {
-    background-color: #fff;
-    border-radius: 50%;
-  }
-  button {
-    @extend %rubik-500;
-    font-size: 11px;
-    padding: 0;
-    line-height: 1;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgba(#fff, 0.3);
-    border: none;
-    outline: transparent;
-    &:focus {
-      box-shadow: 0 0 3px 1px $name;
-    }
-    &:hover {
-      background-color: $name;
-      color: #fff
-    }
-    &:active {
-      box-shadow: inset 0 0 2px 1px #fff;
-    }
-  }
-  li:not(:last-child) {
-    margin-right: 12px;
-  }
-}
 
 // ---------------- BENEFITS ---------------//
 
@@ -248,7 +268,7 @@
     justify-content: center;
     align-self: stretch;
     &:not(:last-child) {
-      border-right: 1px solid rgba(36, 63, 77, 0.1);
+      border-right: 1px solid rgba($name, 0.1);
     }
   }
   &__inner {
@@ -279,7 +299,7 @@
     @extend %dmsans-700;
     font-size: 18px;
     line-height: 2.2;
-    color: 414141;
+    color: #414141;
     @extend %line-clamp;
     -webkit-line-clamp: 2;
   }
@@ -299,9 +319,15 @@
 
 .week-products {
   margin-bottom: 90px;
+
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
   }
+
+  &__filters {
+    margin-bottom: 68px;
+  }
+
   &__items {
     display: flex;
     flex-wrap: wrap;
@@ -350,7 +376,7 @@
   }
   &__price {
     @extend %dmsans-700;
-    color: a3bbc8;
+    color: $accent;
   }
   &__actions {
     display: flex;
@@ -365,37 +391,7 @@
   &__action:not(:last-child) {
     margin-right: 15px;
   }
-  &__btn,
-  &__link {
-    border: none;
-    position: relative;
-    width: 45px;
-    height: 45px;
-    background-color: #fff;
-    box-shadow: 0 6px 30px 5px rgba(37, 37, 37, 0.3);
-    outline: transparent;
-    transition: background-color 0.4s, box-shadow 0.4s;
-  }
-  &__btn-svg {
-    width: 22px;
-    height: 20px;
-    fill: $accent;
-  }
-  &__btn:focus,
-  &__link:focus {
-    box-shadow: 0 3px 15px 3px rgba(37, 37, 37, 0.3);
-  }
-  &__btn:hover,
-  &__link:hover {
-    background-color: $accent;
-    path {
-      fill: #fff;
-    }
-  }
-  &__btn:active,
-  &__link:active {
-    box-shadow: inset 0 3px 15px 3px rgba(37, 37, 37, 0.3);
-  }
+  
   &__item:hover {
     box-shadow: inset 0 0 7px 1px $accent;
     .week-products__actions {
@@ -409,6 +405,7 @@
   display: flex;
   justify-content: space-between;
   }
+  
   &__item {
     max-width: 870px;
     width: 100%;
@@ -428,12 +425,14 @@
       z-index: -1;
     }
   }
+
   &__img {
     max-width: 250px;
     max-height: 410px;
     object-fit: contain;
     margin-right: 50px;
   }
+
   &__content {
     padding-top: 100px;
     display: flex;
@@ -441,6 +440,7 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+
   &__title,
   &__info {
     color: $name;
@@ -448,39 +448,18 @@
     @extend %line-clamp;
     -webkit-line-clamp: 2;
   }
+
   &__title {
     max-width: 260px;
     @extend %dmsans-700;
     font-size: 26px;
     line-height: 1.2;
   }
+
   &__info {
     max-width: 340px;
     font-size: 16px;
     line-height: 1.9;
-  }
-  &__btn {
-    min-width: 180px;
-    background-color: transparent;
-    color: #74858c;
-    border: 1px solid #b3b7b5;
-      &:focus {
-        box-shadow: 0 0 3px 1px #000;
-      }
-      &:hover {
-        background-color: $accent;
-        border: 1px solid transparent;
-        color: #fff;
-        .lamps__btn-svg {
-          fill: #fff;
-        }
-      }
-      &:active {
-        box-shadow: inset 0 0 10px 1px #000;
-      }
-  }
-  &__btn-svg {
-    fill: #436372;
   }
 }
 // ---------- NEW DESIGN ---------------//
@@ -489,6 +468,11 @@
   &__title {
     margin-bottom: 30px;
   }
+
+  &__filter {
+    margin-bottom: 65px;
+  }
+
   &__items {
     display: flex;
     justify-content: space-between;
@@ -724,129 +708,79 @@
 //-----------FOOTER-----------//
 
 .footer {
-  &__items  {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #7b7b7b;
+
+  &__inner {
     padding-bottom:60px;
     display: flex;
-    justify-content: space-between;
   }
-  &__item {
+
+  &__box {
     @extend %rubik-400;
-    width: 25%;
+    flex-grow: 1;
+    max-width: 300px;
     text-align: left;
     font-size: 14px;
-    color: #7b7b7b;
+    &--form {
+      max-width: 270px;
+    }
     p {
       max-width: 215px;
     }
   }
-  &__contact { 
-    max-width: 240px;
-    line-height: 1.7;
-    margin-bottom: 10px;
-  }
-  &__link--location {
-    @extend %line-clamp;
-    -webkit-line-clamp: 2;
-  }
-  &__link-name {
-    text-transform: uppercase;
-  }
-  &__name {
-    margin-bottom: 24px;
-  }  
-  &__logo {
-    display: block;
-    transform: translateY(-50%);
-  }
-  &__list-item {
-    margin-bottom: 15px;
-    font-size: 14px;
-    line-height: 1.3;
-  }
-  &__list--name {
+
+  &__title {
     @extend %dmsans-700;
-    margin-bottom: 20px;
+    display: inline-block;
+    margin-bottom: 9px;
     text-transform: uppercase;
     color: $name;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 2.8;
   }
-  &__newsletter {
-    line-height: 1.7;
-    margin-bottom: 30px;
-  }
-  &__form {
-    width: 100%;
-    font-size: 0;
-  }
-  &__input {
-    width: calc(100% - 100px);
-    font-size: 14px;
-    padding-left: 12px;
-    cursor: unset;
-    outline: transparent;
-    transition: box-shadow 1s;
-    border: 2px solid transparent;
-    &:focus {
-      box-shadow: -3px 0 3px 0 $accent;
-    }
-    &:hover {
-      box-shadow: inset 0 0 3px 1px $accent;
-    }
-    &:active {
-      border: 2px solid $accent;
-    }
-  }
-  &__input::placeholder {
-    font-size: 12px;
-    color: $name;
-  }
-  &__input,
-  &__btn {
-    height: 38px;
-    border: none;
-    background-color: rgba($bg-main, 0.2);
-  }
-  &__btn {
-    width: 100px;
-    background-color: $accent;
-    @extend %dmsans-400;
-    border: 2px solid transparent;
-    color: #fff;
-    font-size: 14px;
-    transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
-    outline: transparent;
-    &:focus {
-      box-shadow: 0 0 3px 1px #000;
-    }
-    &:hover {
-      color: $accent;
-      background-color: #fff;
-      border: 2px solid $accent;
-    }
-    &:active {
-      box-shadow: inset 0 0 10px 1px #000;
-    }
-  }
-}     
 
-.footer-bottom {
-  padding: 30px 0 40px;
-  display: flex;
-  justify-content: space-between;
-  color: #a3a3a3;
-  font-size: 14px;
-  line-height: 2.3;
-  border-top: 1px solid rgba(163, 187, 200, 0.4);
-  &__menu {
+  &__address {
+    max-width: 200px;
+  }
+
+  &__item {
+    margin-bottom: 9px;
+  }
+
+  &__address-name {
+    text-transform: uppercase;
+  }  
+
+  &__text {
+    margin-bottom: 30px;
+
+  }
+
+  &__bottom {
+    padding: 28px 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #a3a3a3;
+    font-size: 14px;
+    line-height: 2.3;
+    border-top: 1px solid rgba($accent, 0.4);
+  }
+  
+  &__menu-list {
     display: flex;
   }
-  &__item {
-    padding-left: 13px;
+  &__menu-item {
+    line-height: 1.3;
+    &:not(:last-child) {
+      border-right: 1px solid #7b7b7b;
+      margin-right: 12px;
+      padding-right: 12px;
+    }
   }
-  &__item:not(:last-child) {
-    margin-right: 13px;
+  &__menu-link {
+    padding: 3px;
   }
 }
-
-@import 'media';

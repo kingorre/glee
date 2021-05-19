@@ -1,3 +1,10 @@
+body {
+  @extend %rubik-400;
+  font-size: 16px;
+  background-color: #fff;
+  line-height: 1.3;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -21,59 +28,14 @@
   }
 }
 
-.container-fluid {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
 
-.anim-effect {
-  display: block;
-  transform: scale(1);
-  transition: box-shadow 0.4s, border-color 0.4s, color 0.4s, background-color 0.3s;
-  border-top: 2px solid transparent;
-  outline: transparent;
-  border-radius: 4px;
-  &:focus {
-    box-shadow: 0 4px 9px black;
+  &--fluid {
+    max-width: 1800px;
   }
-  &:hover {
-    border-top: 2px solid $accent;
-  }
-  &:active {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.9);
-  }
-}
-
-.anim-secondary {
-  border-bottom: 1px solid transparent;
-  border-radius: 2px;
-  outline: transparent;
-  border-radius: 3px;
-  padding: 3px;
-  transition: box-shadow 0.4s, border-color 0.4s, color 0.4s, background-color 0.5s;
-  &:focus {
-    box-shadow: 0 4px 9px rgb(102, 102, 102);
-  }
-  &:hover {
-    border-bottom: 1px solid $accent;
-  }
-  &:active {
-    color: $accent;
-    // background-color: rgba(0, 0, 0, 0.2);
-  }
-}
-
-body {
-  @extend %rubik-400;
-  font-size: 16px;
 }
 
 .round-btn {
@@ -81,27 +43,47 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  width: 51px;
-  height: 51px;
   border-radius: 50%;
   border: none;
   padding: 0;
   outline: transparent;
   transition: background-color 0.4s, box-shadow 0.4s;
   z-index: 10;
-  &__svg {
-    transition: fill 0.4s;
+
+  &--menu {
+    width: 51px;
+    height: 51px;
   }
+
+  &--action {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+
+    svg {
+      fill: $accent;
+      width: 22px;
+      height: 20px;
+    }
+  }
+
+  svg {
+    transition: fill 0.4s;
+    width: 22px;
+      height: 20px;
+  }
+
   &:focus {
     box-shadow: 0 0 8px 1px #000;
   }
+
   &:hover {
     background-color: $accent;
-    .round-btn__svg {
+    svg {
       fill: #fff;
     }
   }
+
   &:active {
     box-shadow: inset 0 0 8px 1px #000;
   }
@@ -111,7 +93,6 @@ body {
   position: relative;
   padding: 23px 60px 23px 23px;
   @extend %rubik-500;
-  min-width: 200px;
   font-size: 15px;
   line-height: 1;
   color: #fff;
@@ -120,8 +101,62 @@ body {
   border-radius: 5px;
   text-align: left;
   outline: transparent;
-  transition: background-color 0.4s, box-shadow 0.4s, color 0.4s;
-  &__svg {
+  transition: background-color 0.4s, box-shadow 0.4s, color 0.4s, border-color 0.4s;
+  
+  &--trans {
+    min-width: 180px;
+    background-color: transparent;
+    color: $text-grey;
+    border: 1px solid #b3b7b5;
+
+    svg {
+      fill: $text-grey;
+    }
+      &:focus {
+        box-shadow: 0 0 3px 1px #000;
+      }
+
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+        svg {
+          fill: #fff;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 0 10px 1px #000;
+      }
+  }
+
+  &--fill {
+    min-width: 200px;
+    border: 1px solid transparent;
+
+    svg {
+      fill: #fff;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 1px #000;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid rgba($name, 0.4);
+      color: #687f88;
+      svg {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px 1px #000;
+    }
+  }
+  
+  
+  svg {
     transition: fill 0.4s;
     position: absolute;
     width: 22px;
@@ -140,16 +175,18 @@ body {
 }
 
 .mix-filter {
-  margin-bottom: 80px;
   display: flex;
   justify-content: center;
   @extend %dmsans-700;
   font-size: 16px;
   line-height: 1;
+
   &__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 10px;
   }
+
   &__btn {
+    padding: 13px 5px;
     background-color: transparent;
     border: none;
     color: #8b8b8b;
@@ -158,13 +195,14 @@ body {
 }
 
 .view-link {
-  display: block;
-  padding: 0 25px 0 5px;
+  display: inline-block;
+  padding: 11px 25px 11px 5px;
   position: relative;
   @extend %dmsans-700;
   line-height: 1.3;
   border-bottom: 1px solid transparent;
-  &__svg {
+
+  svg {
     width: 7px;
     height: 12px;
     position: absolute;
@@ -188,7 +226,7 @@ body {
   border: 1px solid transparent;
   transition: border-color 0.4s, box-shadow 0.4s, background-color 0.4s;
   &:focus {
-      box-shadow: inset 0 0 3px 1px rgb(0, 0, 0);
+      box-shadow: inset 0 0 3px 1px #000;
     }
     &:hover {
       border: 1px solid $name;
@@ -197,4 +235,105 @@ body {
       color: $accent;
       background-color: rgb(80, 80, 80);
     }
+}
+
+.anim-effect {
+  display: inline-block;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  outline: transparent;
+  border-radius: 4px;
+  transition: box-shadow 0.4s, border-color 0.4s, color 0.4s;
+  &:focus {
+    box-shadow: 0 4px 9px black;
+  }
+  &:hover {
+    border-top: 1px solid $accent;
+    border-bottom: 1px solid $accent;
+  }
+  &:active {
+    box-shadow: inset 0 0 9px -1px black;
+  }
+}
+
+.anim-secondary {
+  border-bottom: 1px solid transparent;
+  border-radius: 2px;
+  outline: transparent;
+  border-radius: 4px;
+  transition: box-shadow 0.4s, border-color 0.4s, color 0.4s;
+
+  &:focus {
+    box-shadow: 0 4px 9px rgb(102, 102, 102);
+  }
+
+  &:hover {
+    border-bottom: 1px solid $accent;
+  }
+
+  &:active {
+    color: #000;
+  }
+}
+
+.subscribe-form {
+  font-size: 0;
+
+  &__input,
+  &__btn {
+    @extend %dmsans-400;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    padding: 10px 10px;
+    border: none;
+    background-color: rgba($bg-main, 0.2);
+    outline: transparent;
+    box-sizing: border-box;
+  }
+
+  &__input {
+    width: 170px;
+    transition: box-shadow 1s;
+    border: 2px solid transparent;
+
+    &:focus {
+      box-shadow: -3px 0 2px -1px $accent;
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 3px 1px $accent;
+    }
+
+    &:active {
+      border: 2px solid $accent;
+    }
+
+    &::placeholder{
+      font-size: 12px;
+      color: $name;
+      font-family: inherit;
+    }
+  }
+
+  &__btn {
+    background-color: $accent;
+    border: 2px solid transparent;
+    color: #fff;
+    transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+    
+    &:focus {
+      box-shadow: 0 0 3px 1px #000;
+    }
+
+    &:hover {
+      color: $accent;
+      background-color: #fff;
+      border: 2px solid $accent;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px 1px #000;
+    }
+  }
 }
