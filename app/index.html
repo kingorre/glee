@@ -43,7 +43,7 @@
 
         <div class="user-nav">
           <button class="user-nav__btn round-btn user-nav__btn--search" type="button">
-            <svg class="search-btn-sprite">
+            <svg class="user-nav__search-svg round-btn__svg">
               <use xlink:href="images/sprites/sprite.svg#search"></use>
             </svg>
             <span class="sr-only">search</span>
@@ -51,7 +51,7 @@
 
           <div class="user-nav__links">
             <a class="user-nav__link user-nav__link--liked" href="#">
-              <svg class="search-btn-sprite">
+              <svg class="user-nav__link-svg">
                 <use xlink:href="images/sprites/sprite.svg#heart"></use>
               </svg>
               <span class="sr-only">liked products</span>
@@ -59,7 +59,7 @@
             </a>
             <span class="user-nav__line"></span>
             <a class="user-nav__link user-nav__link--basket" href="#">
-              <svg class="search-btn-sprite">
+              <svg class="user-nav__link-svg">
                 <use xlink:href="images/sprites/sprite.svg#basket"></use>
               </svg>
               <span class="sr-only">basket</span>
@@ -68,7 +68,7 @@
           </div>
 
           <button class="user-nav__btn round-btn user-nav__btn--menu " type="button">
-            <svg class="search-btn-sprite">
+            <svg class="user-nav__menu-svg round-btn__svg">
               <use xlink:href="images/sprites/sprite.svg#menu-dots"></use>
             </svg>
             <span class="sr-only">user menu</span>
@@ -80,7 +80,7 @@
   </header>
 
   <main>
-    <h1 class="h1-title">Glee - best furniture</h1>
+    <h1 class="sr-only">Glee - best furniture</h1>
     <div class="container-fluid">
       <div class="shop-slider">
 
@@ -99,6 +99,9 @@
               </div>
               <button class="shop-slider__btn main-btn" type="button">
                 Shop Now
+                <svg class="shop-slider__btn-svg main-btn__svg">
+                  <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
+                </svg>
               </button>
             </div>
             <img class="shop-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
@@ -189,7 +192,7 @@
       </div>
     </div>
 
-    <section class="week-products">
+    <section class="week-products" data-ref="week-products-mix">
       <div class="container">
         <h2 class="week-products__title title">Products of the week</h2>
 
@@ -199,7 +202,7 @@
               All
             </button>
           </li>
-          <li class="mix-filter__item">
+          <li class="mix-filter__item week-products__filter">
             <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
               Furnitures
             </button>
@@ -240,7 +243,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -248,7 +251,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -256,7 +259,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -277,7 +280,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -285,7 +288,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -293,7 +296,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -314,7 +317,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -322,7 +325,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -330,7 +333,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -351,7 +354,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -359,7 +362,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -367,7 +370,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -388,7 +391,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -396,7 +399,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -404,7 +407,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -425,7 +428,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -433,7 +436,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -441,7 +444,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -462,7 +465,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -470,7 +473,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -478,7 +481,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -499,7 +502,7 @@
               <li class="week-products__action">
                 <a class="week-products__link round-btn" href="#">
                   <span class="sr-only">product information</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#search"></use>
                   </svg>
                 </a>
@@ -507,7 +510,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">add to basket</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#basket"></use>
                   </svg>
                 </button>
@@ -515,7 +518,7 @@
               <li class="week-products__action">
                 <button class="week-products__btn round-btn" type="button">
                   <span class="sr-only">like product</span>
-                  <svg class="search-btn-sprite">
+                  <svg class="week-products__btn-svg round-btn__svg">
                     <use xlink:href="images/sprites/sprite.svg#heart"></use>
                   </svg>
                 </button>
@@ -524,6 +527,287 @@
           </li>
 
         </ul>
+
+      </div>
+
+      <div class="container-fluid">
+        <div class="week-products__lamps lamps">
+          <div class="lamps__items">
+
+            <div class="lamps__item">
+              <img class="lamps__img" src="images/lamps/image-1.png" alt="Mirum Notare Tellus">
+              <div class="lamps__content">
+                <div class="lamps__title">
+                  Mirum Notare Tellus
+                </div>
+                <div class="lamps__info">
+                  <p>
+                    LED Corn Bulb Lamp 5W 7W 10W 12W 15W E26 E27 LED Corn Light
+                  </p>
+                </div>
+                <button class="lamps__btn main-btn" type="button">
+                  View More
+                  <svg class="lamps__btn-svg main-btn__svg">
+                    <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="lamps__item">
+              <img class="lamps__img" src="images/lamps/image-2.png" alt="Mirum Notare Tellus">
+              <div class="lamps__content">
+                <div class="lamps__title">
+                  Malesuada Tempor Euismod
+                </div>
+                <div class="lamps__info">
+                  <p>
+                    50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
+                  </p>
+                </div>
+                <button class="lamps__btn main-btn" type="button">
+                  View More
+                  <svg class="lamps__btn-svg main-btn__svg">
+                    <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
+                  </svg>
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-design">
+      <div class="container">
+        <h2 class="new-design__title title">New Design</h2>
+
+        <ul class="week-products__filter mix-filter">
+          <li class="mix-filter__item">
+            <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
+              All
+            </button>
+          </li>
+
+          <li class="mix-filter__item">
+            <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
+              Furnitures
+            </button>
+          </li>
+
+          <li class="mix-filter__item">
+            <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
+              Chairs
+            </button>
+          </li>
+
+          <li class="mix-filter__item">
+            <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
+              Lighting
+            </button>
+          </li>
+
+          <li class="mix-filter__item">
+            <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
+              Decor
+            </button>
+          </li>
+        </ul>
+
+        <ul class="new-design__items">
+          <li class="mix category-furnitures">
+            <a class="new-design__item" href="#">
+              <div class="new-design__name">
+                Beat Flat Pendant Black
+              </div>
+              <div class="new-design__content">
+                <div class="new-design__style">
+                  Classic
+                </div>
+                <div class="new-design__picture">
+                  <img class="new-design__img" src="images/new-design/image-1.png" alt="Beat Flat Pendant Black">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="mix category-furnitures category-decor">
+            <a class="new-design__item" href="#">
+              <div class="new-design__name">
+                Lampe Sur Pieds Bamboo
+              </div>
+              <div class="new-design__content">
+                <div class="new-design__style">
+                  Classic
+                </div>
+                <div class="new-design__picture">
+                  <img class="new-design__img" src="images/new-design/image-2.png" alt="Lampe Sur Pieds Bamboo">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="mix category-chairs">
+            <a class="new-design__item" href="#">
+              <div class="new-design__name">
+                Rattan Rocking Chair
+              </div>
+              <div class="new-design__content">
+                <div class="new-design__style">
+                  Classic
+                </div>
+                <div class="new-design__picture">
+                  <img class="new-design__img" src="images/new-design/image-3.png" alt="Rattan Rocking Chair">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="mix">
+            <a class="new-design__item" href="#">
+              <div class="new-design__name">
+                Rattan Rocking Chair
+              </div>
+              <div class="new-design__content">
+                <div class="new-design__style">
+                  Classic
+                </div>
+                <div class="new-design__picture">
+                  <img class="new-design__img" src="images/new-design/image-4.png" alt="Rattan Rocking Chair">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="mix category-chairs category-lighting">
+            <a class="new-design__item" href="#">
+              <div class="new-design__name">
+                Rattan Rocking Chair
+              </div>
+              <div class="new-design__content">
+                <div class="new-design__style">
+                  Classic
+                </div>
+                <div class="new-design__picture">
+                  <img class="new-design__img" src="images/new-design/image-5.png" alt="Rattan Rocking Chair">
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="mix category-lighting category-decor">
+            <a class="new-design__item" href="#">
+              <div class="new-design__name">
+                Lampe Sur Pieds Bamboo
+              </div>
+              <div class="new-design__content">
+                <div class="new-design__style">
+                  Classic
+                </div>
+                <div class="new-design__picture">
+                  <img class="new-design__img" src="images/new-design/image-6.png" alt="Lampe Sur Pieds Bamboo">
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="new-design__video">
+        <a class="video" href="https://www.youtube.com/watch?v=n2lH150k4nk&ab_channel=%D0%9E%D1%820%D0%B4%D0%BE1"
+          data-fancybox style="background-image: url('images/video-bg.jpg');">
+          <span class="sr-only">Watch video</span>
+          <svg class="video__svg">
+            <use xlink:href="images/sprites/sprite.svg#video-play"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="articles">
+      <div class="container">
+        <div class="articles__top-box">
+          <h2 class="title">Our Insights & Articles</h2>
+          <a class="articles__top-link view-link anim-effect" href="#">
+            View All
+            <svg class="view-link__svg">
+              <use xlink:href="images/sprites/sprite.svg#arrow-right-link"></use>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="articles__items">
+          <li class="articles__item">
+            <a class="articles__link-img" href="#">
+              <img class="articles__img" src="images/articles/image-1.jpg" alt="modern interior design">
+            </a>
+            <div class="articles__content">
+              <a class="articles__link-theme anim-secondary" href="#">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </a>
+              <div class="articles__info">
+                <a class="articles__link-date anim-secondary" href="#">
+                  <time datetime="2020-01-28"> 28 january, 2020</time>
+                </a>
+                <a class="articles__link-author anim-secondary" href="#">
+                   by admin
+                </a>
+              </div>
+              <a class="articles__link-subject subject-icon" href="#">news</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="articles__slider slider-partnesr">
+          <div class="slider-partners__items">
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-1.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-3.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-4.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-5.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-1.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-3.png" alt="">
+              </div>
+            </div>
+            <div class="slider-partners__wrapper">
+              <div class="slider-partners__item">
+                <img class="slider-partners__img" src="images/slider-partners/image-4.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -538,18 +822,23 @@
           <a class="logo footer__logo" href="#">
             <img class="logo__img" src="images/logo.png" alt="logo">
           </a>
+
           <address class="footer__address">
             <div class="footer__contact">
-              address:
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary footer__link--location" href="#">
+                <span class="footer__link-name">address:</span>
                 4772 Wines Lane Houston, TX 77032
               </a>
             </div class="footer__contact">
             <div class="footer__contact">
-              telephone: <a class=" footer__link anim-footer" href="tel:+8323475843">+832-347-5843</a>
+              <a class=" footer__link anim-secondary" href="tel:+8323475843">
+                <span class="footer__link-name">telephone:</span> +832-347-5843
+              </a>
             </div class="footer__contact">
             <div class="footer__contact">
-              email : <a class="footer__link anim-footer" href="mailto:contact@Glee.com">contact@Glee.com</a>
+              <a class="footer__link anim-secondary" href="mailto:contact@Glee.com">
+                <span class="footer__link-name">email:</span> contact@Glee.com
+              </a>
             </div class="footer__contact">
           </address>
         </li>
@@ -560,27 +849,27 @@
               services
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 About us
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Return Policy
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Our Blog
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Contact Us
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Terms & Condition
               </a>
             </li>
@@ -592,22 +881,22 @@
             <li class="footer__list-item footer__list--name">
               account
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Your Account
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Checkout
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Login
               </a>
             </li>
             <li class="footer__list-item">
-              <a class="footer__link anim-footer" href="#">
+              <a class="footer__link anim-secondary" href="#">
                 Register
               </a>
             </li>
@@ -624,8 +913,8 @@
               update protidin.
             </p>
           </div>
-          <form class="footer__form">
-            <input class="footer__input" type="email" name="email" placeholder="Email address">
+          <form class="footer__form" action="#">
+            <input class="footer__input" type="email" name="email" placeholder="Email address" required>
             <button class="footer__btn" type="submit">
               Subscribe
             </button>
@@ -636,20 +925,22 @@
 
       <div class="footer__bottom footer-bottom">
         <div class="footer-bottom__copy">
-          ©2020 CopyRight Example. All rights reserved.
+          <p>
+            ©2020 CopyRight Example. All rights reserved.
+          </p>
         </div>
         <ul class="footer-bottom__menu">
           <li class="footer-bottom__item">
-            <a class="footer-bottom__link anim-footer" href="#">Home</a>
+            <a class="footer-bottom__link anim-secondary" href="#">Home</a>
           </li>|
           <li class="footer-bottom__item">
-            <a class="footer-bottom__link anim-footer" href="#">About</a>
+            <a class="footer-bottom__link anim-secondary" href="#">About</a>
           </li>|
           <li class="footer-bottom__item">
-            <a class="footer-bottom__link anim-footer" href="#">Blog</a>
+            <a class="footer-bottom__link anim-secondary" href="#">Blog</a>
           </li>|
           <li class="footer-bottom__item">
-            <a class="footer-bottom__link anim-footer" href="#">Contact</a>
+            <a class="footer-bottom__link anim-secondary" href="#">Contact</a>
           </li>
         </ul>
       </div>

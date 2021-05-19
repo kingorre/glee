@@ -31,8 +31,9 @@ function browsersync() {
 
 function styles() {
   return src([
-    'app/scss/style.scss',
-    'node_modules/slick-carousel/slick/slick.scss'
+    'node_modules/slick-carousel/slick/slick.scss',
+    'node_modules/fancybox/dist/css/jquery.fancybox.css',
+    'app/scss/style.scss'
   ])
     .pipe(scss({outputStyle: 'expanded'}))
     .pipe(concat('style.min.css'))
@@ -49,6 +50,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/mixitup/dist/mixitup.min.js',
+    'node_modules/fancybox/dist/js/jquery.fancybox.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

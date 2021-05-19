@@ -9,6 +9,11 @@ $name: #243f4d;
   background-size: contain;
 }
 
+%line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 %dmsans-400 {
   font-family: 'DMSans-Regular',sans-serif;
