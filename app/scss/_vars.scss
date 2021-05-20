@@ -1,7 +1,12 @@
 $accent: #a3bbc8;
+
 $bg-main: #fcd7b6;
+
 $name: #243f4d;
+
 $text-grey: #436372;
+
+$dark-text: #222933;
 
 %bg-pseudo {
   position: absolute;
@@ -16,40 +21,3 @@ $text-grey: #436372;
   overflow: hidden;
   -webkit-line-clamp: $r;
 }
-
-%line-clamp {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-%dmsans-400 {
-  font-family: 'DMSans',sans-serif;
-  font-weight: 400;
-}
-
-%dmsans-500 {
-  font-family: 'DMSans',sans-serif;
-  font-weight: 500;
-}
-
-%dmsans-700 {
-  font-family: 'DMSans', sans-serif;
-  font-weight: 700;
-}
-
-%poppins-700 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-
-%rubik-400 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-}
-
-%rubik-500 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-}
-

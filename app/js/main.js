@@ -1,6 +1,6 @@
 $(function(){
-  
-  $('.shop-slider').slick({
+
+  $('.top-slider').slick({
     dots: true,
     arrows: false
   });
@@ -11,14 +11,20 @@ $(function(){
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
-    autoplay: true
+    autoplay: true,
+    pauseOnHover: true
   });
 
-  $('[data-fancybox]').fancybox({
-    youtube: {
-      controls: 1
-    }
+  $('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+  
+    fixedContentPos: false
   });
+  
 
   var mixer1 = mixitup('.week-products', {
     animation: {

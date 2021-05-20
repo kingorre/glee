@@ -18,6 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: 'rubik';
+  font-weight: 500;
 
   &__list {
     display: flex;
@@ -29,7 +31,6 @@
   
   &__link {
     padding: 13px 5px;
-    @extend %rubik-500;
     color: $text-grey;
     font-size: 15px;
     line-height: 1;
@@ -121,7 +122,8 @@
     right: 25px;
     top: 10px;
     text-align: center;
-    @extend %dmsans-400;
+    font-family: 'dmsans';
+    font-weight: 400;
     font-size: 10px;
     line-height: 1.6;
     background-color: #fff;
@@ -129,51 +131,45 @@
   }
 }
 
-// ------------- SHOP SLIDER-----------------//
+// ------------- TOP SLIDER-----------------//
   
-.shop-slider {
-
-  &__wrapper {
-    background-color: $bg-main;
-    position: relative;
-    padding: 215px 15px 280px;
-  }
+.top-slider {
+  background-color: $bg-main;
 
   &__item {
     max-width: 1200px;
+    align-items: flex-end;
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
     justify-content: space-between;
-    position: relative;
     z-index: 10;
+    padding: 215px 15px 280px;
   }
 
   &__content {
     max-width: 415px;
-
-    p {
-      @extend %line-clamp;
-      -webkit-line-clamp: 2;
-    }
+    font-family: 'rubik';
   }
 
   &__title {
-    @extend %rubik-500;
+    font-weight: 500;
     color: $name;
     margin-bottom: 25px;
     font-size: 72px;
     line-height: 1;
     text-transform: uppercase;
+    @include l-clamp(2);
   }
 
   &__text {
-    @extend %rubik-400;
+    font-weight: 400;
     color: $text-grey;
     margin-bottom: 35px;
     max-width: 385px;
     font-size: 18px;
     line-height: 1.7;
+    @include l-clamp(3);
   }
 
   &__picture {
@@ -183,6 +179,7 @@
     position: relative;
     max-width: 640px;
     height: 327px;
+    width: 100%;
 
     &::before {
       position: absolute;
@@ -198,7 +195,6 @@
   }
 
   &__img {
-    display: block;
     position: relative;
     align-self: flex-end;
     object-fit: contain;
@@ -220,7 +216,7 @@
     }
 
     button {
-      @extend %rubik-500;
+      font-weight: 500;
       font-size: 11px;
       padding: 0;
       line-height: 1;
@@ -251,11 +247,12 @@
   }
 }
 
-
 // ---------------- BENEFITS ---------------//
 
 .benefits {
   margin-bottom: 70px;
+  font-family: 'dmsans';
+
   &__items {
     display: flex;
     align-items: center;
@@ -284,6 +281,7 @@
       background-position: left top;
     }
   }
+
   &__inner--support::before {
     background-image: url('../images/icons/support.png');
   }
@@ -291,29 +289,26 @@
   &__inner--delivery::before {
     background-image: url('../images/icons/delivery.png');
   }
+
   &__inner--payment::before {
     background-image: url('../images/icons/payment.png');
   }
   
   &__title {
-    @extend %dmsans-700;
+    font-weight: 700;
     font-size: 18px;
     line-height: 2.2;
     color: #414141;
-    @extend %line-clamp;
-    -webkit-line-clamp: 2;
+    @include l-clamp(2);
   }
+
   &__text {
-    @extend %dmsans-400;
     font-size: 16px;
     line-height: 1.9;
     color: #585858;
-    @extend %line-clamp;
-    -webkit-line-clamp: 3;
+    @include l-clamp(2);
   }
 }
-
-
 
 // ---------------- WEEK PRODUCTS ---------------//
 
@@ -329,78 +324,16 @@
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
-  &__item {
-    width: 270px;
-    min-height: 380px;
-    padding: 30px 17px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 16px;
-    line-height: 2;
-    position: relative;
-    transition: box-shadow 0.4s;
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    }
-  }
-  &__img {
-    margin-bottom: auto;
-    height: 200px;
-    object-fit: contain;
-    object-position: bottom;
-  }
-  &__name {
-    text-align: center;
-    @extend %dmsans-500;
-    color: $name;
-    p {
-      @extend %line-clamp;
-      -webkit-line-clamp: 2;
-    }
-  }
-  &__price {
-    @extend %dmsans-700;
-    color: $accent;
-  }
-  &__actions {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.4s;
-  }
-  &__action:not(:last-child) {
-    margin-right: 15px;
-  }
-  
-  &__item:hover {
-    box-shadow: inset 0 0 7px 1px $accent;
-    .week-products__actions {
-      opacity: 1;
-    }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+    margin-bottom: 80px;
   }
 }
 
 .lamps {
+
   &__items {
   display: flex;
   justify-content: space-between;
@@ -445,13 +378,13 @@
   &__info {
     color: $name;
     margin-bottom: 20px;
-    @extend %line-clamp;
-    -webkit-line-clamp: 2;
+    @include l-clamp(2)
   }
 
   &__title {
     max-width: 260px;
-    @extend %dmsans-700;
+    font-family: 'dmsans';
+    font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
   }
@@ -466,7 +399,7 @@
 
 .new-design {
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__filter {
@@ -474,18 +407,19 @@
   }
 
   &__items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 85px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 35px;
+    margin-bottom: 120px;
   }
   &__item {
     display: block;
-    margin-bottom: 35px;
     padding: 35px 0 30px 35px;
     background-color: #f8f8f8;
     max-width: 370px;
     height: 246px;
+    font-family: 'dmsans';
+    font-weight: 700;
     line-height: 1.3;
     border: 1px solid transparent;
     outline: transparent;
@@ -501,10 +435,10 @@
     }
   }
   &__name {
-    max-width: 175px;
-    @extend %dmsans-700;
+    max-width: 200px;
     font-size: 20px;
     margin-bottom: 10px;
+    @include l-clamp(2);
   }
   &__style {
     font-size: 16px;
@@ -584,56 +518,68 @@
   &:active {
     box-shadow: inset 0 0 150px 4px rgba(#000, 1);
   }
+
+  .mfp-content {
+    max-width: 1500px !important;
+  }
 }
 
 //---------- ARTICLES -----------//
 
 .articles {
   position: relative;
-  padding-bottom: 70px;
-  margin-bottom: 100px;
+  padding-bottom: 85px;
+  margin-bottom: 85px;
+
   &::before {
     position: absolute;
     content: '';
     left: 0;
     right: 0;
     bottom: 0;
-    height: 440px;
+    height: 437px;
     background-color: rgba($bg-main, 0.4);
     z-index: -1;
   }
+
   &__top-box {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 50px;
   }
+
   &__items {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 95px;
   }
+
   &__item {
     max-width: 370px;
     min-height: 420px;
     background-color: #fff;
     border-radius: 5px;
   }
+
   &__link-img {
     display: block;
     position: relative;
     outline: transparent;
+    border-radius: 5px 5px 0 0;
+    border-top: 2px solid transparent;
     transition: border-color 0.4s, box-shadow 0.4s;
-    &:focus {
-      border: 1px solid #000;
-    }
+
+    &:focus,
     &:hover {
       box-shadow: 0 0 5px 1px #000;
     }
+
     &:active {
       box-shadow: inset 0 0 15px 3px #000;
     }
   }
+
   &__img {
     max-width: 370px;
     width: 100%;
@@ -642,6 +588,7 @@
     object-position: center;
     border-radius: 5px 5px 0 0;
   }
+
   &__content {
     padding: 30px 30px 25px;
     display: flex;
@@ -649,59 +596,90 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    color: $dark-text;
   }
+
+  &__link-subject {
+    position: absolute;
+    left: 25px;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
   &__link-theme {
-    @extend %dmsans-500;
+    font-family: 'dmsans';
+    font-weight: 500;
     font-size: 18px;
     line-height: 1.3;
-    @extend %line-clamp;
-    -webkit-line-clamp: 3;
+    @include l-clamp(2);
   }
+
   &__info {
     font-size: 12px;
     text-transform: uppercase;
     padding-top: 20px;
     border-top: 1px solid #e0e0e0;
+    position: relative;
   }
-  &__link-date,
-  &__link-author {
+  
+
+  &__link-info {
     padding-left: 10px;
     position: relative;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
     &::before {
       @extend %bg-pseudo;
+      background-image: url('../images/icons/info-icon-left.png');
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url();
+      bottom: 3px;
+      width: 7px;
+      height: 9px;
     }
-  }
-  &__link-date {
-    margin-right: 25px;
-  }
-  &__link-subject {
-    position: absolute;
-    left: 17px;
-    top: 0;
-    transform: translateY(-50%);
   }
 }
 
 .slider-partners {
   &__items {
+    max-width: 1200px;
+    padding: 0 15px;
     width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
   }
-  &__item {
+
+  &__link {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100px;
+    height: 87px;
+    transition: transform 0.3s, background-color 0.4s;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    outline: transparent;
+
+    &:focus {
+      border: 1px solid $accent;
+    }
+
+    &:hover {
+      background-color: rgba($accent, 0.4);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
   }
+
   &__img {
-    max-width: 150px;
     object-fit: contain;
-    object-position: center;
+    max-width: 175px;
+    max-height: 87px;
+    width: 100%;
+  }
+
+  .slick-slide {
+    margin: 0 50px;
   }
 }
 
@@ -718,7 +696,7 @@
   }
 
   &__box {
-    @extend %rubik-400;
+    // @extend %rubik-400;
     flex-grow: 1;
     max-width: 300px;
     text-align: left;
@@ -732,7 +710,8 @@
   }
 
   &__title {
-    @extend %dmsans-700;
+    font-family: 'dmsans';
+    font-weight: 700;
     display: inline-block;
     margin-bottom: 9px;
     text-transform: uppercase;
@@ -755,7 +734,7 @@
 
   &__text {
     margin-bottom: 30px;
-
+    @include l-clamp(2);
   }
 
   &__bottom {
