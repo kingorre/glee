@@ -57,6 +57,7 @@ body {
   }
 
   &--action {
+    box-shadow: 0 0 4px 1px $accent;
     width: 45px;
     height: 45px;
     background-color: #fff;
