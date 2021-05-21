@@ -21,3 +21,14 @@ $dark-text: #222933;
   overflow: hidden;
   -webkit-line-clamp: $r;
 }
+
+$xl: 1440px;
+$l: 1200px;
+$m: 992px;
+$s: 768px;
+$xs: 480px;
+
+@mixin media-w($w) {
+  @media (max-width: $w) {@content};
+}
+
