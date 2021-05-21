@@ -1,5 +1,11 @@
 $(function(){
 
+  $('[data-fancybox]').fancybox({
+    youtube: {
+      controls: 1
+    }
+  });
+
   var pos = 0;
 
   $(window).scroll(function () {

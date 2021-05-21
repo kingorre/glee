@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'vars';
 @import 'fonts';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -771,7 +772,7 @@
   &__text {
     color: $name;
     margin-bottom: 20px;
-    @include l-clamp(2)
+    @include l-clamp(2);
 
     @include media-w($l) {
       margin-bottom: 5px;
