@@ -1,0 +1,78 @@
+
+.benefits {
+  font-family: 'dmsans';
+
+  &__items {
+    display: flex;
+    align-items: center;
+    background-color: rgba($bg-main, 0.3);    
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__item {
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+
+    @include media-w($md) {
+      width: 320px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba($name, 0.1);
+
+      @include media-w($md) {
+        border: none;
+      }
+    }
+
+  }
+  &__inner {
+    padding: 36px 0 39px 74px;
+    position: relative;
+    width: 304px;
+
+    @include media-w($xs) {
+      padding: 25px 0 15px 60px;
+      width: 260px;
+    }
+
+    &::before {
+      @extend %bg-pseudo;
+      width: 55px;
+      height: 50px;
+      left: 0;
+      top: 47px;
+      background-position: left top;
+    }
+  }
+
+  &__inner--support::before {
+    background-image: url('../images/icons/support.png');
+  }
+  
+  &__inner--delivery::before {
+    background-image: url('../images/icons/delivery.png');
+  }
+
+  &__inner--payment::before {
+    background-image: url('../images/icons/payment.png');
+  }
+  
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.2;
+    color: #414141;
+    @include l-clamp(2);
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #585858;
+    @include l-clamp(2);
+  }
+}

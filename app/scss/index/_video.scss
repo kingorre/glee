@@ -1,0 +1,63 @@
+.video {
+  display: block;
+  max-width: 100%;
+  height: 52vh;
+  margin-bottom: 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  transition: box-shadow 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.4s;
+  outline: transparent;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    width: 98px;
+    height: 98px;
+    background-color: $accent;
+  }
+
+  &::after {
+    width: 127px;
+    height: 127px;
+    background-color: rgba($accent, 0.4);
+  }
+
+  &__svg {
+    position: relative;
+    z-index: 5;
+    width: 22px;
+    height: 25px;
+    fill: #fff;
+    transform: translateX(0px);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 20px 2px #000;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 150px 1px rgba(#000, 0.4);
+  }
+
+  &:active {
+    box-shadow: inset 0 0 150px 4px rgba(#000, 1);
+  }
+
+  .mfp-content {
+    max-width: 1500px !important;
+  }
+}

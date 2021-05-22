@@ -1,0 +1,198 @@
+.top-slider {
+  background-color: $bg-main;
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 10;
+    padding: 215px 15px 280px;
+
+    @include media-w($lg) {
+      padding: 140px 15px 200px;
+    }
+
+    @include media-w($sm) {
+      display: block;
+      padding: 55px 15px 130px;
+    }
+
+    @include media-w($xs) {
+      padding: 25px 15px 75px;
+    }
+  }
+
+  &__content {
+    max-width: 415px;
+    font-family: 'rubik';
+
+    @include media-w($md) {
+      margin-bottom: 50px;
+    }
+
+    @include media-w($md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $name;
+    margin-bottom: 25px;
+    font-size: 72px;
+    line-height: 1;
+    text-transform: uppercase;
+    @include l-clamp(2);
+
+    @include media-w($xl) {
+      font-size: 64px;
+    }
+
+    @include media-w($md) {
+      font-size: 48px;
+    }
+
+    @include media-w($sm) {
+      font-size: 40px;
+    }
+
+    @include media-w($xs) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    color: $text-grey;
+    margin-bottom: 35px;
+    max-width: 385px;
+    font-size: 18px;
+    line-height: 1.7;
+    @include l-clamp(3);
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__picture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    max-width: 640px;
+    height: 327px;
+    width: 100%;
+
+    @include media-w($xl) {
+      max-width: 600px;
+      align-items: center;
+    }
+
+    @include media-w($sm) {
+      height: 250px;
+      margin-left: auto;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 0;
+      width: 634px;
+      height: 634px;
+      bottom: -195px;
+      right: -100px;
+      border-radius: 50%;
+      background-image: linear-gradient( 90deg, transparent 0%, rgb(255,255,255) 100%);
+
+      @include media-w($xl) {
+        width: 450px;
+        height: 450px;
+        bottom: -50px;
+        right: 0;
+      }
+
+      @include media-w($md) {
+        width: 330px;
+        height: 330px;
+        bottom: 0;
+      }
+
+      @include media-w($sm) {
+        width: 290px;
+        height: 290px;
+        bottom: -20px;
+      }
+
+      @include media-w($xs) {
+        width: 250px;
+        height: 250px;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    align-self: flex-end;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+  }
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 45px;
+
+    @include media-w($xs) {
+      bottom: 25px;
+    }
+
+    .slick-active {
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    button {
+      font-weight: 500;
+      font-size: 11px;
+      padding: 0;
+      line-height: 1;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(#fff, 0.3);
+      border: none;
+      outline: transparent;
+
+      &:focus {
+        box-shadow: 0 0 3px 1px $name;
+      }
+
+      &:hover {
+        background-color: $name;
+        color: #fff
+      }
+
+      &:active {
+        box-shadow: inset 0 0 2px 1px #fff;
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.user-nav {
+  display: flex;
+
+  @include media-w($xs) {
+    justify-content: space-between;;
+  }
+
+
+  @include media-w(600px) {
+    transition: left 0.5s;
+    position: fixed;
+    top: 73px;
+    left: 200%;
+    z-index: 20;
+  }
+
+  &--active {
+    transition: left 0.5s;
+    right: 0;
+    left: 0;
+    background-color: rgba(#ccc, 0.8);
+    padding: 5px 5px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  &__search-btn {
+    margin-right: 20px;
+
+    @include media-w($xs) {
+      margin-right: 10px;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  &__menu-btn {
+    svg {
+    width: 21px;
+    height: 21px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin-right: 20px;
+    width: 178px;
+    height: 51px;
+    border-radius: 25px;
+    background-color: $bg-main;
+
+    @include media-w($xs) {
+      width: 123px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    outline: transparent;
+    transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+
+    &:focus {
+      box-shadow: inset 0 0 6px 1px $accent;
+    }
+    &:hover {
+      background-color: rgba($accent, 0.4);
+    }
+    &:active {
+      transform: scale(0.8);
+    }
+
+    svg {
+      transform: translateY(5px);
+      width: 19px;
+      height: 17px;
+    }
+
+    &--liked {
+      border-radius: 25px 0 0 25px;
+    }
+
+    &--basket {
+      border-radius: 0 25px 25px 0;
+    }
+  }
+
+  &__line {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 10px;
+      width: 1px;
+      height: 32px;
+      background-color: rgba(#fff, 0.4);
+    }
+  }
+
+  &__num {
+    color: #000;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 25px;
+    top: 10px;
+    text-align: center;
+    font-family: 'dmsans';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.6;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+}

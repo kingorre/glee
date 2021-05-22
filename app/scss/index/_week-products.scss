@@ -1,0 +1,63 @@
+.week-products {
+  padding-top: 70px;
+
+  @include media-w($md) {
+    padding-top: 50px;
+  }
+
+  @include media-w($xs) {
+    padding-top: 30px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__filters {
+    margin-bottom: 68px;
+
+    @include media-w($md) {
+      margin-bottom: 40px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+    margin-bottom: 60px;
+
+    @include media-w($xl) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-w($md) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 50px;
+    }
+
+    @include media-w($sm) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+
+    @include media-w(xs) {
+      width: 241px;
+      min-height: 330px;
+    }
+  }
+}

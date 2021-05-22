@@ -15,27 +15,9 @@ $dark-text: #222933;
   background-size: contain;
 }
 
-@mixin l-clamp($r) {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: $r;
-}
-
 $xl: 1440px;
-$l: 1200px;
-$m: 992px;
-$s: 768px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
 $xs: 480px;
 
-@mixin media-w($w) {
-  @media (max-width: $w) {@content};
-}
-
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
-}

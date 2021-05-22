@@ -1,0 +1,154 @@
+.lamps {
+
+  &__items {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-column-gap: 30px;
+
+    @include media-w($md) {
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+
+    @include media-w($sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__item {
+    margin: 0 auto;
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 15px 15px 100px;
+    position: relative;
+
+    @include media-w($lg) {
+      padding: 15px 15px 65px;
+    }
+
+    @include media-w($md) {
+      padding: 15px 15px 20px;
+    }
+
+    @include media-w($sm) {
+      justify-content: space-around;
+    }
+
+    @include media-w($xs) {
+      display: block;
+    }
+
+    &:not(:last-child) {
+
+      @include media-w($xs) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 390px;
+      background-color:rgba($bg-main, 0.4);
+      z-index: -1;
+
+      @include media-w($lg) {
+        height: 320px;
+      }
+
+      @include media-w($md) {
+        height: 240px;
+      }
+
+      @include media-w($sm) {
+        height: 200px;
+      }
+
+      @include media-w($xs) {
+        height: 360px;
+      }
+    }
+  }
+
+  &__img-link{
+    margin-right: 50px;
+
+    @include media-w($lg) {
+      margin-right: 30px;
+    }
+
+    @include media-w($md) {
+      margin-right: 20px;
+    }
+  }
+
+  &__img {
+    max-width: 250px;
+    max-height: 410px;
+    object-fit: contain;
+
+    @include media-w($lg) {
+      max-width: 200px;
+      max-height: 350px;
+    }
+
+    @include media-w($md) {
+      max-width: 105px;
+    }
+  }
+
+  &__content {
+    padding-top: 100px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include media-w($lg) {
+      padding-top: 30px;
+    }
+  }
+
+  &__title,
+  &__text {
+    color: $name;
+    margin-bottom: 20px;
+    @include l-clamp(2);
+
+    @include media-w($lg) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    max-width: 260px;
+    font-family: 'dmsans';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+
+    @include media-w($lg) {
+      font-size: 22px;
+    }
+    @include media-w($md) {
+      font-size: 18px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  &__text {
+    max-width: 310px;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+}

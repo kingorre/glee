@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
   height: 100%;
 
-  @include media-w($l) {
+  @include media-w($lg) {
     padding-top: 73px;
   }
 
@@ -210,7 +210,7 @@ body {
   line-height: 1;
   text-align: center;
 
-  @include media-w($s) {
+  @include media-w($sm) {
     font-size: 28px;
   }
 }
@@ -230,7 +230,7 @@ body {
   &__item:not(:last-child) {
     margin-right: 20px;
 
-    @include media-w($xl) {
+    @include media-w($lg) {
       margin: 0;
     }
   }
@@ -451,7 +451,7 @@ body {
     opacity: 0;
     transition: opacity 0.4s;
 
-    @include media-w($m) {
+    @include media-w($md) {
       opacity: 1;
       top: 225px;
     }
