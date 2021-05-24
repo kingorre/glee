@@ -1,54 +1,53 @@
 @font-face {
-  font-family: 'dmsans';
+  font-family: 'DMsans';
+  font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src:  url('../fonts/DMSans-Regular.woff2') format('woff2'),
-        url('../fonts/DMSans-Regular.woff') format('woff');
-  font-style: normal;
+  src: url('../fonts/DMSans-Regular.woff2') format('woff2'), 
+       url('../fonts/DMSans-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'dmsans';
+  font-family: 'DMsans';
+  font-style: normal;
   font-weight: 500;
   font-display: swap;
   src:  url('../fonts/DMSans-Medium.woff2') format('woff2'),
         url('../fonts/DMSans-Medium.woff') format('woff');
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'dmsans';
+  font-family: 'DMsans';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src:  url('../fonts/DMSans-Bold.woff2') format('woff2'),
         url('../fonts/DMSans-Bold.woff') format('woff');
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'poppins';
+  font-family: 'Poppins';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src:  url('../fonts/Poppins-Bold.woff2') format('woff2'),
         url('../fonts/Poppins-Bold.woff') format('woff');
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'rubik';
+  font-family: 'Rubik';
+  font-style: normal;
   font-weight: 400;
   font-display: swap;
   src:  url('../fonts/Rubik-Regular.woff2') format('woff2'),
         url('../fonts/Rubik-Regular.woff') format('woff');
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'rubik';
+  font-family: 'Rubik';
+  font-style: normal;
   font-weight: 500;
   font-display: swap;
   src:  url('../fonts/Rubik-Medium.woff2') format('woff2'),
-        url('../fonts/Rubik-Medium.woff') format('woff');
-  font-style: normal;
-}
-
+  url('../fonts/Rubik-Medium.woff') format('woff');
+  }

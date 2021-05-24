@@ -2,14 +2,13 @@
   background-color: $bg-main;
 
   &__item {
+    z-index: 10;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    z-index: 10;
     padding: 215px 15px 280px;
+    margin: 0 auto;
 
     @include media-w($lg) {
       padding: 140px 15px 200px;
@@ -21,13 +20,13 @@
     }
 
     @include media-w($xs) {
-      padding: 25px 15px 75px;
+      padding: 25px 15px 55px;
     }
   }
 
   &__content {
     max-width: 415px;
-    font-family: 'rubik';
+    font-family: 'Rubik', sans-serif;
 
     @include media-w($md) {
       margin-bottom: 50px;
@@ -39,12 +38,13 @@
   }
 
   &__title {
-    font-weight: 500;
-    color: $name;
     margin-bottom: 25px;
     font-size: 72px;
+    font-weight: 500;
     line-height: 1;
+    color: $name;
     text-transform: uppercase;
+
     @include l-clamp(2);
 
     @include media-w($xl) {
@@ -60,18 +60,19 @@
     }
 
     @include media-w($xs) {
-      font-size: 28px;
       margin-bottom: 15px;
+      font-size: 28px;
     }
   }
 
   &__text {
-    font-weight: 400;
-    color: $text-grey;
-    margin-bottom: 35px;
     max-width: 385px;
+    margin-bottom: 35px;
     font-size: 18px;
+    font-weight: 400;
     line-height: 1.7;
+    color: $text-grey;
+
     @include l-clamp(3);
 
     @include media-w($md) {
@@ -84,58 +85,68 @@
   }
 
   &__picture {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
     max-width: 640px;
     height: 327px;
-    width: 100%;
 
-    @include media-w($xl) {
-      max-width: 600px;
+    @include media-w($lg) {
       align-items: center;
+      max-width: 500px;
     }
 
     @include media-w($sm) {
-      height: 250px;
       margin-left: auto;
+    }
+
+    @include media-w($xs) {
+      height: 310px;
     }
 
     &::before {
       position: absolute;
-      content: '';
+      right: -100px;
+      bottom: -195px;
       z-index: 0;
       width: 634px;
       height: 634px;
-      bottom: -195px;
-      right: -100px;
+      content: '';
+      background-image: linear-gradient(90deg, transparent 0%, #fff 100%);
       border-radius: 50%;
-      background-image: linear-gradient( 90deg, transparent 0%, rgb(255,255,255) 100%);
 
       @include media-w($xl) {
+        right: 0;
+        bottom: -130px;
+        width: 550px;
+        height: 550px;
+      }
+
+      @include media-w($lg) {
+        right: 0;
+        bottom: -60px;
         width: 450px;
         height: 450px;
-        bottom: -50px;
-        right: 0;
       }
 
       @include media-w($md) {
+        bottom: 0;
         width: 330px;
         height: 330px;
-        bottom: 0;
       }
 
       @include media-w($sm) {
+        bottom: 10px;
         width: 290px;
         height: 290px;
-        bottom: -20px;
       }
 
       @include media-w($xs) {
+        bottom: 35px;
         width: 250px;
         height: 250px;
-        bottom: 0;
       }
     }
   }
@@ -143,18 +154,30 @@
   &__img {
     position: relative;
     align-self: flex-end;
-    object-fit: contain;
-    height: 100%;
     width: 100%;
+    object-fit: contain;
+    max-height: 327px;
     object-position: bottom;
+
+    @include media-w($lg) {
+      width: 90%;
+    }
+
+    @include media-w($sm) {
+      max-height: 180px;
+    }
+
+    @include media-w($xs) {
+      margin-left: auto;
+    }
   }
 
   .slick-dots {
     position: absolute;
+    bottom: 45px;
     display: flex;
     justify-content: center;
     width: 100%;
-    bottom: 45px;
 
     @include media-w($xs) {
       bottom: 25px;
@@ -166,15 +189,15 @@
     }
 
     button {
-      font-weight: 500;
-      font-size: 11px;
-      padding: 0;
-      line-height: 1;
       width: 30px;
       height: 30px;
-      border-radius: 50%;
+      padding: 0;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1;
       background-color: rgba(#fff, 0.3);
       border: none;
+      border-radius: 50%;
       outline: transparent;
 
       &:focus {
@@ -182,8 +205,8 @@
       }
 
       &:hover {
+        color: #fff;
         background-color: $name;
-        color: #fff
       }
 
       &:active {

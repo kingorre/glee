@@ -1,37 +1,38 @@
 html {
   height: 100%;
 }
+
 body {
-  font-family: 'rubik';
-  font-weight: 400;
-  font-size: 16px;
-  background-color: #fff;
-  line-height: 1.3;
+  height: 100%;
   padding-top: 144px;
   overflow-x: hidden;
-  height: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  background-color: #fff;
 
   @include media-w($lg) {
     padding-top: 73px;
   }
+}
 
-  .lock {
-    overflow: hidden;
-  }
+.lock {
+  overflow: hidden;
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 .main {
-	flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .footer {
-	flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .sr-only {
@@ -41,28 +42,29 @@ body {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   clip-path: inset(100%);
-  border: 0;
   white-space: nowrap;
+  border: 0;
 }
 
 .logo {
   position: relative;
-  outline: transparent;
   z-index: 20;
+  outline: transparent;
+
   &__img {
     object-fit: contain;
-    height: 39px;
     width: 139px;
+    height: 39px;
     object-position: left center;
   }
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 15px;
+  margin: 0 auto;
 
   &--fluid {
     max-width: 1800px;
@@ -74,38 +76,37 @@ body {
 }
 
 .round-btn {
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  border: none;
   padding: 0;
+  border: none;
+  border-radius: 50%;
   outline: transparent;
   transition: background-color 0.4s, box-shadow 0.4s;
 
-  &--menu {
+  &--big {
     width: 51px;
     height: 51px;
   }
 
   &--action {
-    box-shadow: 0 0 4px 1px $accent;
     width: 45px;
     height: 45px;
     background-color: #fff;
+    box-shadow: 0 0 4px 1px $accent;
 
     svg {
-      fill: $accent;
       width: 22px;
       height: 20px;
+      fill: $accent;
     }
   }
 
   svg {
-    transition: fill 0.4s;
     width: 22px;
-      height: 20px;
+    height: 20px;
+    transition: fill 0.4s;
   }
 
   &:focus {
@@ -114,6 +115,7 @@ body {
 
   &:hover {
     background-color: $accent;
+
     svg {
       fill: #fff;
     }
@@ -127,42 +129,43 @@ body {
 .main-btn {
   position: relative;
   padding: 23px 60px 23px 23px;
-  font-family: 'rubik';
-  font-weight: 500;
   font-size: 15px;
+  font-weight: 500;
   line-height: 1;
   color: #fff;
+  text-align: left;
   background-color: $accent;
   border: none;
   border-radius: 5px;
-  text-align: left;
   outline: transparent;
   transition: background-color 0.4s, box-shadow 0.4s, color 0.4s, border-color 0.4s;
-  
+
   &--trans {
     min-width: 180px;
-    background-color: transparent;
     color: $text-grey;
+    background-color: transparent;
     border: 1px solid #b3b7b5;
 
     svg {
       fill: $text-grey;
     }
-      &:focus {
-        box-shadow: 0 0 3px 1px #000;
-      }
 
-      &:hover {
-        background-color: $accent;
-        color: #fff;
-        svg {
-          fill: #fff;
-        }
-      }
+    &:focus {
+      box-shadow: 0 0 3px 1px #000;
+    }
 
-      &:active {
-        box-shadow: inset 0 0 10px 1px #000;
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+
+      svg {
+        fill: #fff;
       }
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px 1px #000;
+    }
   }
 
   &--fill {
@@ -178,9 +181,10 @@ body {
     }
 
     &:hover {
+      color: #687f88;
       background-color: transparent;
       border: 1px solid rgba($name, 0.4);
-      color: #687f88;
+
       svg {
         fill: $accent;
       }
@@ -190,23 +194,22 @@ body {
       box-shadow: inset 0 0 10px 1px #000;
     }
   }
-  
-  
+
   svg {
-    transition: fill 0.4s;
     position: absolute;
+    top: 50%;
+    right: 20px;
     width: 22px;
     height: 9px;
-    top: 50%;
+    transition: fill 0.4s;
     transform: translateY(-50%);
-    right: 20px;
   }
 }
 
 .title {
-  font-family: 'dmsans';
-  font-weight: 700;
+  font-family: 'DMsans', sans-serif;
   font-size: 36px;
+  font-weight: 700;
   line-height: 1;
   text-align: center;
 
@@ -218,9 +221,9 @@ body {
 .mix-filter {
   display: flex;
   justify-content: center;
-  font-family: 'dmsans';
-  font-weight: 700;
+  font-family: 'DMsans', sans-serif;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1;
 
   @include media-w($xs) {
@@ -237,9 +240,9 @@ body {
 
   &__btn {
     padding: 13px 5px;
+    color: #8b8b8b;
     background-color: transparent;
     border: none;
-    color: #8b8b8b;
     border-top: 2px solid transparent;
 
     @include media-w($xl) {
@@ -249,75 +252,80 @@ body {
 }
 
 .view-link {
+  position: relative;
   display: inline-block;
   padding: 11px 25px 11px 5px;
-  position: relative;
-  font-family: 'dmsans';
+  font-family: 'DMsans', sans-serif;
   font-weight: 700;
   line-height: 1.3;
   border-bottom: 1px solid transparent;
 
   svg {
+    position: absolute;
+    top: 50%;
+    right: 0;
     width: 7px;
     height: 12px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
     fill: #262626;
+    transform: translateY(-50%);
   }
 }
 
 .subject-icon {
-  padding: 8px 30px;
   min-width: 101px;
+  padding: 8px 30px;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  text-transform: uppercase;
+  font-weight: 700;
   line-height: 1;
-  font-family: 'poppins';
-  font-weight: 700;;
-  background-color: $accent;
-  border-radius: 20px;
   color: #fff;
-  outline: transparent;
+  text-transform: uppercase;
+  background-color: $accent;
   border: 1px solid transparent;
+  border-radius: 20px;
+  outline: transparent;
   transition: border-color 0.4s, box-shadow 0.4s, background-color 0.4s;
+
   &:focus {
-      box-shadow: inset 0 0 3px 1px #000;
-    }
-    &:hover {
-      border: 1px solid $name;
-    }
-    &:active {
-      color: $accent;
-      background-color: rgb(80, 80, 80);
-    }
+    box-shadow: inset 0 0 3px 1px #000;
+  }
+
+  &:hover {
+    border: 1px solid $name;
+  }
+
+  &:active {
+    color: $accent;
+    background-color: rgb(80, 80, 80);
+  }
 }
 
 .anim-effect {
   display: inline-block;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  outline: transparent;
   border-radius: 4px;
+  outline: transparent;
   transition: box-shadow 0.4s, border-color 0.4s, color 0.4s;
+
   &:focus {
     box-shadow: 0 4px 9px black;
   }
+
   &:hover {
     border-top: 1px solid $accent;
     border-bottom: 1px solid $accent;
   }
+
   &:active {
     box-shadow: inset 0 0 9px -1px black;
   }
 }
 
-.anim-secondary {
+.anim-line {
   border-bottom: 1px solid transparent;
   border-radius: 2px;
   outline: transparent;
-  border-radius: 4px;
   transition: box-shadow 0.4s, border-color 0.4s, color 0.4s;
 
   &:focus {
@@ -334,25 +342,24 @@ body {
 }
 
 .subscribe-form {
-  font-size: 0;
+  display: flex;
+  font-size: 14px;
 
   &__input,
   &__btn {
-    font-family: 'dmsans';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1;
     padding: 10px 10px;
-    border: none;
+    font-family: 'DMsans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
     background-color: rgba($bg-main, 0.2);
+    border: none;
     outline: transparent;
-    box-sizing: border-box;
   }
 
   &__input {
     width: 170px;
-    transition: box-shadow 1s, background-color 0.3s;
     vertical-align: bottom;
+    transition: box-shadow 1s, background-color 0.3s;
 
     &:focus {
       box-shadow: -3px 0 2px -1px $accent;
@@ -366,19 +373,19 @@ body {
       background-color: rgba($accent, 0.2);
     }
 
-    &::placeholder{
+    &::placeholder {
+      font-family: inherit;
       font-size: 12px;
       color: $name;
-      font-family: inherit;
     }
   }
 
   &__btn {
+    color: #fff;
     background-color: $accent;
     border: 2px solid transparent;
-    color: #fff;
     transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
-    
+
     &:focus {
       box-shadow: 0 0 3px 1px #000;
     }
@@ -391,81 +398,6 @@ body {
 
     &:active {
       box-shadow: inset 0 0 10px 1px #000;
-    }
-  }
-}
-
-.product-card {
-  width: 270px;
-  min-height: 380px;
-  padding: 30px 17px;
-  border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  font-family: 'dmsans';
-  font-size: 16px;
-  line-height: 2;
-  position: relative;
-  transition: box-shadow 0.4s;
-
-  &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-    }
-
-  &__img {
-    margin-bottom: auto;
-    height: 200px;
-    object-fit: contain;
-    object-position: bottom;
-  }
-
-  &__name {
-    text-align: center;
-    font-weight: 500;
-    line-height: 1.3;
-    color: $name;
-    @include l-clamp(2);
-  }
-
-  &__price {
-    font-weight: 700;
-    color: $accent;
-  }
-
-  &__actions {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.4s;
-
-    @include media-w($md) {
-      opacity: 1;
-      top: 225px;
-    }
-  }
-
-  &__action:not(:last-child) {
-    margin-right: 15px;
-  }
-  
-  &:hover {
-    box-shadow: inset 0 0 7px 1px $accent;
-
-    .product-card__actions {
-      opacity: 1;
     }
   }
 }

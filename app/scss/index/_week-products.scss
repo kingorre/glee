@@ -26,11 +26,11 @@
   }
 
   &__items {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 40px;
     grid-column-gap: 30px;
+    margin: 0 auto;
     margin-bottom: 60px;
 
     @include media-w($xl) {
@@ -54,7 +54,6 @@
   }
 
   &__card {
-
     @include media-w(xs) {
       width: 241px;
       min-height: 330px;

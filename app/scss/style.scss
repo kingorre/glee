@@ -5,8 +5,8 @@
 @import 'libs';
 @import 'global';
 
-
 // HEADER
+
 @import "components/header";
 
 // MAIN
@@ -20,5 +20,13 @@
 @import "components/articles";
 @import "components/slider-partners";
 
+//articles
+
+@import "components/product-card";
+@import "components/lamp-card";
+@import "components/mini-card";
+@import "components/blog-card";
+
 // FOOTER
+
 @import "components/footer";

@@ -12,7 +12,7 @@ $(function(){
     var height = $(window).scrollTop();
     var currentPos = $(this).scrollTop();
     
-    if (height > 71) {
+    if (height > 48) {
       $('.header').addClass('header--bg');
     } else {
       $('.header').removeClass('header--bg');
@@ -28,13 +28,13 @@ $(function(){
 
   $('.burger').on('click', function () {
     $('.burger').toggleClass('burger--active');
-    $('.menu__list').toggleClass('menu__list--active');
+    $('.menu').toggleClass('menu--active');
     $('body').toggleClass('lock');
     $('.user-nav').removeClass('user-nav--active');
   });
 
   $('.menu__link, .logo').on('click', function () {
-    $('.menu__list').removeClass('menu__list--active');
+    $('.menu').removeClass('menu--active');
     $('body').removeClass('lock');
     $('.user-nav').removeClass('user-nav--active');
   });
@@ -58,7 +58,6 @@ $(function(){
     autoplaySpeed: 2000,
     autoplay: true,
     infinite: true,
-    pauseOnHover: true,
 
     responsive: [
       {
@@ -83,18 +82,7 @@ $(function(){
         }
       }
     ]
-  });
-
-  $('.popup-youtube').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-  
-    fixedContentPos: false
-  });
-  
+  });  
 
   var mixer1 = mixitup('.week-products', {
     animation: {

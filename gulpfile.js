@@ -7,6 +7,7 @@ const imagemin        = require('gulp-imagemin');
 const del             = require('del');
 const browserSync     = require('browser-sync').create();
 const svgSprite       = require('gulp-svg-sprite');
+const gulpStylelint   = require('gulp-stylelint');
 
 
 function svgSprites() {
@@ -83,6 +84,18 @@ function build() {
   .pipe(dest('dist'))
 }
 
+function lintCss() {
+  return src('app/scss/**/*.scss')
+    .pipe(gulpStylelint({
+      reporters: [
+        {
+          formatter: 'string', 
+          console: true
+        }
+      ]
+    }));
+}
+
 function cleanDist() {
   return del('dist')
 }
@@ -102,6 +115,7 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.lintCss = lintCss;
 exports.build = series(cleanDist, images, build);
 
 exports.default = parallel(styles, scripts, browsersync, watching, svgSprites);
