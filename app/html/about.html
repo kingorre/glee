@@ -1,0 +1,31 @@
+@@include('parts/components/_head.html', {
+  "title": "Glee - furniture | About us" 
+  })
+
+<body>
+
+@@include('parts/components/_header.html')
+
+<div class="wrapper">
+  <main class="main">
+    <h1 class="sr-only">Glee - best furniture</h1>
+
+
+    @@include('parts/components/_breadcramps.html',{
+      "title": "About us"
+    })
+
+    @@include('parts/about/_mission.html')
+    @@include('parts/about/_achievements.html')
+    @@include('parts/about/_team.html')
+    
+
+    @@include('parts/components/_articles.html')
+
+    @@include('parts/components/_slider-partners.html')
+  </main>
+@@include('parts/components/_footer.html')
+
+</div>
+
+@@include('parts/components/_scripts.html')

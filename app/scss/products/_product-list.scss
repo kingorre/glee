@@ -1,0 +1,146 @@
+.product-list {
+  &__inner {
+
+  }
+
+  &__aside {
+    width: 270px;
+  }
+
+  &__box:not(:last-child) {
+    margin-bottom: 55px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 11px 35px 11px 15px;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: transparent;
+    transition: border-color 0.4s, box-shadow 0.4s, background-color 0.4s;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      width: 5px;
+      height: 10px;
+      transform: translateY(-50%);
+    }
+
+    &--upper {
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      border: 1px solid $grey50;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 7px 0 #000;
+    }
+  }
+
+  &__svg {
+    width: 5px;
+    height: 10px;
+  }
+
+  &__val,
+  &__svg {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+  }
+
+  &__recent-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__price {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 5px;
+  }
+
+  &__line {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    left: 4px;
+    height: 1px;
+    background-color: $grey50;
+  }
+
+  &__scale {
+    position: absolute;
+    top: 5px;
+    height: 3px;
+    background-color: $accent;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: -6px;
+      width: 15px;
+      height: 15px;
+      content: '';
+      background-color: $accent;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    bottom: 0;
+    display: inline;
+    width: 80px;
+    padding: 5px;
+    font-size: 14px;
+    color: $name;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: transparent;
+    transition: border-color 0.4s, box-shadow 0.4s;
+
+    &--min {
+      left: 0;
+    }
+
+    &--max {
+      right: 0;
+    }
+
+    &:focus {
+      border: 1px solid $accent;
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px 1px $accent;
+    }
+
+    &:active {
+      box-shadow: inset 0 0 5px 1px $accent;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+<section class="week-products" data-ref="week-products-mix">
+  <div class="container">
+    <h2 class="week-products__title title">Products of the week</h2>
+
+    <ul class="week-products__filters mix-filter">
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
+          All
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
+          Furnitures
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
+          Chairs
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
+          Lighting
+        </button>
+      </li>
+      <li class="mix-filter__item">
+        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
+          Decor
+        </button>
+      </li>
+    </ul>
+
+    <ul class="week-products__items">
+
+      <li class="week-products__box mix category-furnitures">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          }) 
+      </li>
+
+      <li class="week-products__box mix category-chairs">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          })
+      </li>
+
+      <li class="week-products__box mix category-chairs">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          })
+      </li>
+
+      <li class="week-products__box mix category-furnitures category-lighting">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+      </li>
+
+      <li class="week-products__box mix category-lighting">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          })
+      </li>
+
+      <li class="week-products__box mix category-decor">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          })
+      </li>
+
+      <li class="week-products__box mix category-furnitures category-decor">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          })
+      </li>
+
+      <li class="week-products__box mix category-furnitures category-decor">
+        @@include('../cards/_product-card.html', {
+          "name": "Wooden radio",
+          "price": "$29.00"
+          })
+      </li>
+    </ul>
+  </div>
+
+  <div class="container container--fluid">
+    <div class="week-products__lamps lamps">
+      <ul class="lamps__items">
+
+        <li class="lamps__item">
+          @@include('../cards/_lamp-card.html', {
+            "name": "Malesuada Tempor Euismod",
+            "info": "LED Corn Bulb Lamp 5W 7W 10W 12W 15W E26 E27 LED Corn Light",
+            "img-src": "images/lamps/image-1.png",
+            "alt": "Malesuada Tempor Euismod"
+            })
+        </li>
+
+        <li class="lamps__item">
+          @@include('../cards/_lamp-card.html', {
+            "name": "Malesuada Tempor Euismod",
+            "info": "LED Corn Bulb Lamp 5W 7W 10W 12W 15W E26 E27 LED Corn Light",
+            "img-src": "images/lamps/image-1.png",
+            "alt": "Malesuada Tempor Euismod"
+            })
+        </li>
+      </ul> 
+
+    </div>
+  </div>
+</section>

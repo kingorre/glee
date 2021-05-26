@@ -84,6 +84,22 @@ $(function(){
     ]
   });  
 
+  $(".recent-card__star").rateYo({
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+    spacing   : "8px",
+    starWidth: "11px"
+  });
+
+  $(".card-big__star").rateYo({
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+    spacing   : "13px",
+    starWidth: "17px"
+  });
+
   var mixer1 = mixitup('.week-products', {
     animation: {
       effects: 'fade translateZ(-30px)'

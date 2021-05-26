@@ -8,7 +8,16 @@ const del             = require('del');
 const browserSync     = require('browser-sync').create();
 const svgSprite       = require('gulp-svg-sprite');
 const gulpStylelint   = require('gulp-stylelint');
+const fileinclude     = require('gulp-file-include');
 
+function fileInclude() {
+  return src('app/html/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(dest('./app/'));
+}
 
 function svgSprites() {
   return src('app/images/pre-sprites/**.svg')
@@ -51,6 +60,7 @@ function scripts() {
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/mixitup/dist/mixitup.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
@@ -105,9 +115,8 @@ function watching () {
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/pre-sprites/**.svg'], svgSprites);
+  watch(['app/html/**/*.html'], fileInclude);
 }
-
-
 
 exports.styles = styles;
 exports.scripts = scripts;
@@ -116,6 +125,7 @@ exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
 exports.lintCss = lintCss;
+exports.fileInclude = fileInclude;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching, svgSprites);
+exports.default = parallel(styles, scripts, browsersync, watching, svgSprites, fileInclude);

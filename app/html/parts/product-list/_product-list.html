@@ -1,0 +1,134 @@
+<div class="product-list">
+  <div class="container">
+    <div class="product-list__inner">
+      <div class="product-list__aside">
+        <div class="product-list__box">
+          <h2 class="product-list__title title-line">category</h2>
+          <ul class="product-list__list">
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Chair
+                <svg class="product-list__svg">
+                  <use xlink:href="images/sprites/sprite.svg#arrow-right-small"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Table
+                <svg class="product-list__svg">
+                  <use xlink:href="images/sprites/sprite.svg#arrow-right-small"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Lamp
+                <svg class="product-list__svg">
+                  <use xlink:href="images/sprites/sprite.svg#arrow-right-small"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Watch
+                <svg class="product-list__svg">
+                  <use xlink:href="images/sprites/sprite.svg#arrow-right-small"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Clock
+                <svg class="product-list__svg">
+                  <use xlink:href="images/sprites/sprite.svg#arrow-right-small"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="product-list__box">
+          <h2 class="product-list__title title-line">price</h2>
+          <div class="product-list__price" >
+            <span class="product-list__line"></span>
+            <span class="product-list__scale" style="left: 20px; right: 110px;"></span>
+            <label for="" class="product-list__label">
+              <span class="sr-only">type minimum price</span>
+              <input type="text" class="product-list__input product-list__input--min" placeholder="$100.00">
+            </label>
+            <label for="" class="product-list__label">
+              <span class="sr-only">type maximum price</span>
+              <input type="text" class="product-list__input product-list__input--max" placeholder="$800.00">
+            </label>
+          </div>
+
+        </div>
+
+        <div class="product-list__box">
+          <h2 class="product-list__title title-line">brand</h2>
+          <ul class="product-list__list">
+            <li class="product-list__item">
+              <button class="product-list__btn product-list__btn--upper" type="button">
+                RFL
+                <span class="product-list__val">(10)</span>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Brothers
+                <span class="product-list__val">(10)</span>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Regal
+                <span class="product-list__val">(10)</span>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Nadia
+                <span class="product-list__val">(10)</span>
+              </button>
+            </li>
+            <li class="product-list__item">
+              <button class="product-list__btn" type="button">
+                Otobi
+                <span class="product-list__val">(10)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="product-list__box">
+          <h2 class="product-list__title title-line">recent products</h2>
+          <ul class="product-list__recent-list">
+            <li class="product-list__recent-item">
+              @@include('../cards/_recent-card.html',{
+              "title": "Pendant lamp",
+              "price": "23.00$"
+              })
+            </li>
+            <li class="product-list__recent-item">
+              @@include('../cards/_recent-card.html',{
+              "title": "Pendant lamp",
+              "price": "23.00$"
+              })
+            </li>
+            <li class="product-list__recent-item">
+              @@include('../cards/_recent-card.html',{
+              "title": "Pendant lamp",
+              "price": "23.00$"
+              })
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="product-list__content">
+        
+      </div>
+    </div>
+  </div>
+</div>
