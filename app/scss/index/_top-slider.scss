@@ -26,7 +26,6 @@
 
   &__content {
     max-width: 415px;
-    font-family: 'Rubik', sans-serif;
 
     @include media-w($md) {
       margin-bottom: 50px;
@@ -160,7 +159,8 @@
     object-position: bottom;
 
     @include media-w($lg) {
-      width: 90%;
+      align-self: auto;
+      // width: 90%;
     }
 
     @include media-w($sm) {
@@ -199,6 +199,7 @@
       border: none;
       border-radius: 50%;
       outline: transparent;
+      transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
 
       &:focus {
         box-shadow: 0 0 3px 1px $name;

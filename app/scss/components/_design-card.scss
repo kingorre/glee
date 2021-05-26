@@ -1,9 +1,9 @@
-.mini-card {
+.design-card {
   display: flex;
 
   &__item {
     display: block;
-    max-width: 370px;
+    width: 370px;
     height: 246px;
     padding: 35px 0 30px 35px;
     font-family: 'DMsans', sans-serif;
@@ -27,8 +27,8 @@
       box-shadow: inset 0 0 10px 1px $name;
     }
 
-    @include media-w($sm) {
-      padding: 25px 0 25px 15px;
+    @include media-w($xs) {
+      width: 280px;
     }
   }
 
@@ -49,10 +49,6 @@
 
   &__content {
     display: flex;
-
-    @include media-w($sm) {
-      display: block;
-    }
   }
 
   &__picture {
@@ -60,20 +56,11 @@
     display: inline-block;
     width: 325px;
     height: 130px;
-    margin-left: -60px;
+    margin-left: -54px;
     overflow: hidden;
 
-    @include media-w($md) {
-      width: 300px;
-    }
-
-    @include media-w($sm) {
-      width: 240px;
-      margin-left: -38px;
-    }
-
     @include media-w($xs) {
-      width: 290px;
+      width: 300px;
     }
   }
 
@@ -86,9 +73,5 @@
     width: 318px;
     height: 128px;
     object-position: center;
-
-    @include media-w($sm) {
-      left: 35px;
-    }
   }
 }

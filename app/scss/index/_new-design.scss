@@ -36,7 +36,7 @@
       margin-bottom: 70px;
     }
 
-    @include media-w($xs) {
+    @include media-w($sm) {
       grid-template-columns: 1fr;
       margin-bottom: 30px;
     }

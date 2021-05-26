@@ -33,7 +33,6 @@
   }
 
   &__box {
-    flex-grow: 1;
     width: 300px;
     text-align: left;
 
@@ -52,13 +51,18 @@
       padding-right: 0;
     }
 
-    &--form {
+    &--ssize {
       width: 270px;
 
       @include media-w($md) {
         width: 50%;
       }
     }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 9px;
   }
 
   &__title {
@@ -73,10 +77,10 @@
   }
 
   &__address {
-    max-width: 200px;
+    max-width: 230px;
 
-    @include media-w($sm) {
-      max-width: 220px;
+    @include media-w($lg) {
+      width: 230px;
     }
   }
 
@@ -99,12 +103,17 @@
 
   &__name {
     text-transform: uppercase;
+
+    @include media-w($sm) {
+      display: block;
+    }
   }
 
   &__text {
+    max-width: 270px;
     margin-bottom: 35px;
 
-    @include l-clamp(2);
+    @include l-clamp(4);
   }
 
   &__bottom {

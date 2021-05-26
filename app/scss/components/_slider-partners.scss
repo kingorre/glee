@@ -1,25 +1,21 @@
 .slider-partners {
+  padding: 78px 0 85px;
   background-color: rgba($bg-main, 0.4);
 
-  &__items {
-    width: 100%;
-    max-width: 1200px;
-    padding: 78px 15px 85px;
+  &__item {
+    margin: 0 50px;
   }
 
   &__wrapper {
+    display: flex;
+    align-items: center;
     height: 87px;
   }
 
-  &__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
   &__img {
-    max-width: 175px;
+    max-height: 87px;
+    margin: auto;
     object-fit: contain;
+    object-position: center center;
   }
 }

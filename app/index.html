@@ -13,7 +13,7 @@
 <body>
 
 <header class="header">
-  <div class="container container--fluid container--header">
+  <div class="container container--fluid">
 
     <nav class="header__menu">
       <a class="logo header__logo" href="#">
@@ -47,6 +47,7 @@
           <svg>
             <use xlink:href="images/sprites/sprite.svg#arrow-right-link"></use>
           </svg>
+          <span class="sr-only">open tools menu</span>
         </button>
 
         <button class="user-nav__search-btn round-btn round-btn--big " type="button">
@@ -61,7 +62,7 @@
             <svg>
               <use xlink:href="images/sprites/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">move to liked products</span>
+            <span class="sr-only">move to chosen</span>
             <span class="user-nav__num">0</span>
           </a>
           <span class="user-nav__line"></span>
@@ -120,9 +121,7 @@
           </button>
         </div>
         <div class="top-slider__picture">
-          <div class="top-slider__img-wrapper">
-            <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
-          </div>
+          <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
         </div>
       </div>
     </li>
@@ -146,9 +145,7 @@
           </button>
         </div>
         <div class="top-slider__picture">
-          <div class="top-slider__img-wrapper">
-            <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
-          </div>
+          <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
         </div>
       </div>
     </li>
@@ -172,9 +169,7 @@
           </button>
         </div>
         <div class="top-slider__picture">
-          <div class="top-slider__img-wrapper">
-            <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
-          </div>
+          <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
         </div>
       </div>
     </li>
@@ -204,7 +199,9 @@
             Delivery.
           </div>
           <div class="benefits__text">
-            Free shipping on all US order.
+            <p>
+              Free shipping on all US order.
+            </p>
           </div>
         </div>
       </li>
@@ -231,6 +228,7 @@
       <li class="mix-filter__item">
         <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
           All
+          <span class="sr-only">view all products</span>
         </button>
       </li>
       <li class="mix-filter__item">
@@ -286,7 +284,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -325,7 +323,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -364,7 +362,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -375,9 +373,42 @@
       </li>
 
       <li class="week-products__box mix category-furnitures category-lighting">
-        @@include('../cards/_product-card.html', {
-          "name": "Wooden radio",
-          "price": "$29.00"
+        <article class="week-products__card product-card">
+  <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
+  <h3 class="product-card__name">
+    Wooden radio
+  </h3>
+  <span class="product-card__price">
+    $29.00
+  </span>
+
+  <ul class="product-card__actions mix category-furnitures">
+    <li class="product-card__action">
+      <a class="round-btn round-btn--action" href="#">
+        <span class="sr-only">open product information</span>
+        <svg>
+          <use xlink:href="images/sprites/sprite.svg#search"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="product-card__action">
+      <button class="product-card__btn round-btn round-btn--action" type="button">
+        <span class="sr-only">add product to basket</span>
+        <svg>
+          <use xlink:href="images/sprites/sprite.svg#basket"></use>
+        </svg>
+      </button>
+    </li>
+    <li class="product-card__action">
+      <button class="round-btn round-btn--action" type="button">
+        <span class="sr-only">Add product to favourites</span>
+        <svg>
+          <use xlink:href="images/sprites/sprite.svg#heart"></use>
+        </svg>
+      </button>
+    </li>
+  </ul>
+</article>
       </li>
 
       <li class="week-products__box mix category-lighting">
@@ -409,7 +440,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -448,7 +479,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -487,7 +518,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -526,7 +557,7 @@
     </li>
     <li class="product-card__action">
       <button class="round-btn round-btn--action" type="button">
-        <span class="sr-only">like this product</span>
+        <span class="sr-only">Add product to favourites</span>
         <svg>
           <use xlink:href="images/sprites/sprite.svg#heart"></use>
         </svg>
@@ -539,10 +570,10 @@
   </div>
 
   <div class="container container--fluid">
-    <div class="week-products__lamps lamps">
-      <ul class="lamps__items">
+    <div class="week-products__bottom lamps">
+      <ul class="week-products__lamps">
 
-        <li class="lamps__item">
+        <li class="week-products__lamp">
           <article class="lamp-card">
   <img class="lamp-card__img" src="images/lamps/image-1.png" alt="Malesuada Tempor Euismod">
   <div class="lamp-card__content">
@@ -564,7 +595,7 @@
 </article>
         </li>
 
-        <li class="lamps__item">
+        <li class="week-products__lamp">
           <article class="lamp-card">
   <img class="lamp-card__img" src="images/lamps/image-1.png" alt="Malesuada Tempor Euismod">
   <div class="lamp-card__content">
@@ -628,17 +659,17 @@
 
     <ul class="new-design__items">
       <li class="new-design__item mix category-furnitures">
-        <article class="mini-card">
-  <a class="mini-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
-    <h3 class="mini-card__name">
+        <article class="design-card">
+  <a class="design-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+    <h3 class="design-card__name">
       Beat Flat Pendant Black
     </h3>
-    <div class="mini-card__content">
-      <span class="mini-card__style">
+    <div class="design-card__content">
+      <span class="design-card__style">
         classic
       </span>
-      <div class="mini-card__picture">
-        <img class="mini-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+      <div class="design-card__picture">
+        <img class="design-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
       </div>
     </div>
   </a>
@@ -646,17 +677,17 @@
       </li>
 
       <li class="new-design__item mix category-furnitures">
-        <article class="mini-card">
-  <a class="mini-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
-    <h3 class="mini-card__name">
+        <article class="design-card">
+  <a class="design-card__item" href="images/new-design/image-4.png" alt="Beat Flat Pendant Black">
+    <h3 class="design-card__name">
       Beat Flat Pendant Black
     </h3>
-    <div class="mini-card__content">
-      <span class="mini-card__style">
+    <div class="design-card__content">
+      <span class="design-card__style">
         classic
       </span>
-      <div class="mini-card__picture">
-        <img class="mini-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+      <div class="design-card__picture">
+        <img class="design-card__img" src="images/new-design/image-4.png" alt="Beat Flat Pendant Black">
       </div>
     </div>
   </a>
@@ -664,17 +695,17 @@
       </li>
 
       <li class="new-design__item mix category-furnitures">
-        <article class="mini-card">
-  <a class="mini-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
-    <h3 class="mini-card__name">
+        <article class="design-card">
+  <a class="design-card__item" href="images/new-design/image-3.png" alt="Beat Flat Pendant Black">
+    <h3 class="design-card__name">
       Beat Flat Pendant Black
     </h3>
-    <div class="mini-card__content">
-      <span class="mini-card__style">
+    <div class="design-card__content">
+      <span class="design-card__style">
         classic
       </span>
-      <div class="mini-card__picture">
-        <img class="mini-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+      <div class="design-card__picture">
+        <img class="design-card__img" src="images/new-design/image-3.png" alt="Beat Flat Pendant Black">
       </div>
     </div>
   </a>
@@ -682,17 +713,17 @@
       </li>
 
       <li class="new-design__item mix category-furnitures">
-        <article class="mini-card">
-  <a class="mini-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
-    <h3 class="mini-card__name">
+        <article class="design-card">
+  <a class="design-card__item" href="images/new-design/image-2.png" alt="Beat Flat Pendant Black">
+    <h3 class="design-card__name">
       Beat Flat Pendant Black
     </h3>
-    <div class="mini-card__content">
-      <span class="mini-card__style">
+    <div class="design-card__content">
+      <span class="design-card__style">
         classic
       </span>
-      <div class="mini-card__picture">
-        <img class="mini-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+      <div class="design-card__picture">
+        <img class="design-card__img" src="images/new-design/image-2.png" alt="Beat Flat Pendant Black">
       </div>
     </div>
   </a>
@@ -700,17 +731,17 @@
       </li>
 
       <li class="new-design__item mix category-furnitures">
-        <article class="mini-card">
-  <a class="mini-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
-    <h3 class="mini-card__name">
+        <article class="design-card">
+  <a class="design-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+    <h3 class="design-card__name">
       Beat Flat Pendant Black
     </h3>
-    <div class="mini-card__content">
-      <span class="mini-card__style">
+    <div class="design-card__content">
+      <span class="design-card__style">
         classic
       </span>
-      <div class="mini-card__picture">
-        <img class="mini-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+      <div class="design-card__picture">
+        <img class="design-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
       </div>
     </div>
   </a>
@@ -718,17 +749,17 @@
       </li>
 
       <li class="new-design__item mix category-furnitures">
-        <article class="mini-card">
-  <a class="mini-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
-    <h3 class="mini-card__name">
+        <article class="design-card">
+  <a class="design-card__item" href="images/new-design/image-6.png" alt="Beat Flat Pendant Black">
+    <h3 class="design-card__name">
       Beat Flat Pendant Black
     </h3>
-    <div class="mini-card__content">
-      <span class="mini-card__style">
+    <div class="design-card__content">
+      <span class="design-card__style">
         classic
       </span>
-      <div class="mini-card__picture">
-        <img class="mini-card__img" src="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
+      <div class="design-card__picture">
+        <img class="design-card__img" src="images/new-design/image-6.png" alt="Beat Flat Pendant Black">
       </div>
     </div>
   </a>
@@ -748,40 +779,31 @@
 
     <section class="articles">
   <div class="container">
-    <div class="articles__top-box">
+    <div class="articles__top">
       <h2 class="articles__title title">Our Insights & Articles</h2>
       <a class="articles__link view-link anim-effect" href="#">
         View All
-        <svg>
-          <use xlink:href="images/sprites/sprite.svg#arrow-right-link"></use>
-        </svg>
       </a>
     </div>
 
     <ul class="articles__items">
       <li class="articles__item">
-        <article class="blog-card">
-  <a class="blog-card__link-img" href="#">
-    <img class="blog-card__img" src="images/articles/image-2.jpg" alt="modern interior design">
+        <article class="article-card">
+  <a class="article-card__link" href="#">
+    <img class="article-card__img" src="images/articles/image-1.jpg" alt="modern interior design">
   </a>
-  <div class="blog-card__content">
-    <a class="blog-card__link-subject subject-icon" href="#">news</a>
-    <a class="blog-card__link-theme anim-line" href="#">
-      Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+  <div class="article-card__content">
+    <a class="article-card__subject" href="#">news</a>
+    <a class="article-card__theme anim-line" href="#">
+      <h3 class="article-card__title">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
     </a>
-    <div class="blog-card__info">
-      <a class="blog-card__link-info anim-line" href="#">
+    <div class="article-card__links">
+      <a class="article-card__info article-card__info--date anim-line" href="#">
         <time datetime="2020-01-28">
-          <svg>
-            <use xlink:href="images/sprites/sprite.svg#date"></use>
-          </svg>
-          classic
+          29 january, 2020
         </time>
       </a>
-      <a class="blog-card__link-info anim-line" href="#">
-        <svg>
-          <use xlink:href="images/sprites/sprite.svg#user-regular"></use>
-        </svg>
+      <a class="article-card__info article-card__info--author anim-line" href="#">
         by admin
       </a>
     </div>
@@ -790,28 +812,22 @@
       </li>
 
       <li class="articles__item">
-        <article class="blog-card">
-  <a class="blog-card__link-img" href="#">
-    <img class="blog-card__img" src="images/articles/image-2.jpg" alt="modern interior design">
+        <article class="article-card">
+  <a class="article-card__link" href="#">
+    <img class="article-card__img" src="images/articles/image-2.jpg" alt="modern interior design">
   </a>
-  <div class="blog-card__content">
-    <a class="blog-card__link-subject subject-icon" href="#">news</a>
-    <a class="blog-card__link-theme anim-line" href="#">
-      Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+  <div class="article-card__content">
+    <a class="article-card__subject" href="#">news</a>
+    <a class="article-card__theme anim-line" href="#">
+      <h3 class="article-card__title">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
     </a>
-    <div class="blog-card__info">
-      <a class="blog-card__link-info anim-line" href="#">
+    <div class="article-card__links">
+      <a class="article-card__info article-card__info--date anim-line" href="#">
         <time datetime="2020-01-28">
-          <svg>
-            <use xlink:href="images/sprites/sprite.svg#date"></use>
-          </svg>
-          classic
+          29 january, 2020
         </time>
       </a>
-      <a class="blog-card__link-info anim-line" href="#">
-        <svg>
-          <use xlink:href="images/sprites/sprite.svg#user-regular"></use>
-        </svg>
+      <a class="article-card__info article-card__info--author anim-line" href="#">
         by admin
       </a>
     </div>
@@ -820,28 +836,22 @@
       </li>
 
       <li class="articles__item">
-        <article class="blog-card">
-  <a class="blog-card__link-img" href="#">
-    <img class="blog-card__img" src="images/articles/image-2.jpg" alt="modern interior design">
+        <article class="article-card">
+  <a class="article-card__link" href="#">
+    <img class="article-card__img" src="images/articles/image-3.jpg" alt="modern interior design">
   </a>
-  <div class="blog-card__content">
-    <a class="blog-card__link-subject subject-icon" href="#">news</a>
-    <a class="blog-card__link-theme anim-line" href="#">
-      Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+  <div class="article-card__content">
+    <a class="article-card__subject" href="#">news</a>
+    <a class="article-card__theme anim-line" href="#">
+      <h3 class="article-card__title">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
     </a>
-    <div class="blog-card__info">
-      <a class="blog-card__link-info anim-line" href="#">
+    <div class="article-card__links">
+      <a class="article-card__info article-card__info--date anim-line" href="#">
         <time datetime="2020-01-28">
-          <svg>
-            <use xlink:href="images/sprites/sprite.svg#date"></use>
-          </svg>
-          classic
+          29 january, 2020
         </time>
       </a>
-      <a class="blog-card__link-info anim-line" href="#">
-        <svg>
-          <use xlink:href="images/sprites/sprite.svg#user-regular"></use>
-        </svg>
+      <a class="article-card__info article-card__info--author anim-line" href="#">
         by admin
       </a>
     </div>
@@ -855,47 +865,43 @@
     <div class="slider-partners">
   <div class="container">
     <ul class="slider-partners__items">
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-1.png" alt="partner name">
-        </li>
-      </div>
 
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-3.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-4.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
           <img class="slider-partners__img" src="images/slider-partners/image-5.png" alt="partner name">
-        </li>
-      </div>
+        </div>
+      </li>
 
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
           <img class="slider-partners__img" src="images/slider-partners/image-1.png" alt="partner name">
-        </li>
-      </div>
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-3.png" alt="partner name">
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-4.png" alt="partner name">
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
+        </div>
+      </li>
+
     </ul>
   </div> 
   </main>
@@ -905,7 +911,7 @@
     <div class="footer__inner">
 
       <div class="footer__box">
-        <a class="logo footer__title" href="#">
+        <a class="logo footer__logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="logo">
         </a>
 
@@ -992,7 +998,7 @@
         </ul>
       </div>
 
-      <div class="footer__box footer__box--form">
+      <div class="footer__box footer__box--ssize">
         <span class="footer__title">
           newsletter
         </span>
@@ -1005,9 +1011,9 @@
         <form class="footer__form subscribe-form" action="#">
           <label class="subscribe-form__label">
             <span class="sr-only">type your email address</span>
-            <input class="subscribe-form__input" type="email" name="email" placeholder="Email address" required>
+            <input class="subscribe-form__item subscribe-form__item--input" type="email" name="email" placeholder="Email address" required>
           </label>
-          <button class="subscribe-form__btn" type="submit">
+          <button class="subscribe-form__item subscribe-form__item--btn" type="submit">
             Subscribe
           </button>
         </form>
@@ -1024,7 +1030,7 @@
       <nav class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
-            <a class="footer__menu-liline" href="#">Home</a>
+            <a class="footer__menu-link anim-line" href="#">Home</a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link anim-line" href="#">About</a>

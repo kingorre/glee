@@ -6,22 +6,27 @@ $(function(){
     }
   });
 
+  $('.mix-filter__item').on('click', function () {
+    $('.mix-filter').toggleClass('mix-filter--dropdown');
+  });
+  
+
   var pos = 0;
 
   $(window).scroll(function () {
     var height = $(window).scrollTop();
     var currentPos = $(this).scrollTop();
     
-    if (height > 48) {
+    if (height > 68) {
       $('.header').addClass('header--bg');
     } else {
       $('.header').removeClass('header--bg');
     };
 
     if (currentPos > pos) {
-      $('.header').addClass('header--display');
+      $('.header').fadeOut('1500');
     } else {
-      $('.header').removeClass('header--display');
+      $('.header').fadeIn('3500');
     };
     pos = currentPos;
   });
@@ -68,7 +73,7 @@ $(function(){
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2

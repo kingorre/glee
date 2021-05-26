@@ -69,10 +69,6 @@ body {
   &--fluid {
     max-width: 1800px;
   }
-
-  &--header {
-    padding: 0;
-  }
 }
 
 .round-btn {
@@ -158,6 +154,16 @@ body {
   outline: transparent;
   transition: background-color 0.4s, box-shadow 0.4s, color 0.4s, border-color 0.4s;
 
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 22px;
+    height: 9px;
+    transition: fill 0.4s;
+    transform: translateY(-50%);
+  }
+
   &--trans {
     color: $text-grey;
     background-color: transparent;
@@ -211,16 +217,6 @@ body {
     }
   }
 
-  svg {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    width: 22px;
-    height: 9px;
-    transition: fill 0.4s;
-    transform: translateY(-50%);
-  }
-
   &--small {
     display: inline-block;
     padding: 15px 60px 15px 20px;
@@ -257,12 +253,22 @@ body {
 
   @include media-w($xs) {
     display: block;
+    height: 46px;
+    overflow-y: hidden;
+  }
+
+  &--dropdown {
+    height: 100%;
+  }
+
+  &__item {
+    border: 1px solid $accent;
   }
 
   &__item:not(:last-child) {
     margin-right: 20px;
 
-    @include media-w($lg) {
+    @include media-w($xs) {
       margin: 0;
     }
   }
@@ -277,55 +283,6 @@ body {
     @include media-w($xl) {
       width: 100%;
     }
-  }
-}
-
-.view-link {
-  position: relative;
-  display: inline-block;
-  padding: 11px 25px 11px 5px;
-  font-family: 'DMsans', sans-serif;
-  font-weight: 700;
-  line-height: 1.3;
-  border-bottom: 1px solid transparent;
-
-  svg {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 7px;
-    height: 12px;
-    fill: #262626;
-    transform: translateY(-50%);
-  }
-}
-
-.subject-icon {
-  min-width: 101px;
-  padding: 8px 30px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: $accent;
-  border: 1px solid transparent;
-  border-radius: 20px;
-  outline: transparent;
-  transition: border-color 0.4s, box-shadow 0.4s, background-color 0.4s;
-
-  &:focus {
-    box-shadow: inset 0 0 3px 1px #000;
-  }
-
-  &:hover {
-    border: 1px solid $name;
-  }
-
-  &:active {
-    color: $accent;
-    background-color: rgb(80, 80, 80);
   }
 }
 
@@ -375,8 +332,7 @@ body {
   flex-wrap: wrap;
   font-size: 14px;
 
-  &__input,
-  &__btn {
+  &__item {
     padding: 10px 10px;
     font-family: 'DMsans', sans-serif;
     font-weight: 400;
@@ -384,50 +340,49 @@ body {
     background-color: rgba($bg-main, 0.2);
     border: none;
     outline: transparent;
-  }
 
-  &__input {
-    max-width: 170px;
-    vertical-align: bottom;
-    transition: box-shadow 1s, background-color 0.3s;
+    &--input {
+      max-width: 170px;
+      vertical-align: bottom;
+      transition: box-shadow 1s, background-color 0.3s;
 
-    &:focus {
-      box-shadow: -3px 0 2px -1px $accent;
+      &:focus {
+        box-shadow: -3px 0 2px -1px $accent;
+      }
+
+      &:hover {
+        box-shadow: inset 0 0 3px 1px $accent;
+      }
+
+      &:active {
+        background-color: rgba($accent, 0.2);
+      }
+
+      &::placeholder {
+        font-size: 12px;
+        color: $name;
+      }
     }
 
-    &:hover {
-      box-shadow: inset 0 0 3px 1px $accent;
-    }
+    &--btn {
+      color: #fff;
+      background-color: $accent;
+      border: 2px solid transparent;
+      transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 
-    &:active {
-      background-color: rgba($accent, 0.2);
-    }
+      &:focus {
+        box-shadow: 0 0 3px 1px #000;
+      }
 
-    &::placeholder {
-      font-family: inherit;
-      font-size: 12px;
-      color: $name;
-    }
-  }
+      &:hover {
+        color: $accent;
+        background-color: #fff;
+        border: 2px solid $accent;
+      }
 
-  &__btn {
-    color: #fff;
-    background-color: $accent;
-    border: 2px solid transparent;
-    transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
-
-    &:focus {
-      box-shadow: 0 0 3px 1px #000;
-    }
-
-    &:hover {
-      color: $accent;
-      background-color: #fff;
-      border: 2px solid $accent;
-    }
-
-    &:active {
-      box-shadow: inset 0 0 10px 1px #000;
+      &:active {
+        box-shadow: inset 0 0 10px 1px #000;
+      }
     }
   }
 }

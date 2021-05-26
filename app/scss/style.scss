@@ -10,9 +10,15 @@
 @import "components/header";
 
 // MAIN
-
+@import "components/pagination";
+@import "components/product-card";
+@import "components/lamp-card";
+@import "components/design-card";
+@import "components/article-card";
+@import "products/recent-card";
 @import "components/breadcramps";
 @import "components/card-big";
+
 @import "index/top-slider";
 @import "index/benefits";
 @import "index/week-products";
@@ -26,16 +32,6 @@
 @import "about/mission";
 @import "about/achievements";
 @import "about/team";
-
-@import "components/pagination";
-
-//articles
-
-@import "components/product-card";
-@import "components/lamp-card";
-@import "components/mini-card";
-@import "components/blog-card";
-@import "products/recent-card";
 
 // FOOTER
 

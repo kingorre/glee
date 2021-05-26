@@ -6,6 +6,7 @@
       <li class="mix-filter__item">
         <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
           All
+          <span class="sr-only">view all products</span>
         </button>
       </li>
       <li class="mix-filter__item">
@@ -57,6 +58,7 @@
         @@include('../cards/_product-card.html', {
           "name": "Wooden radio",
           "price": "$29.00"
+        })
       </li>
 
       <li class="week-products__box mix category-lighting">
@@ -90,10 +92,10 @@
   </div>
 
   <div class="container container--fluid">
-    <div class="week-products__lamps lamps">
-      <ul class="lamps__items">
+    <div class="week-products__bottom lamps">
+      <ul class="week-products__lamps">
 
-        <li class="lamps__item">
+        <li class="week-products__lamp">
           @@include('../cards/_lamp-card.html', {
             "name": "Malesuada Tempor Euismod",
             "info": "LED Corn Bulb Lamp 5W 7W 10W 12W 15W E26 E27 LED Corn Light",
@@ -102,7 +104,7 @@
             })
         </li>
 
-        <li class="lamps__item">
+        <li class="week-products__lamp">
           @@include('../cards/_lamp-card.html', {
             "name": "Malesuada Tempor Euismod",
             "info": "LED Corn Bulb Lamp 5W 7W 10W 12W 15W E26 E27 LED Corn Light",

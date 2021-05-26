@@ -1,5 +1,5 @@
 
-.blog-card {
+.article-card {
   display: flex;
   flex-direction: column;
   max-width: 370px;
@@ -15,7 +15,7 @@
     max-width: 340px;
   }
 
-  &__link-img {
+  &__link {
     position: relative;
     display: block;
     border-top: 2px solid transparent;
@@ -47,24 +47,59 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 170px;
+    height: 170px;
     padding: 30px 30px 25px;
     color: $dark-text;
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
 
-    @include media-w($xs) {
-      padding: 25px 15px;
+    @include media-w($md) {
+      padding: 25px 15px 17px;
     }
   }
 
-  &__link-subject {
+  &__subject {
     position: absolute;
     top: 0;
     left: 25px;
+    padding: 8px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $accent;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    outline: transparent;
+    transition: border-color 0.4s, box-shadow 0.4s, background-color 0.4s;
     transform: translateY(-50%);
+
+    &:focus {
+      box-shadow: inset 0 0 3px 1px #000;
+    }
+
+    &:hover {
+      border: 1px solid $name;
+    }
+
+    &:active {
+      color: $accent;
+      background-color: rgb(80, 80, 80);
+    }
+
+    &::after {
+      position: absolute;
+      top: -6px;
+      right: 0;
+      bottom: -6px;
+      left: 0;
+      content: '';
+      border-radius: 5px;
+    }
   }
 
-  &__link-theme {
+  &__theme {
     display: block;
     font-family: 'DMsans', sans-serif;
     font-size: 18px;
@@ -74,26 +109,47 @@
     @include l-clamp(3);
   }
 
-  &__info {
+  &__links {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
-    font-size: 15px;
+    font-size: 12px;
     text-transform: uppercase;
     border-top: 1px solid #e0e0e0;
-  }
 
-  &__link-info {
-    &:not(:last-child) {
-      margin-right: 25px;
+    @include media-w($md) {
+      padding-top: 8px;
     }
   }
 
-  svg {
-    width: 15px;
-    height: 15px;
-    margin-right: 3px;
-    fill: #000;
+  &__info {
+    position: relative;
+    padding-left: 19px;
+
+    &::before {
+      @extend %bg-pseudo;
+      top: 50%;
+      left: 0;
+      width: 16px;
+      height: 14px;
+      transform: translateY(-50%);
+    }
+
+    &--date::before {
+      background-image: url(../../images/icons/date.svg);
+    }
+
+    &--author::before {
+      background-image: url(../../images/icons/user-regular.svg);
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    @include media-w($md) {
+      padding: 13px 0 13px 19px;
+    }
   }
 }

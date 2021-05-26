@@ -13,7 +13,7 @@
 <body>
 
 <header class="header">
-  <div class="container container--fluid container--header">
+  <div class="container container--fluid">
 
     <nav class="header__menu">
       <a class="logo header__logo" href="#">
@@ -47,6 +47,7 @@
           <svg>
             <use xlink:href="images/sprites/sprite.svg#arrow-right-link"></use>
           </svg>
+          <span class="sr-only">open tools menu</span>
         </button>
 
         <button class="user-nav__search-btn round-btn round-btn--big " type="button">
@@ -61,7 +62,7 @@
             <svg>
               <use xlink:href="images/sprites/sprite.svg#heart"></use>
             </svg>
-            <span class="sr-only">move to liked products</span>
+            <span class="sr-only">move to chosen</span>
             <span class="user-nav__num">0</span>
           </a>
           <span class="user-nav__line"></span>
@@ -106,7 +107,7 @@
       <a class="breadcramps__link anim-line" href="#">Home</a>
     </li>
     <li class="breadcramps__item">
-      <span class="breadcramps__link" >Product list 1</span>
+      <span class="breadcramps__link">Product list 1</span>
     </li>
   </ul>
 </div>
@@ -339,47 +340,43 @@
     <div class="slider-partners">
   <div class="container">
     <ul class="slider-partners__items">
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-1.png" alt="partner name">
-        </li>
-      </div>
 
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-3.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-4.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
           <img class="slider-partners__img" src="images/slider-partners/image-5.png" alt="partner name">
-        </li>
-      </div>
+        </div>
+      </li>
 
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
-          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
-        </li>
-      </div>
-
-      <div class="slider-partners__wrapper">
-        <li class="slider-partners__item">
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
           <img class="slider-partners__img" src="images/slider-partners/image-1.png" alt="partner name">
-        </li>
-      </div>
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-3.png" alt="partner name">
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-4.png" alt="partner name">
+        </div>
+      </li>
+
+      <li class="slider-partners__item">
+        <div class="slider-partners__wrapper">
+          <img class="slider-partners__img" src="images/slider-partners/image-2.png" alt="partner name">
+        </div>
+      </li>
+
     </ul>
   </div>
   </main>
@@ -388,7 +385,7 @@
     <div class="footer__inner">
 
       <div class="footer__box">
-        <a class="logo footer__title" href="#">
+        <a class="logo footer__logo" href="#">
           <img class="logo__img" src="images/logo.png" alt="logo">
         </a>
 
@@ -475,7 +472,7 @@
         </ul>
       </div>
 
-      <div class="footer__box footer__box--form">
+      <div class="footer__box footer__box--ssize">
         <span class="footer__title">
           newsletter
         </span>
@@ -488,9 +485,9 @@
         <form class="footer__form subscribe-form" action="#">
           <label class="subscribe-form__label">
             <span class="sr-only">type your email address</span>
-            <input class="subscribe-form__input" type="email" name="email" placeholder="Email address" required>
+            <input class="subscribe-form__item subscribe-form__item--input" type="email" name="email" placeholder="Email address" required>
           </label>
-          <button class="subscribe-form__btn" type="submit">
+          <button class="subscribe-form__item subscribe-form__item--btn" type="submit">
             Subscribe
           </button>
         </form>
@@ -507,7 +504,7 @@
       <nav class="footer__menu">
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
-            <a class="footer__menu-liline" href="#">Home</a>
+            <a class="footer__menu-link anim-line" href="#">Home</a>
           </li>
           <li class="footer__menu-item">
             <a class="footer__menu-link anim-line" href="#">About</a>

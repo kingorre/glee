@@ -1,20 +1,27 @@
 <section class="articles">
   <div class="container">
-    <div class="articles__top-box">
+    <div class="articles__top">
       <h2 class="articles__title title">Our Insights & Articles</h2>
       <a class="articles__link view-link anim-effect" href="#">
         View All
-        <svg>
-          <use xlink:href="images/sprites/sprite.svg#arrow-right-link"></use>
-        </svg>
       </a>
     </div>
 
     <ul class="articles__items">
       <li class="articles__item">
-        @@include('../cards/_blog-card.html', {
+        @@include('../cards/_article-card.html', {
           "theme": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-          "time": "classic",
+          "time": "29 january, 2020",
+          "author": "by admin",
+          "img-src": "images/articles/image-1.jpg",
+          "alt": "modern interior design"
+          })
+      </li>
+
+      <li class="articles__item">
+        @@include('../cards/_article-card.html', {
+          "theme": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+          "time": "29 january, 2020",
           "author": "by admin",
           "img-src": "images/articles/image-2.jpg",
           "alt": "modern interior design"
@@ -22,21 +29,11 @@
       </li>
 
       <li class="articles__item">
-        @@include('../cards/_blog-card.html', {
+        @@include('../cards/_article-card.html', {
           "theme": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-          "time": "classic",
+          "time": "29 january, 2020",
           "author": "by admin",
-          "img-src": "images/articles/image-2.jpg",
-          "alt": "modern interior design"
-          })
-      </li>
-
-      <li class="articles__item">
-        @@include('../cards/_blog-card.html', {
-          "theme": "Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-          "time": "classic",
-          "author": "by admin",
-          "img-src": "images/articles/image-2.jpg",
+          "img-src": "images/articles/image-3.jpg",
           "alt": "modern interior design"
           })
       </li>
