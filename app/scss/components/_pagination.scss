@@ -1,19 +1,26 @@
 .pagination {
+  display: flex;
   line-height: 1.9;
   color: $name;
 
-  &__list {
-    display: flex;
-  }
-
   &__item {
+    text-align: center;
+
     &:not(:last-child) {
       margin-right: 15px;
     }
+
+    &--disabled {
+      display: none;
+      margin-right: -15px;
+    }
   }
 
-  &__btn {
-    padding: 10px 20px;
+  &__link {
+    display: inline-block;
+    width: 50px;
+    padding: 10px 0;
+    cursor: pointer;
     background-color: transparent;
     border: 1px solid $accent;
     transition: box-shadow 0.4s, color 0.4s, background-color 0.4s;
@@ -21,11 +28,6 @@
     &--active {
       color: #fff;
       background-color: $accent;
-    }
-
-    &--disabled {
-      pointer-events: none;
-      opacity: 0;
     }
 
     &:focus {

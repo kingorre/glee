@@ -262,7 +262,9 @@ body {
   }
 
   &__item {
-    border: 1px solid $accent;
+    @include media-w($xs) {
+      border: 1px solid $accent;
+    }
   }
 
   &__item:not(:last-child) {
@@ -407,5 +409,44 @@ body {
     content: '';
     background-color: #a3bbc8;
     transform: translateY(-50%);
+  }
+}
+
+// FILTERS
+
+.main-filter {
+  width: 270px;
+}
+
+.filter-label {
+  display: block;
+  width: 100%;
+  line-height: 1;
+  color: $name;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 2px;
+  }
+}
+
+.filter-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.checkbox {
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: transparent;
+  transition: border-color 0.4s;
+
+  &:hover {
+    border: 1px solid $accent;
   }
 }

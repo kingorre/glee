@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 270px;
   height: 380px;
   padding: 30px 17px;
@@ -12,16 +12,88 @@
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   transition: border-color 0.4s;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  &.product-card--list {
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:hover {
+      border: none;
+    }
+
+    .product-card__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 370px;
+      height: 500px;
+      padding: 25px;
+      margin-right: 55px;
+      border: 2px solid $grey10;
+    }
+
+    .product-card__img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    .product-card__box {
+      text-align: left;
+    }
+
+    .product-card__name {
+      margin-bottom: 15px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: $grey90;
+      text-align: left;
+    }
+
+    .product-card__star {
+      display: block;
+    }
+
+    .product-card__price {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-family: 'Rubik', sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: $grey90;
+    }
+
+    .product-card__text {
+      @include l-clamp(4);
+      display: block;
+    }
+
+    .product-card__actions {
+      position: static;
+      justify-content: start;
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    .round-btn--action {
+      width: 50px;
+      height: 50px;
+      border-radius: 0;
+    }
+
+    .product-card__action--deleted {
+      display: none;
+    }
   }
 
   &__img {
@@ -29,6 +101,10 @@
     margin-bottom: auto;
     object-fit: contain;
     object-position: bottom;
+  }
+
+  &__box {
+    text-align: center;
   }
 
   &__name {
@@ -40,9 +116,22 @@
     @include l-clamp(2);
   }
 
+  &__star {
+    display: none;
+    margin-bottom: 20px;
+  }
+
   &__price {
     font-weight: 700;
     color: $accent;
+  }
+
+  &__text {
+    display: none;
+    max-width: 410px;
+    margin-bottom: 25px;
+    font-family: 'Rubik', sans-serif;
+    color: $name;
   }
 
   &__actions {

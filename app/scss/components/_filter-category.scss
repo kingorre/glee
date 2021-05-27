@@ -1,0 +1,23 @@
+.filter-category {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__input:checked + .filter-category__checkbox {
+    background-color: $accent;
+  }
+
+  &__checkbox {
+    position: relative;
+
+    &::after {
+      @extend %bg-pseudo;
+      top: 50%;
+      right: 20px;
+      width: 5px;
+      height: 10px;
+      background-image: url('../../images/icons/filter-arrow.svg');
+      transform: translateY(-50%);
+    }
+  }
+}

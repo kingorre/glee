@@ -1,0 +1,23 @@
+.filter-brand {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__input:checked + .filter-brand__checkbox {
+    background-color: $accent;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__value {
+    color: $grey40;
+
+    &--active {
+      color: $name;
+    }
+  }
+}

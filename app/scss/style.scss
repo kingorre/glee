@@ -15,9 +15,12 @@
 @import "components/lamp-card";
 @import "components/design-card";
 @import "components/article-card";
-@import "products/recent-card";
+@import "shop/recent-card";
 @import "components/breadcramps";
 @import "components/card-big";
+@import "components/filter-category";
+@import "components/filter-brand";
+@import "components/filter-price";
 
 @import "index/top-slider";
 @import "index/benefits";
@@ -28,7 +31,9 @@
 @import "components/articles";
 @import "components/slider-partners";
 
-@import "products/product-list";
+@import "shop/shop";
+@import "shop/recent-products";
+@import "shop/filters-top";
 @import "about/mission";
 @import "about/achievements";
 @import "about/team";
