@@ -104,7 +104,10 @@
   <h1 class="breadcramps__title">Product list</h1>
   <ul class="breadcramps__list">
     <li class="breadcramps__item">
-      <a class="breadcramps__link anim-line" href="#">Home</a>
+      <a class="breadcramps__link anim-line" href="#">Home /</a>
+    </li>
+    <li class="breadcramps__item">
+      <a class="breadcramps__link anim-line" href="#" tabindex="-1"></a>
     </li>
     <li class="breadcramps__item">
       <span class="breadcramps__link">Product list</span>
@@ -112,15 +115,19 @@
   </ul>
 </div>
 
-    <div class="shop">
+    <section class="shop">
+  <h2 class="sr-only">Glee products</h2>
+
   <div class="container">
     <div class="shop__inner">
-      <div class="shop__filters filter-bar">
 
+      <aside class="shop__filters filter-bar">
         <div class="filter-bar__box">
           <div class="filter-category main-filter">
-  <h2 class="filter-category__title title-line">category</h2>
-  <form class="filter-category__form" action="#">
+  <div class="filter-category__top dropdown">
+    <h3 class="filter-category__title title-line">category</h3>
+  </div>
+  <form class="filter-category__form dropdown-list" action="#">
 
     <label class="filter-label">
       <span class="sr-only">Chose category chair</span>
@@ -167,14 +174,17 @@
         </div>
         <div class="filter-bar__box">
           <div class="filter-price main-filter">
-  <h2 class="filter-price__title title-line">Price</h2>
-  <form class="filter-price__form "action="#">
+  <div class="filter-price__top dropdown">
+    <h3 class="filter-price__title title-line">Price</h3>
+  </div>
+  <form class="filter-price__form dropdown-list" action="#">
     <input class="filter-price__input" data-type="double"
     data-min="0"
     data-max="800"
     data-from="100"
     data-to="500"
-    type="text">
+    type="text"
+    >
     <div class="filter-price__box">
         <span class="filter-price__from"></span>
         <span class="filter-price__to"></span>
@@ -184,8 +194,10 @@
         </div>
         <div class="filter-bar__box">
           <div class="filter-brand main-filter">
-  <h2 class="filter-brand__title title-line">Brand</h2>
-  <form class="filter-brand__form" action="#">
+  <div class="filter-brand__top dropdown">
+    <h3 class="filter-brand__title title-line">Brand</h3>
+  </div>
+  <form class="filter-brand__form dropdown-list" action="#">
 
     <label class="filter-label">
       <span class="sr-only">Chose brand RFL</span>
@@ -235,7 +247,7 @@
 </div>
         </div>
         <div class="filter-bar__box">
-          <div class="recent-products">
+          <article class="recent-products">
   <h2 class="recent-products__title title-line">recent products</h2>
   <ul class="recent-products__list">
     <li class="recent-products__item">
@@ -244,11 +256,11 @@
     <img class="recent-card__img" src="images/recent/image-1.png" alt="Pendant lamp">
   </div>
   <div class="recent-card__content">
-    <h2 class="recent-card__title">
-      <a href="" class="recent-card__link anim-effect">
+    <a class="recent-card__link anim-effect" href="#">
+      <h3 class="recent-card__title">
         Pendant lamp
-      </a>
-    </h2>
+      </h3>
+    </a>
     <div class="recent-card__star" data-rateyo-rating="4"></div>
     <span class="recent-card__price">23.00$</span>
   </div>
@@ -260,11 +272,11 @@
     <img class="recent-card__img" src="images/recent/image-1.png" alt="Pendant lamp">
   </div>
   <div class="recent-card__content">
-    <h2 class="recent-card__title">
-      <a href="" class="recent-card__link anim-effect">
+    <a class="recent-card__link anim-effect" href="#">
+      <h3 class="recent-card__title">
         Pendant lamp
-      </a>
-    </h2>
+      </h3>
+    </a>
     <div class="recent-card__star" data-rateyo-rating="4"></div>
     <span class="recent-card__price">23.00$</span>
   </div>
@@ -276,33 +288,33 @@
     <img class="recent-card__img" src="images/recent/image-1.png" alt="Pendant lamp">
   </div>
   <div class="recent-card__content">
-    <h2 class="recent-card__title">
-      <a href="" class="recent-card__link anim-effect">
+    <a class="recent-card__link anim-effect" href="#">
+      <h3 class="recent-card__title">
         Pendant lamp
-      </a>
-    </h2>
+      </h3>
+    </a>
     <div class="recent-card__star" data-rateyo-rating="4"></div>
     <span class="recent-card__price">23.00$</span>
   </div>
 </article>
     </li>
   </ul>
-</div>
+</article>
         </div>
-      </div>
+      </aside>
 
       <div class="shop__content">
         <div class="shop__top filters-top">
           <div class="filters-top__buttons">
             <span class="filters-top__text">View</span>
             <button class="filters-top__btn button-grid round-btn filters-top__btn--active" type="button">
-              <span class="sr-only"></span>
+              <span class="sr-only">Show grid</span>
               <svg>
                 <use xlink:href="images/sprites/sprite.svg#grid-view"></use>
               </svg>
             </button>
             <button class="filters-top__btn button-list round-btn filters-top__btn--wide" type="button">
-              <span class="sr-only"></span>
+              <span class="sr-only">Show list</span>
               <svg>
                 <use xlink:href="images/sprites/sprite.svg#list-view"></use>
               </svg>
@@ -311,6 +323,7 @@
 
           <form class="filters-top__form" action="#">
             <select class="filters-top__select filters-top__select--sort">
+              <span class="sr-only">Choose sorting</span>
               <option value="default" selected>Sort By Default</option>
               <option value="default">Sort By Default</option>
               <option value="default">Sort By Default</option>
@@ -318,6 +331,7 @@
             </select>
 
             <select class="filters-top__select filters-top__select--show">
+              <span class="sr-only">Choose viewing</span>
               <option value="9" selected>Show 9</option>
               <option value="3">Show 3</option>
               <option value="2">Show 2</option>
@@ -622,7 +636,8 @@
       </div>
     </div>
   </div>
-</div>
+
+</section>
 
     
 

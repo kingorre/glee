@@ -1,8 +1,10 @@
-<div class="shop">
+<section class="shop">
+  <h2 class="sr-only">Glee products</h2>
+
   <div class="container">
     <div class="shop__inner">
-      <div class="shop__filters filter-bar">
 
+      <aside class="shop__filters filter-bar">
         <div class="filter-bar__box">
           @@include('../filters/_filter-category.html')
         </div>
@@ -15,20 +17,20 @@
         <div class="filter-bar__box">
           @@include('_recent-products.html')
         </div>
-      </div>
+      </aside>
 
       <div class="shop__content">
         <div class="shop__top filters-top">
           <div class="filters-top__buttons">
             <span class="filters-top__text">View</span>
             <button class="filters-top__btn button-grid round-btn filters-top__btn--active" type="button">
-              <span class="sr-only"></span>
+              <span class="sr-only">Show grid</span>
               <svg>
                 <use xlink:href="images/sprites/sprite.svg#grid-view"></use>
               </svg>
             </button>
             <button class="filters-top__btn button-list round-btn filters-top__btn--wide" type="button">
-              <span class="sr-only"></span>
+              <span class="sr-only">Show list</span>
               <svg>
                 <use xlink:href="images/sprites/sprite.svg#list-view"></use>
               </svg>
@@ -37,6 +39,7 @@
 
           <form class="filters-top__form" action="#">
             <select class="filters-top__select filters-top__select--sort">
+              <span class="sr-only">Choose sorting</span>
               <option value="default" selected>Sort By Default</option>
               <option value="default">Sort By Default</option>
               <option value="default">Sort By Default</option>
@@ -44,6 +47,7 @@
             </select>
 
             <select class="filters-top__select filters-top__select--show">
+              <span class="sr-only">Choose viewing</span>
               <option value="9" selected>Show 9</option>
               <option value="3">Show 3</option>
               <option value="2">Show 2</option>
@@ -90,4 +94,5 @@
       </div>
     </div>
   </div>
-</div>
+
+</section>

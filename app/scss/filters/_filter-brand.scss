@@ -1,8 +1,4 @@
 .filter-brand {
-  &__title {
-    margin-bottom: 30px;
-  }
-
   &__input:checked + .filter-brand__checkbox {
     background-color: $accent;
   }

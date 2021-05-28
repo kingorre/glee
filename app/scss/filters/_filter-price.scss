@@ -1,8 +1,4 @@
 .filter-price {
-  &__title {
-    margin-bottom: 35px;
-  }
-
   &__box {
     display: flex;
     justify-content: space-between;
@@ -50,7 +46,17 @@
 .irs--flat .irs-handle > i:first-child {
   width: 15px;
   height: 15px;
+  cursor: pointer;
   background-color: $accent;
+
+  &::after {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    left: -15px;
+    content: '';
+  }
 }
 
 .irs--flat {

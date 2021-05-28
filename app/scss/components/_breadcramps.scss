@@ -5,12 +5,26 @@
   text-align: center;
   background-color: $accent20;
 
+  @include media-w($md) {
+    padding: 15px 0;
+  }
+
+
   &__title {
     margin-bottom: 10px;
     font-family: "Rubik", sans-serif;
     font-size: 36px;
     font-weight: 300;
     line-height: 1;
+
+    @include media-w($md) {
+      font-size: 32px;
+    }
+
+    @include media-w($xs) {
+      font-size: 26px;
+    }
+  
   }
 
   &__list {
@@ -19,12 +33,6 @@
     font-size: 14px;
     line-height: 1.7;
     color: $grey30;
-  }
-
-  &__item::after {
-    margin-right: 8px;
-    margin-left: 4px;
-    content: '/';
   }
 
   &__item:last-child::after {

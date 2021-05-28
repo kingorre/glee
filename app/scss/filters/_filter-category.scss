@@ -1,8 +1,4 @@
 .filter-category {
-  &__title {
-    margin-bottom: 30px;
-  }
-
   &__input:checked + .filter-category__checkbox {
     background-color: $accent;
   }

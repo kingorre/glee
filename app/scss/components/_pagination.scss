@@ -1,7 +1,12 @@
 .pagination {
   display: flex;
+  justify-content: center;
   line-height: 1.9;
   color: $name;
+
+  &--left {
+    justify-content: flex-start;
+  }
 
   &__item {
     text-align: center;
@@ -18,12 +23,17 @@
 
   &__link {
     display: inline-block;
-    width: 50px;
-    padding: 10px 0;
+    min-width: 50px;
+    padding: 10px 15px;
     cursor: pointer;
     background-color: transparent;
     border: 1px solid $accent;
     transition: box-shadow 0.4s, color 0.4s, background-color 0.4s;
+
+    @include media-w($xs) {
+      min-width: 44px;
+      padding: 6px 8px;
+    }
 
     &--active {
       color: #fff;
@@ -35,8 +45,8 @@
     }
 
     &:hover {
-      background-color: $accent;
       color: #fff;
+      background-color: $accent;
     }
 
     &:active {

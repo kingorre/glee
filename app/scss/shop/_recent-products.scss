@@ -1,6 +1,10 @@
 .recent-products {
   width: 270px;
 
+  @include media-w($sm) {
+    display: none;
+  }
+
   &__title {
     margin-bottom: 35px;
   }

@@ -17,9 +17,9 @@
 @import "components/article-card";
 @import "shop/recent-card";
 @import "components/breadcramps";
-@import "components/filter-category";
-@import "components/filter-brand";
-@import "components/filter-price";
+@import "filters/filter-category";
+@import "filters/filter-brand";
+@import "filters/filter-price";
 
 @import "index/top-slider";
 @import "index/benefits";

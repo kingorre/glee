@@ -36,7 +36,17 @@
   }
 
   &__link {
+    position: relative;
     padding: 3px 3px;
+
+    &::before {
+      position: absolute;
+      top: -9px;
+      right: 0;
+      bottom: -9px;
+      left: 0;
+      content: '';
+    }
   }
 
   &__price {

@@ -450,3 +450,59 @@ body {
     border: 1px solid $accent;
   }
 }
+
+.dropdown {
+  position: relative;
+  margin-bottom: 30px;
+
+  @include media-w($sm) {
+    cursor: pointer;
+  }
+
+  &::after {
+    @extend %bg-pseudo;
+    display: none;
+    top: 50%;
+    right: 15px;
+    width: 10px;
+    height: 5px;
+    background-image: url(../../images/icons/arrow-down.svg);
+    transform: translateY(-50%);
+
+    @include media-w($sm) {
+      display: block;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: -12px;
+    right: -5px;
+    bottom: -12px;
+    left: -5px;
+    display: none;
+    content: '';
+    border: 1px solid $accent;
+    border-radius: 5px;
+
+    @include media-w($sm) {
+      display: block;
+    }
+  }
+
+  &--active {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdown-list {
+  @include media-w($sm) {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+}
