@@ -20,6 +20,7 @@
 @import "filters/filter-category";
 @import "filters/filter-brand";
 @import "filters/filter-price";
+@import "components/search-form";
 
 @import "index/top-slider";
 @import "index/benefits";
@@ -36,6 +37,15 @@
 @import "about/mission";
 @import "about/achievements";
 @import "about/team";
+
+@import "blog/blog";
+@import "blog/blog-card";
+@import "blog/recent-post";
+@import "blog/recent-posts";
+
+
+@import "blog-one/blog-one";
+@import "blog-one/blog-post";
 
 // FOOTER
 

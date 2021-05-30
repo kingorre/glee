@@ -16,6 +16,9 @@ $(function(){
     $('.filter-price__form').toggleClass('dropdown-list--active');
   })
 
+  $('.recent-posts__top').on('click', function(){
+    $('.recent-posts__list').toggleClass('dropdown-list--active');
+  })
 
   $('.filters-top__select').styler();
 

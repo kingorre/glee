@@ -1,0 +1,29 @@
+.blog-one {
+  &__inner {
+    display: flex;
+
+    @include media-w($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 830px;
+    margin-right: 70px;
+
+    @include media-w($sm) {
+      margin-right: 0;
+    }
+
+    .pagination {
+      justify-content: center;
+    }
+  }
+
+  &__filters {
+    @include media-w($sm) {
+      order: -1;
+      margin-right: 20px;
+    }
+  }
+}

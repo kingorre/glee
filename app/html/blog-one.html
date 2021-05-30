@@ -1,0 +1,27 @@
+@@include('parts/components/_head.html', {
+  "title": "Glee - furniture | Blog details"
+  })
+  
+  <body>
+  
+    @@include('parts/components/_header.html')
+  
+    <div class="wrapper">
+      <main class="main">
+  
+        @@include('parts/components/_breadcramps.html',{
+        "title": "Blog Details",
+        "tabindex": "0",
+        "link": "#",
+        "link-name": "Blog /"
+        })
+  
+        @@include('parts/blog-one/_blog-one.html')
+  
+        @@include('parts/components/_slider-partners.html')
+      </main>
+      @@include('parts/components/_footer.html')
+  
+    </div>
+  
+    @@include('parts/components/_scripts.html')
