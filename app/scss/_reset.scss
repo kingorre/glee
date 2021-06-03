@@ -47,7 +47,6 @@ img {
 }
 
 a {
-  font-family: inherit;
   color: inherit;
   text-decoration: none;
 }
@@ -55,7 +54,8 @@ a {
 input,
 button,
 textarea,
-select {
+select,
+label {
   font: inherit;
   cursor: pointer;
 }

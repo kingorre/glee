@@ -1,0 +1,30 @@
+.breadcramps {
+  color: $black90;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $grey30;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 4px;
+
+    &::after {
+      position: absolute;
+      margin-right: 4px;
+      content: '/';
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__link {
+    padding: 13px 3px;
+  }
+}

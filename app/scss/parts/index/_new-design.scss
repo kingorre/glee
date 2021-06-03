@@ -1,0 +1,43 @@
+.new-design {
+  padding: 100px 0 65px;
+
+  @include media-w($md) {
+    padding: 50px 0 25px;
+  }
+
+  @include media-w($sm) {
+    padding: 30px 0 15px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__filters {
+    margin-bottom: 65px;
+
+    @include media-w($md) {
+      margin-bottom: 40px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-w($md) {
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+}

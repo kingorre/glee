@@ -113,9 +113,33 @@
               Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
             </p>
           </div>
-          <button class="main-btn main-btn--fill" type="button">
+          <a class="main-btn main-btn--grey" href="#">
             Shop Now
-            <svg class="top-slider__btn-svg main-btn__svg">
+            <svg>
+              <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="top-slider__picture">
+          <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
+        </div>
+      </div>
+    </li>
+
+    <li class="top-slider__wrapper">
+      <div class="top-slider__item">
+        <div class="top-slider__content">
+          <div class="top-slider__title">
+            smart and trendy
+          </div>
+          <div class="top-slider__text">
+            <p>
+              Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            </p>
+          </div>
+          <button class="main-btn main-btn--grey" type="button">
+            Shop Now
+            <svg>
               <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
             </svg>
           </button>
@@ -139,31 +163,7 @@
           </div>
           <button class="main-btn main-btn--fill" type="button">
             Shop Now
-            <svg class="top-slider__btn-svg main-btn__svg">
-              <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="top-slider__picture">
-          <img class="top-slider__img" src="images/slider/sofa-slider.png" alt="white sofa">
-        </div>
-      </div>
-    </li>
-
-    <li class="top-slider__wrapper">
-      <div class="top-slider__item">
-        <div class="top-slider__content">
-          <div class="top-slider__title">
-            smart and trendy
-          </div>
-          <div class="top-slider__text">
-            <p>
-              Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            </p>
-          </div>
-          <button class="main-btn main-btn--fill" type="button">
-            Shop Now
-            <svg class="top-slider__btn-svg main-btn__svg">
+            <svg>
               <use xlink:href="images/sprites/sprite.svg#arrow-right-button"></use>
             </svg>
           </button>
@@ -224,42 +224,46 @@
   <div class="container">
     <h2 class="week-products__title title">Products of the week</h2>
 
-    <ul class="week-products__filters mix-filter">
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
-          All
-          <span class="sr-only">view all products</span>
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
-          Furnitures
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
-          Chairs
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
-          Lighting
-        </button>
-      </li>
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
-          Decor
-        </button>
-      </li>
-    </ul>
+    <div class="week-products__filters mix-filter">
+      <button class="mix-filter__opener mix-filter__btn anim-effect">Filters</button>
+      <ul class="mix-filter__list">
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
+            All
+            <span class="sr-only">view all products</span>
+          </button>
+        </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
+            Furnitures
+          </button>
+        </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
+            Chairs
+          </button>
+        </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
+            Lighting
+          </button>
+        </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
+            Decor
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <ul class="week-products__items">
 
       <li class="week-products__box mix category-furnitures">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -276,9 +280,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -286,7 +290,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -294,59 +298,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
-          <span class="sr-only">Add product to favourites</span>
-          <svg>
-            <use xlink:href="images/sprites/sprite.svg#heart"></use>
-          </svg>
-        </button>
-      </li>
-    </ul>
-
-  </div>
-</article> 
-      </li>
-
-      <li class="week-products__box mix category-chairs">
-        <article class="product-card">
-  <div class="product-card__wrapper">
-    <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
-  <div class="product-card__box">
-    <h3 class="product-card__name">
-      Wooden radio
-    </h3>
-
-    <div class="product-card__star" data-rateyo-rating="4"></div>
-    <span class="product-card__price">
-      $29.00
-    </span>
-    <div class="product-card__text">
-      <p>
-        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation
-      </p>
-    </div>
-
-    <ul class="product-card__actions mix category-furnitures">
-      <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
-          <span class="sr-only">open product information</span>
-          <svg>
-            <use xlink:href="images/sprites/sprite.svg#search"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
-          <span class="sr-only">add product to basket</span>
-          <svg>
-            <use xlink:href="images/sprites/sprite.svg#basket"></use>
-          </svg>
-        </button>
-      </li>
-      <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -361,9 +313,10 @@
 
       <li class="week-products__box mix category-chairs">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -380,9 +333,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -390,7 +343,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -398,7 +351,60 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
+          <span class="sr-only">Add product to favourites</span>
+          <svg>
+            <use xlink:href="images/sprites/sprite.svg#heart"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+
+  </div>
+</article>
+      </li>
+
+      <li class="week-products__box mix category-chairs">
+        <article class="product-card">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
+    <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
+  </a>
+  <div class="product-card__box">
+    <h3 class="product-card__name">
+      Wooden radio
+    </h3>
+
+    <div class="product-card__star" data-rateyo-rating="4"></div>
+    <span class="product-card__price">
+      $29.00
+    </span>
+    <div class="product-card__text">
+      <p>
+        consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation
+      </p>
+    </div>
+
+    <ul class="product-card__actions">
+      <li class="product-card__action product-card__action--deleted">
+        <a class="round-btn round-btn--middle" href="#">
+          <span class="sr-only">open product information</span>
+          <svg>
+            <use xlink:href="images/sprites/sprite.svg#search"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="product-card__action">
+        <button class="round-btn round-btn--middle" type="button">
+          <span class="sr-only">add product to basket</span>
+          <svg>
+            <use xlink:href="images/sprites/sprite.svg#basket"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="product-card__action">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -413,9 +419,10 @@
 
       <li class="week-products__box mix category-furnitures category-lighting">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -432,9 +439,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -442,7 +449,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -450,7 +457,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -465,9 +472,10 @@
 
       <li class="week-products__box mix category-lighting">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -484,9 +492,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -494,7 +502,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -502,7 +510,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -517,9 +525,10 @@
 
       <li class="week-products__box mix category-decor">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -536,9 +545,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -546,7 +555,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -554,7 +563,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -569,9 +578,10 @@
 
       <li class="week-products__box mix category-furnitures category-decor">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -588,9 +598,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -598,7 +608,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -606,7 +616,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -621,9 +631,10 @@
 
       <li class="week-products__box mix category-furnitures category-decor">
         <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       Wooden radio
@@ -640,9 +651,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -650,7 +661,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -658,7 +669,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>
@@ -720,7 +731,7 @@
   </div>
 </article>
         </li>
-      </ul> 
+      </ul>
 
     </div>
   </div>
@@ -729,37 +740,40 @@
   <div class="container">
     <h2 class="new-design__title title">New Design</h2>
 
-    <ul class="new-design__filter mix-filter">
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
-          All
-        </button>
-      </li>
+    <div class="new-design__filters mix-filter">
+      <button class="mix-filter__opener mix-filter__btn anim-effect">Filters</button>
+      <ul class="mix-filter__list">
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
+            All
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
-          Furnitures
-        </button>
-      </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
+            Furnitures
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
-          Chairs
-        </button>
-      </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
+            Chairs
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
-          Lighting
-        </button>
-      </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
+            Lighting
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
-          Decor
-        </button>
-      </li>
-    </ul>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
+            Decor
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <ul class="new-design__items">
       <li class="new-design__item mix category-furnitures">
@@ -798,7 +812,7 @@
 </article>
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-decor category-chairs">
         <article class="design-card">
   <a class="design-card__item" href="images/new-design/image-3.png" alt="Beat Flat Pendant Black">
     <h3 class="design-card__name">
@@ -816,7 +830,7 @@
 </article>
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-decor category-chairs">
         <article class="design-card">
   <a class="design-card__item" href="images/new-design/image-2.png" alt="Beat Flat Pendant Black">
     <h3 class="design-card__name">
@@ -834,7 +848,7 @@
 </article>
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-lighting">
         <article class="design-card">
   <a class="design-card__item" href="images/new-design/image-5.png" alt="Beat Flat Pendant Black">
     <h3 class="design-card__name">
@@ -852,7 +866,7 @@
 </article>
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-lighting">
         <article class="design-card">
   <a class="design-card__item" href="images/new-design/image-6.png" alt="Beat Flat Pendant Black">
     <h3 class="design-card__name">
@@ -869,7 +883,7 @@
   </a>
 </article>
       </li>
-    </ul> 
+    </ul>
 
 </section>
     <a class="video" data-fancybox href="https://www.youtube.com/watch?v=ww2TRH9hIxk"
@@ -893,8 +907,8 @@
     <ul class="articles__items">
       <li class="articles__item">
         <article class="article-card">
-  <a class="article-card__link" href="#">
-    <img class="article-card__img" src="images/articles/image-1.jpg" alt="modern interior design">
+  <a class="article-card__link" href="#" style="background-image: url('images/articles/image-1.jpg');">
+    <span class="sr-only">Open this post</span>
   </a>
   <div class="article-card__content">
     <a class="article-card__subject" href="#">news</a>
@@ -917,8 +931,8 @@
 
       <li class="articles__item">
         <article class="article-card">
-  <a class="article-card__link" href="#">
-    <img class="article-card__img" src="images/articles/image-2.jpg" alt="modern interior design">
+  <a class="article-card__link" href="#" style="background-image: url('images/articles/image-1.jpg');">
+    <span class="sr-only">Open this post</span>
   </a>
   <div class="article-card__content">
     <a class="article-card__subject" href="#">news</a>
@@ -941,8 +955,8 @@
 
       <li class="articles__item">
         <article class="article-card">
-  <a class="article-card__link" href="#">
-    <img class="article-card__img" src="images/articles/image-3.jpg" alt="modern interior design">
+  <a class="article-card__link" href="#" style="background-image: url('images/articles/image-1.jpg');">
+    <span class="sr-only">Open this post</span>
   </a>
   <div class="article-card__content">
     <a class="article-card__subject" href="#">news</a>
@@ -1081,7 +1095,7 @@
         </span>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link footeline" href="#">
+            <a class="footer__link anim-line" href="#">
               Your Account
             </a>
           </li>
@@ -1103,7 +1117,7 @@
         </ul>
       </div>
 
-      <div class="footer__box footer__box--ssize">
+      <div class="footer__box footer__box--s-size">
         <span class="footer__title">
           newsletter
         </span>

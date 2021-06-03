@@ -1,0 +1,49 @@
+.mix-filter {
+  text-align: center;
+
+  &__opener {
+    display: none;
+
+    @include media-w($xs) {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    font-family: 'DMsans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+
+    @include media-w($xs) {
+      display: block;
+      display: none;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+
+    @include media-w($xs) {
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    padding: 13px 5px;
+    color: #8b8b8b;
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid transparent;
+
+    &.mixitup-control-active {
+      color: black;
+    }
+
+    @include media-w($xl) {
+      width: 100%;
+    }
+  }
+}

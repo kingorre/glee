@@ -1,0 +1,106 @@
+.comment-form {
+  max-width: 830px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include media-w($sm) {
+      display: block;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 48%;
+
+    @include media-w($sm) {
+      max-width: 100%;
+    }
+
+    &:first-child {
+      @include media-w($sm) {
+        margin-bottom: 20px;
+      }
+
+      @include media-w($xs) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &::after {
+      @extend %bg-pseudo;
+      top: 19px;
+      right: 20px;
+      width: 18px;
+      height: 15px;
+
+      @include media-w($xs) {
+        right: 10px;
+      }
+    }
+
+    &--name::after {
+      background-image: url('../../../images/icons/name-icon.svg');
+    }
+
+    &--email::after {
+      background-image: url('../../../images/icons/email-icon.svg');
+    }
+
+    &--textarea {
+      max-width: 100%;
+
+      &::after {
+        background-image: url('../../../images/icons/textarea-icon.svg');
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    color: $grey90;
+    border: 1px solid $white5;
+
+    @include media-w($xs) {
+      padding: 15px 40px 15px 10px;
+    }
+
+    &::placeholder {
+      color: $grey42;
+    }
+
+    &--input {
+      width: 100%;
+    }
+
+    &--textarea {
+      min-height: 120px;
+      margin-bottom: 40px;
+      resize: none;
+
+      @include media-w($xs) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 16px 35px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+}

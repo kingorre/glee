@@ -1,7 +1,8 @@
 <article class="product-card">
-  <div class="product-card__wrapper">
+  <a class="product-card__wrapper" href="#">
+    <span class="sr-only">Open product information</span>
     <img class="product-card__img" src="images/week-products/image-1.png" alt="describe">
-  </div>
+  </a>
   <div class="product-card__box">
     <h3 class="product-card__name">
       @@name
@@ -18,9 +19,9 @@
       </p>
     </div>
 
-    <ul class="product-card__actions mix category-furnitures">
+    <ul class="product-card__actions">
       <li class="product-card__action product-card__action--deleted">
-        <a class="product-card__btn round-btn round-btn--action" href="#">
+        <a class="round-btn round-btn--middle" href="#">
           <span class="sr-only">open product information</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#search"></use>
@@ -28,7 +29,7 @@
         </a>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">add product to basket</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#basket"></use>
@@ -36,7 +37,7 @@
         </button>
       </li>
       <li class="product-card__action">
-        <button class="round-btn round-btn--action" type="button">
+        <button class="round-btn round-btn--middle" type="button">
           <span class="sr-only">Add product to favourites</span>
           <svg>
             <use xlink:href="images/sprites/sprite.svg#heart"></use>

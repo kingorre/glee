@@ -1,0 +1,87 @@
+.blog-head {
+  position: relative;
+  width: 100%;
+  max-width: 830px;
+  height: 500px;
+
+  @include media-w($md) {
+    max-width: 100%;
+    height: 400px;
+  }
+
+  @include media-w($xs) {
+    height: 250px;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 830px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+
+    @include media-w($md) {
+      max-width: 100%;
+      height: 400px;
+    }
+
+    @include media-w($xs) {
+      height: 250px;
+    }
+  }
+
+  &__data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // min-width: 270px;
+    padding: 28px 20px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $accent;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+
+    @include media-w($sm) {
+      padding: 15px 10px;
+    }
+
+    @include media-w($xs) {
+      padding: 10px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    display: inline-block;
+    padding-left: 18px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &::before {
+      @extend %bg-pseudo;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 14px;
+    }
+
+    &--date {
+      &::before {
+        background-image: url('../../images/icons/date-white.svg');
+      }
+    }
+
+    &--author {
+      &::before {
+        background-image: url('../../images/icons/user-white.svg');
+      }
+    }
+  }
+}

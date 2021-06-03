@@ -8,12 +8,14 @@
 
 <div class="wrapper">
   <main class="main">
-    <h1 class="sr-only">Glee - best furniture</h1>
 
-
-    @@include('parts/components/_breadcramps.html',{
-      "title": "About us"
-    })
+    <div class="page-top">
+      <h1 class="page-top__title">About</h1>
+      @@include('parts/components/_breadcramps.html',{
+        "cur-page": "About",
+        "link-name": "About"
+      })
+    </div>
 
     @@include('parts/about/_mission.html')
     @@include('parts/about/_achievements.html')

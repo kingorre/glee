@@ -2,92 +2,95 @@
   <div class="container">
     <h2 class="new-design__title title">New Design</h2>
 
-    <ul class="new-design__filter mix-filter">
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
-          All
-        </button>
-      </li>
+    <div class="new-design__filters mix-filter">
+      <button class="mix-filter__opener mix-filter__btn anim-effect">Filters</button>
+      <ul class="mix-filter__list">
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter="all">
+            All
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
-          Furnitures
-        </button>
-      </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-furnitures">
+            Furnitures
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
-          Chairs
-        </button>
-      </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-chairs">
+            Chairs
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
-          Lighting
-        </button>
-      </li>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-lighting">
+            Lighting
+          </button>
+        </li>
 
-      <li class="mix-filter__item">
-        <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
-          Decor
-        </button>
-      </li>
-    </ul>
+        <li class="mix-filter__item">
+          <button class="mix-filter__btn anim-effect" type="button" data-filter=".category-decor">
+            Decor
+          </button>
+        </li>
+      </ul>
+    </div>
 
     <ul class="new-design__items">
       <li class="new-design__item mix category-furnitures">
         @@include('../cards/_design-card.html', {
-          "name": "Beat Flat Pendant Black",
-          "style": "classic",
-          "img-src": "images/new-design/image-5.png",
-          "alt": "Beat Flat Pendant Black"
-          })
+        "name": "Beat Flat Pendant Black",
+        "style": "classic",
+        "img-src": "images/new-design/image-5.png",
+        "alt": "Beat Flat Pendant Black"
+        })
       </li>
 
       <li class="new-design__item mix category-furnitures">
         @@include('../cards/_design-card.html', {
-          "name": "Beat Flat Pendant Black",
-          "style": "classic",
-          "img-src": "images/new-design/image-4.png",
-          "alt": "Beat Flat Pendant Black"
-          })
+        "name": "Beat Flat Pendant Black",
+        "style": "classic",
+        "img-src": "images/new-design/image-4.png",
+        "alt": "Beat Flat Pendant Black"
+        })
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-decor category-chairs">
         @@include('../cards/_design-card.html', {
-          "name": "Beat Flat Pendant Black",
-          "style": "classic",
-          "img-src": "images/new-design/image-3.png",
-          "alt": "Beat Flat Pendant Black"
-          })
+        "name": "Beat Flat Pendant Black",
+        "style": "classic",
+        "img-src": "images/new-design/image-3.png",
+        "alt": "Beat Flat Pendant Black"
+        })
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-decor category-chairs">
         @@include('../cards/_design-card.html', {
-          "name": "Beat Flat Pendant Black",
-          "style": "classic",
-          "img-src": "images/new-design/image-2.png",
-          "alt": "Beat Flat Pendant Black"
-          })
+        "name": "Beat Flat Pendant Black",
+        "style": "classic",
+        "img-src": "images/new-design/image-2.png",
+        "alt": "Beat Flat Pendant Black"
+        })
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-lighting">
         @@include('../cards/_design-card.html', {
-          "name": "Beat Flat Pendant Black",
-          "style": "classic",
-          "img-src": "images/new-design/image-5.png",
-          "alt": "Beat Flat Pendant Black"
-          })
+        "name": "Beat Flat Pendant Black",
+        "style": "classic",
+        "img-src": "images/new-design/image-5.png",
+        "alt": "Beat Flat Pendant Black"
+        })
       </li>
 
-      <li class="new-design__item mix category-furnitures">
+      <li class="new-design__item mix category-lighting">
         @@include('../cards/_design-card.html', {
-          "name": "Beat Flat Pendant Black",
-          "style": "classic",
-          "img-src": "images/new-design/image-6.png",
-          "alt": "Beat Flat Pendant Black"
-          })
+        "name": "Beat Flat Pendant Black",
+        "style": "classic",
+        "img-src": "images/new-design/image-6.png",
+        "alt": "Beat Flat Pendant Black"
+        })
       </li>
-    </ul> 
+    </ul>
 
 </section>

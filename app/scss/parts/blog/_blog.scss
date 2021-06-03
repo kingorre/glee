@@ -1,0 +1,33 @@
+.blog {
+  &__inner {
+    display: flex;
+
+    @include media-w($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: 830px;
+    margin-right: 70px;
+
+    @include media-w($md) {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__list {
+    margin-bottom: 75px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__filters {
+    @include media-w($md) {
+      order: -1;
+    }
+  }
+}

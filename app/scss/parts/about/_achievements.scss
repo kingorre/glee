@@ -1,0 +1,96 @@
+.achievements {
+  padding: 85px 0 80px;
+  font-family: 'DMSans', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  color: $blue80;
+  background-color: $bg-main;
+
+  @include media-w($lg) {
+    padding: 50px 0;
+  }
+
+  @include media-w($md) {
+    padding: 30px 0 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 80px;
+    font-size: 18px;
+    text-align: center;
+
+    @include media-w($md) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    @include media-w($md) {
+      width: 50%;
+    }
+
+    @include media-w($xs) {
+      width: 100%;
+    }
+
+    &::before,
+    &::after {
+      @extend %bg-pseudo;
+    }
+
+    &::before {
+      top: 0;
+      left: 50%;
+      z-index: 2;
+      width: 65px;
+      height: 65px;
+      background-position: center center;
+      transform: translateX(-50%);
+    }
+
+    &--rate::before {
+      background-image: url('../images/icons/achievements-1.svg');
+    }
+
+    &--deliv::before {
+      background-image: url('../images/icons/achievements-2.svg');
+    }
+
+    &--time::before {
+      background-image: url('../images/icons/achievements-3.svg');
+    }
+
+    &--brand::before {
+      background-image: url('../images/icons/achievements-4.svg');
+    }
+
+    &::after {
+      top: 30px;
+      left: 55%;
+      width: 35px;
+      height: 35px;
+      background-color: $accent;
+      border-radius: 50%;
+
+      @include media-w($md) {
+        left: 50%;
+      }
+    }
+  }
+
+  &__value {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 36px;
+
+    @include media-w($md) {
+      font-size: 30px;
+    }
+  }
+}

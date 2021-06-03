@@ -1,43 +1,29 @@
 $(function(){
 
-  $('.dropdown').on('click', function(){
-    $(this).toggleClass('dropdown--active');
-  })
 
-  $('.filter-category__top').on('click', function(){
-    $('.filter-category__form').toggleClass('dropdown-list--active');
-  })
-
-  $('.filter-brand__top').on('click', function(){
-    $('.filter-brand__form').toggleClass('dropdown-list--active');
-  })
-
-  $('.filter-price__top').on('click', function(){
-    $('.filter-price__form').toggleClass('dropdown-list--active');
-  })
-
-  $('.recent-posts__top').on('click', function(){
-    $('.recent-posts__list').toggleClass('dropdown-list--active');
-  })
+  $('.side-bar__btn').on('click', function () {
+    $(this).next().slideToggle(500);
+    $(this).toggleClass('side-bar__btn--clicked');
+  });
 
   $('.filters-top__select').styler();
 
   $('.filters-top__btn').on('click', function(){
     $('.filters-top__btn').removeClass('filters-top__btn--active');
     $(this).addClass('filters-top__btn--active');
-  })
+  });
 
   $('.button-list').on('click', function(){
     $('.product-card').addClass('product-card--list');
-    $('.shop__cards').addClass('shop__cards--list');
-    $('.pagination').addClass('pagination--left');
-  })
+    $('.product-list__cards').addClass('product-list__cards--list');
+    $('.product-list__pagination').addClass('pagination-left');
+  });
 
   $('.button-grid').on('click', function(){
     $('.product-card').removeClass('product-card--list');
-    $('.shop__cards').removeClass('shop__cards--list');
-    $('.pagination').removeClass('pagination--left');
-  })
+    $('.product-list__cards').removeClass('product-list__cards--list');
+    $('.product-list__pagination').removeClass('pagination-left');
+  });
 
   $(".filter-price__input").ionRangeSlider({
     prefix: "$",
@@ -55,8 +41,8 @@ $(function(){
     $(this).children('span').toggleClass('filter-brand__value--active');
   });
 
-  $('.mix-filter__item').on('click', function () {
-    $('.mix-filter').toggleClass('mix-filter--dropdown');
+  $('.mix-filter__opener').on('click', function () {
+    $(this).siblings().slideToggle(500);
   });
 
   $('[data-fancybox]').fancybox({

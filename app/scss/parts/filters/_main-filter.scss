@@ -1,0 +1,65 @@
+.main-filter {
+  @include media-w($md) {
+    display: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 2px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 1;
+    color: $blue80;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  &__input {
+    &:focus + .main-filter__checkbox {
+      box-shadow: 0 0 4px 1px $accent;
+    }
+
+    &:hover + .main-filter__checkbox {
+      border-color: $accent;
+    }
+
+    &:checked + .main-filter__checkbox {
+      background-color: $accent20;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 14px;
+    border-bottom: 2px solid transparent;
+    border-radius: 5px;
+
+    &::after {
+      @extend %bg-pseudo;
+      top: 50%;
+      right: 20px;
+      width: 5px;
+      height: 10px;
+      background-image: url('../../images/icons/filter-arrow.svg');
+      transform: translateY(-50%);
+    }
+  }
+
+  &--right-arrow {
+    .main-filter__value {
+      display: none;
+    }
+  }
+
+  &--right-value {
+    .main-filter__checkbox::after {
+      display: none;
+    }
+  }
+}

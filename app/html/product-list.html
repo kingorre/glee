@@ -1,0 +1,28 @@
+@@include('parts/components/_head.html', {
+  "title": "Glee - furniture | Product list" 
+  })
+
+<body>
+
+@@include('parts/components/_header.html')
+
+<div class="wrapper">
+  <main class="main">
+
+    <div class="page-top">
+      <h1 class="page-top__title">Product list</h1>
+      @@include('parts/components/_breadcramps.html',{
+        "cur-page": "Product list",
+        "link-name": "Product list"
+      })
+    </div>
+
+    @@include('parts/product-list/_product-list.html')
+
+    @@include('parts/components/_slider-partners.html')
+  </main>
+@@include('parts/components/_footer.html')
+
+</div>
+
+@@include('parts/components/_scripts.html')

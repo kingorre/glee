@@ -98,49 +98,52 @@
     <div class="wrapper">
       <main class="main">
   
-        <div class="breadcramps">
-  <h1 class="breadcramps__title">Blog Details</h1>
+        <div class="page-top">
+          <h1 class="page-top__title">Blog details</h1>
+          <div class="breadcramps">
   <ul class="breadcramps__list">
     <li class="breadcramps__item">
-      <a class="breadcramps__link anim-line" href="#">Home /</a>
+      <a class="breadcramps__link anim-line" href="#">Home</a>
     </li>
     <li class="breadcramps__item">
-      <a class="breadcramps__link anim-line" href="#" tabindex="0">Blog /</a>
+      <a class="breadcramps__link anim-line" href="@@link" tabindex="@@tabindex">Blog</a>
     </li>
     <li class="breadcramps__item">
-      <span class="breadcramps__link">Blog Details</span>
+      <span class="breadcramps__link">Blog details</span>
     </li>
   </ul>
 </div>
-  
+        </div>
+        
         <section class="blog-one section-padding">
-  <h2 class="sr-only">Glee blog</h2>
 
   <div class="container">
     <div class="blog-one__inner">
 
       <div class="blog-one__content">
         <article class="blog-post">
-  <div class="blog-post__picture">
-    <img class="blog-post__img" src="images/blog/blog-card-2.jpg" alt="Describe">
-    <div class="blog-post__data">
-      <span class="blog-post__info blog-post__info--date">
-        <time>
-          28 january, 2020
-        </time>
-      </span>
-      <span class="blog-post__info blog-post__info--author">
-        by admin
-      </span>
-    </div>
+  <div class="blog-post__top">
+    <div class="blog-head">
+  <img class="blog-head__img" src="images/blog/blog-card-2.jpg" alt="Describe">
+  <div class="blog-head__data">
+    <span class="blog-head__info blog-head__info--date">
+      <time>
+        28 january, 2020
+      </time>
+    </span>
+    <span class="blog-head__info blog-head__info--author">
+      by admin
+    </span>
+  </div>
+</div>
   </div>
 
   <div class="blog-post__box post-describe">
-    <h3>Fonsectetur adipisicing eiusmod</h3>
-    <h4>
+    <h2>Fonsectetur adipisicing eiusmod</h2>
+    <h3>
       Sdipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia
       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    </h4>
+    </h3>
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
       minim veniam, quis nostrud exercitation ullamco laboris nisi ut alLorem ipsum dolor sit amet, consectetur
@@ -158,186 +161,212 @@
       </cite>
     </blockquote>
 
-    <figure>
-      <img src="images/blog/post-image.jpg" alt="post image describe">
-      <figcaption>
-        <h4>Riusmod tempor incididunt</h4>
-        <p>
-          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        </p>
-      </figcaption>
-    </figure>
+    <img src="images/blog/post-image.jpg" alt="post image describe">
 
-    <h4>Kajtsal jervcm eoaspckred</h4>
+    <h3>Riusmod tempor incididunt</h3>
+    <p>
+      consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+      ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    </p>
+
+    <h3>Kajtsal jervcm eoaspckred</h3>
     <p>
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
       minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     </p>
   </div>
 
-  <div class="blog-post__box post-author">
-    <img class="post-author__img" src="images/blog/author-photo.jpg" alt="author photo">
-    <div class="post-author__content">
-      <div class="post-author__box">
-        <span class="post-author__info">Mark N. Hernandez</span>
-        <span class="post-author__info post-author__info--grey">Designer</span>
+  <div class="blog-post__box">
+    <div class="post-author">
+  <img class="post-author__img" src="images/blog/author-photo.jpg" alt="author photo">
+  <div class="post-author__content">
+    <div class="post-author__box">
+      <span class="post-author__info">Mark N. Hernandez</span>
+      <span class="post-author__info post-author__info--grey">Designer</span>
+    </div>
+
+    <div class="post-author__box">
+      <div class="post-author__inner">
+        <span class="post-author__data">Tags:</span>
+        <ul class="post-author__tag-list">
+          <li class="post-author__tag-item">
+            <a class="post-author__tag-link anim-line" href="#">all</a>
+          </li>
+          <li class="post-author__tag-item">
+            <a class="post-author__tag-link anim-line" href="#">Trending</a>
+          </li>
+        </ul>
       </div>
 
-      <div class="post-author__box">
-        <div class="post-author__inner">
-          <span class="post-author__data">Tags:</span>
-          <ul class="post-author__tag-list">
-            <li class="post-author__tag-item">
-              <a class="post-author__tag-link anim-line" href="#">all</a>
-            </li>
-            <li class="post-author__tag-item">
-              <a class="post-author__tag-link anim-line" href="#">Trending</a>
-            </li>
-          </ul>
-        </div>
+      <div class="post-author__inner">
+        <span class="post-author__data">Share:</span>
+        <ul class="post-author__social-list">
+          <li class="post-author__social-item">
+            <a class="post-author__social-link " href="#">
+              <svg>
+                <use xlink:href="images/sprites/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
 
-        <div class="post-author__inner">
-          <span class="post-author__data">Share:</span>
-          <ul class="post-author__social-list">
-            <li class="post-author__social-item">
-              <a class="post-author__social-link " href="#">
-                <svg>
-                  <use xlink:href="images/sprites/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
+          <li class="post-author__social-item">
+            <a class="post-author__social-link post-author__social-link--twitter" href="#">
+              <svg>
+                <use xlink:href="images/sprites/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
 
-            <li class="post-author__social-item">
-              <a class="post-author__social-link post-author__social-link--twitter" href="#">
-                <svg>
-                  <use xlink:href="images/sprites/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
+          <li class="post-author__social-item">
+            <a class="post-author__social-link" href="#">
+              <svg>
+                <use xlink:href="images/sprites/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
 
-            <li class="post-author__social-item">
-              <a class="post-author__social-link" href="#">
-                <svg>
-                  <use xlink:href="images/sprites/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="post-author__social-item">
-              <a class="post-author__social-link" href="#">
-                <svg>
-                  <use xlink:href="images/sprites/sprite.svg#google-icon"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
+          <li class="post-author__social-item">
+            <a class="post-author__social-link" href="#">
+              <svg>
+                <use xlink:href="images/sprites/sprite.svg#google-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
+
     </div>
   </div>
+</div>
+  </div>
 
-  <div class="blog-post__box post-comment">
-    <h3 class="post-comment__title post-title">3 Comments</h3>
-    <ul class="post-comment__list">
+  <div class="blog-post__box">
+    <h3 class="blog-post__title">3 Comments</h3>
+    <ul class="post-comment">
       <li class="post-comment__item">
-        <img class="post-comment__img" src="images/blog/comment-author-photo.jpg" alt="comment author photo">
-        <div class="post-comment__content">
-          <div class="post-comment__info">
-            <a class="post-comment__author anim-line" href="#">Delores G. Roberts</a>
-            <span class="post-comment__date">
-              Add<time> 11 Oct 2020</time>
-            </span>
-          </div>
+        <div class="comment">
+  <img class="comment__img" src="images/blog/comment-author-photo.jpg" alt="comment author photo">
+  <div class="comment__content">
+    <div class="comment__info">
+      <a class="comment__author anim-line" href="#">Delores G. Roberts</a>
+      <span class="comment__date">
+        Add<time> 11 Oct 2020</time>
+      </span>
+    </div>
 
-          <div class="post-comment__text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis.
-              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse
-              orci sem, ultrices
-            </p>
-          </div>
+    <div class="comment__text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse
+        orci sem, ultrices
+      </p>
+    </div>
 
-          <button class="post-comment__btn main-btn main-btn--trans" type="button">
-            Reply
-            <svg>
-              <use xlink:href="images/sprites/sprite.svg#reply-arrow"></use>
-            </svg>
-          </button>
-        </div>
+    <button class="comment__btn main-btn main-btn--trans" type="button">
+      Reply
+      <svg>
+        <use xlink:href="images/sprites/sprite.svg#reply-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</div>
       </li>
 
       <li class="post-comment__item">
-        <img class="post-comment__img" src="images/blog/comment-author-photo.jpg" alt="comment author photo">
-        <div class="post-comment__content">
-          <div class="post-comment__info">
-            <a class="post-comment__author anim-line" href="#">Delores G. Roberts</a>
-            <span class="post-comment__date">
-              Add<time> 11 Oct 2020</time>
-            </span>
-          </div>
+        <div class="comment">
+  <img class="comment__img" src="images/blog/comment-author-photo.jpg" alt="comment author photo">
+  <div class="comment__content">
+    <div class="comment__info">
+      <a class="comment__author anim-line" href="#">Delores G. Roberts</a>
+      <span class="comment__date">
+        Add<time> 11 Oct 2020</time>
+      </span>
+    </div>
 
-          <div class="post-comment__text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis.
-              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse
-              orci sem, ultrices
-            </p>
-          </div>
+    <div class="comment__text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse
+        orci sem, ultrices
+      </p>
+    </div>
 
-          <button class="post-comment__btn main-btn main-btn--trans" type="button">
-            Reply
-            <svg>
-              <use xlink:href="images/sprites/sprite.svg#reply-arrow"></use>
-            </svg>
-          </button>
-        </div>
+    <button class="comment__btn main-btn main-btn--trans" type="button">
+      Reply
+      <svg>
+        <use xlink:href="images/sprites/sprite.svg#reply-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</div>
       </li>
 
       <li class="post-comment__item">
-        <img class="post-comment__img" src="images/blog/comment-author-photo.jpg" alt="comment author photo">
-        <div class="post-comment__content">
-          <div class="post-comment__info">
-            <a class="post-comment__author anim-line" href="#">Delores G. Roberts</a>
-            <span class="post-comment__date">
-              Add<time> 11 Oct 2020</time>
-            </span>
-          </div>
+        <div class="comment">
+  <img class="comment__img" src="images/blog/comment-author-photo.jpg" alt="comment author photo">
+  <div class="comment__content">
+    <div class="comment__info">
+      <a class="comment__author anim-line" href="#">Delores G. Roberts</a>
+      <span class="comment__date">
+        Add<time> 11 Oct 2020</time>
+      </span>
+    </div>
 
-          <div class="post-comment__text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis.
-              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse
-              orci sem, ultrices
-            </p>
-          </div>
+    <div class="comment__text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla massa et tristique convallis.
+        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse
+        orci sem, ultrices
+      </p>
+    </div>
 
-          <button class="post-comment__btn main-btn main-btn--trans" type="button">
-            Reply
-            <svg>
-              <use xlink:href="images/sprites/sprite.svg#reply-arrow"></use>
-            </svg>
-          </button>
-        </div>
+    <button class="comment__btn main-btn main-btn--trans" type="button">
+      Reply
+      <svg>
+        <use xlink:href="images/sprites/sprite.svg#reply-arrow"></use>
+      </svg>
+    </button>
+  </div>
+</div>
       </li>
 
     </ul>
   </div>
 
-  <div class="blog__post__box post-form">
-    <h3 class="post-form__title post-title"></h3>
-    <form class="post-form__form" action="#">
+  <div class="blog-post__box post-form">
+    <h3 class="blog-post__title">Leave a comment</h3>
+    <form class="comment-form" action="#">
+  <div class="comment-form__box">
+    <label class="comment-form__label comment-form__label--name">
+      <span class="sr-only">type your name</span>
+      <input class="comment-form__item comment-form__item--input basic-effect" type="text" name="name" placeholder="Name" required>
+    </label>
 
-    </form>
+    <label class="comment-form__label comment-form__label--email">
+      <span class="sr-only">type your email address</span>
+      <input class="comment-form__item comment-form__item--input basic-effect" type="email" name="email" placeholder="Email address"
+        required>
+    </label>
+  </div>
+
+  <label class="comment-form__label comment-form__label--textarea">
+    <span class="sr-only">type your comment</span>
+    <textarea class="comment-form__item comment-form__item--textarea basic-effect" name="Comment" placeholder="Comment"
+      required></textarea>
+  </label>
+
+  <button class="comment-form__btn main-btn main-btn--grey" type="submit">
+    Post comment
+  </button>
+</form>
   </div>
 </article>
       </div>
 
       <div class="blog-one__filters">
-        <aside class="blog-right filter-bar">
-  <div class="filter-bar__box">
+        <ul class="side-bar">
+  <li class="side-bar__item">
     <article class="search-form">
   <form class="search-form__form" action="#">
     <label class="search-form__label">
@@ -352,66 +381,83 @@
     </button>
   </form>
 </article>
-  </div>
-  <div class="filter-bar__box">
-    <div class="filter-category main-filter">
-  <div class="filter-category__top dropdown">
-    <h3 class="filter-category__title title-line">category</h3>
-  </div>
-  <form class="filter-category__form dropdown-list" action="#">
+  </li>
+  <li class="side-bar__item">
+    <h3 class="side-bar__title">Category</h3>
+    <button class="side-bar__btn" type="button">
+      <span class="sr-only">Open brand list</span>
+    </button>
+    <div class="main-filter main-filter--right-arrow">
+  <form class="main-filter__form" action="#">
 
-    <label class="filter-label">
-      <span class="sr-only">Chose category chair</span>
-      <input class="filter-category__input filter-input" type="checkbox">
-      <div class="filter-category__checkbox checkbox">
-        <span class="filter-category__name">Chair</span>
-      </div>
-    </label>
+    <ul class="main-filter__list">
+      <li class="main-filter__item">
+        <label class="main-filter__label">
+          <input class="main-filter__input sr-only" type="checkbox">
+          <div class="main-filter__checkbox">
+            <span class="main-filter__name">Chair</span>
+            <span class="main-filter__value">(10)</span>
+          </div>
+        </label>
+      </li>
 
-    <label class="filter-label">
-      <span class="sr-only">Chose category lamp</span>
-      <input class="filter-category__input filter-input" type="checkbox">
-      <div class="filter-category__checkbox checkbox">
-        <span class="filter-category__name">Lamp</span>
-      </div>
-    </label>
+      <li class="main-filter__item">
+        <label class="main-filter__label">
+          <input class="main-filter__input sr-only" type="checkbox">
+          <div class="main-filter__checkbox">
+            <span class="main-filter__name">Chair</span>
+            <span class="main-filter__value">(10)</span>
+          </div>
+        </label>
+      </li>
 
-    <label class="filter-label">
-      <span class="sr-only">Chose category table</span>
-      <input class="filter-category__input filter-input" type="checkbox">
-      <div class="filter-category__checkbox checkbox">
-        <span class="filter-category__name">Table</span>
-      </div>
-    </label>
+      <li class="main-filter__item">
+        <label class="main-filter__label">
+          <input class="main-filter__input sr-only" type="checkbox">
+          <div class="main-filter__checkbox">
+            <span class="main-filter__name">Chair</span>
+            <span class="main-filter__value">(10)</span>
+          </div>
+        </label>
+      </li>
 
-    <label class="filter-label">
-      <span class="sr-only">Chose category watch</span>
-      <input class="filter-category__input filter-input" type="checkbox">
-      <div class="filter-category__checkbox checkbox">
-        <span class="filter-category__name">Watch</span>
-      </div>
-    </label>
+      <li class="main-filter__item">
+        <label class="main-filter__label">
+          <input class="main-filter__input sr-only" type="checkbox">
+          <div class="main-filter__checkbox">
+            <span class="main-filter__name">Chair</span>
+            <span class="main-filter__value">(10)</span>
+          </div>
+        </label>
+      </li>
 
-    <label class="filter-label">
-      <span class="sr-only">Chose category clock</span>
-      <input class="filter-category__input filter-input" type="checkbox">
-      <div class="filter-category__checkbox checkbox">
-        <span class="filter-category__name">Clock</span>
-      </div>
-    </label>
+      <li class="main-filter__item">
+        <label class="main-filter__label">
+          <input class="main-filter__input sr-only" type="checkbox">
+          <div class="main-filter__checkbox">
+            <span class="main-filter__name">Chair</span>
+            <span class="main-filter__value">(10)</span>
+          </div>
+        </label>
+      </li>
+
+      
+    </ul>
 
   </form>
 </div>
-  </div>
-  <div class="filter-bar__box">
+  </li>
+  <li class="side-bar__item">
+    <h3 class="side-bar__title">Recent posts</h3>
+    <button class="side-bar__btn" type="button">
+      <span class="sr-only">Open brand list</span>
+    </button>
     <article class="recent-posts">
-  <div class="recent-posts__top dropdown">
-    <h3 class="recent-posts__title title-line">Recent posts</h3>
-  </div>
   <ul class="recent-posts__list dropdown-list">
     <li class="recent-posts__item">
       <article class="recent-post">
-  <a class="recent-post__link" href="#">
+  <a class="recent-post__link basic-effect" href="#">
+    <span class="sr-only">Open post</span>
     <img class="recent-post__img" src="images/blog/recent-image-1.jpg" alt="Some image">
     <div class="recent-post__content">
       <h4 class="recent-post__title">
@@ -424,9 +470,11 @@
   </a>
 </article>
     </li>
+    
     <li class="recent-posts__item">
       <article class="recent-post">
-  <a class="recent-post__link" href="#">
+  <a class="recent-post__link basic-effect" href="#">
+    <span class="sr-only">Open post</span>
     <img class="recent-post__img" src="images/blog/recent-image-1.jpg" alt="Some image">
     <div class="recent-post__content">
       <h4 class="recent-post__title">
@@ -439,9 +487,28 @@
   </a>
 </article>
     </li>
+
     <li class="recent-posts__item">
       <article class="recent-post">
-  <a class="recent-post__link" href="#">
+  <a class="recent-post__link basic-effect" href="#">
+    <span class="sr-only">Open post</span>
+    <img class="recent-post__img" src="images/blog/recent-image-1.jpg" alt="Some image">
+    <div class="recent-post__content">
+      <h4 class="recent-post__title">
+        Corem ipsum dolor tetur adipisicing elit
+      </h4>
+      <span class="recent-post__date">
+        <time>28 january, 2020</time>
+      </span>
+    </div>
+  </a>
+</article>
+    </li>
+
+    <li class="recent-posts__item">
+      <article class="recent-post">
+  <a class="recent-post__link basic-effect" href="#">
+    <span class="sr-only">Open post</span>
     <img class="recent-post__img" src="images/blog/recent-image-1.jpg" alt="Some image">
     <div class="recent-post__content">
       <h4 class="recent-post__title">
@@ -456,8 +523,8 @@
     </li>
   </ul>
 </article>
-  </div>
-</aside>
+  </li>
+</ul>
       </div>
     </div>
   </div>
@@ -578,7 +645,7 @@
         </span>
         <ul class="footer__list">
           <li class="footer__item">
-            <a class="footer__link footeline" href="#">
+            <a class="footer__link anim-line" href="#">
               Your Account
             </a>
           </li>
@@ -600,7 +667,7 @@
         </ul>
       </div>
 
-      <div class="footer__box footer__box--ssize">
+      <div class="footer__box footer__box--s-size">
         <span class="footer__title">
           newsletter
         </span>

@@ -1,0 +1,250 @@
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  height: 380px;
+  padding: 30px 17px;
+  font-family: 'DMsans', sans-serif;
+  line-height: 2;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  transition: border-color 0.4s;
+
+  &--list {
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    max-width: 870px;
+    height: auto;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    @include media-w($md) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include media-w($sm) {
+      display: block;
+    }
+
+    @include media-w($xs) {
+      // display: block;
+    }
+
+    &:hover {
+      border: none !important;
+    }
+
+    .product-card {
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        justify-content: center;
+        width: 100%;
+        max-width: 370px;
+        padding: 25px;
+        border: 2px solid $grey10;
+
+        @include media-w($lg) {
+          width: 100%;
+          max-width: 50%;
+        }
+
+        @include media-w($sm) {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        @include media-w($xs) {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__img {
+        max-width: 320px;
+        height: 450px;
+        margin: auto;
+        object-position: center;
+
+        @include media-w($lg) {
+          max-width: 100%;
+          height: 370px;
+        }
+
+        @include media-w($xs) {
+          height: 250px;
+        }
+      }
+
+      &__box {
+        padding: 80px 0 70px 60px;
+        text-align: left;
+
+        @include media-w($lg) {
+          padding: 40px 0 40px 20px;
+        }
+
+        @include media-w($lg) {
+          padding-left: 15px;
+        }
+
+        @include media-w($xs) {
+          padding: 0;
+        }
+      }
+
+      &__name {
+        margin-bottom: 15px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        color: $grey90;
+        text-align: left;
+
+        @include media-w($md) {
+          font-size: 36px;
+        }
+
+        @include media-w($md) {
+          margin-bottom: 10px;
+          font-size: 26px;
+        }
+      }
+
+      &__star {
+        display: block;
+
+        @include media-w($sm) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &__price {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-family: 'Rubik', sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: $grey90;
+
+        @include media-w($sm) {
+          font-size: 20px;
+          line-height: 1;
+        }
+      }
+
+      &__text {
+        @include l-clamp(7);
+        display: block;
+
+        @include media-w($md) {
+          max-width: 100%;
+        }
+
+        @include media-w($md) {
+          max-width: 100%;
+        }
+
+        @include media-w($xs) {
+          max-width: 100%;
+        }
+
+        p {
+          @include l-clamp(7);
+        }
+      }
+
+      &__actions {
+        position: static;
+        justify-content: start;
+        opacity: 1;
+        transform: translate(0);
+      }
+
+      .round-btn--action {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+      }
+
+      &__action--deleted {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    height: 200px;
+    margin-bottom: auto;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  &__box {
+    text-align: center;
+  }
+
+  &__name {
+    font-weight: 500;
+    line-height: 1.3;
+    color: $blue80;
+    text-align: center;
+
+    @include l-clamp(2);
+  }
+
+  &__star {
+    display: none;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    font-weight: 700;
+    color: $accent;
+  }
+
+  &__text {
+    display: none;
+    max-width: 410px;
+    margin-bottom: 25px;
+    font-family: 'Rubik', sans-serif;
+    color: $blue80;
+  }
+
+  &__actions {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+    transform: translateX(-50%);
+
+    @include media-w($md) {
+      top: 225px;
+      opacity: 1;
+    }
+  }
+
+  &__action:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &:hover {
+    border: 1px solid $accent;
+
+    .product-card__actions {
+      opacity: 1;
+    }
+  }
+}

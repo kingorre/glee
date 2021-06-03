@@ -1,11 +1,21 @@
-<aside class="blog-right filter-bar">
-  <div class="filter-bar__box">
-    @@include('../components/_search-form.html')
-  </div>
-  <div class="filter-bar__box">
-    @@include('../filters/_filter-category.html')
-  </div>
-  <div class="filter-bar__box">
+<ul class="side-bar">
+  <li class="side-bar__item">
+    @@include('../forms/_search-form.html')
+  </li>
+  <li class="side-bar__item">
+    <h3 class="side-bar__title">Category</h3>
+    <button class="side-bar__btn" type="button">
+      <span class="sr-only">Open brand list</span>
+    </button>
+    @@include('../filters/_main-filter.html',{
+      "type": "main-filter--right-arrow"
+    })
+  </li>
+  <li class="side-bar__item">
+    <h3 class="side-bar__title">Recent posts</h3>
+    <button class="side-bar__btn" type="button">
+      <span class="sr-only">Open brand list</span>
+    </button>
     @@include('../blog/_recent-posts.html')
-  </div>
-</aside>
+  </li>
+</ul>

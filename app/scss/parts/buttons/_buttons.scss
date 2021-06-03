@@ -1,0 +1,153 @@
+.round-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  outline: transparent;
+  transition: background-color 0.4s, box-shadow 0.4s;
+
+  svg {
+    width: 22px;
+    height: 20px;
+    transition: fill 0.4s;
+  }
+
+  &--small {
+    width: 41px;
+    height: 41px;
+    background-color: $grey10;
+
+    svg {
+      width: 17px;
+      height: 17px;
+      fill: #888;
+    }
+  }
+
+  &--big {
+    width: 51px;
+    height: 51px;
+  }
+
+  &--middle {
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    box-shadow: 0 0 4px 1px $accent;
+
+    svg {
+      width: 22px;
+      height: 20px;
+      fill: $accent;
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 0 8px 1px #000;
+  }
+
+  &:hover {
+    background-color: $accent;
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &:active {
+    box-shadow: inset 0 0 8px 1px #000;
+  }
+}
+
+.main-btn {
+  position: relative;
+  padding: 23px 60px 23px 23px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  text-align: left;
+  background-color: $accent;
+  border: none;
+  border-radius: 5px;
+  outline: transparent;
+  transition: background-color 0.4s, box-shadow 0.4s, color 0.4s, border-color 0.4s;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 22px;
+    height: 9px;
+    transition: fill 0.4s;
+    transform: translateY(-50%);
+  }
+
+  &--trans {
+    color: $blue70;
+    background-color: transparent;
+    border: 1px solid #b3b7b5;
+
+    svg {
+      fill: $blue70;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 1px #000;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px 1px #000;
+    }
+  }
+
+  &--grey {
+    border: 1px solid transparent;
+
+    svg {
+      fill: #fff;
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 1px #000;
+    }
+
+    &:hover {
+      color: #687f88;
+      background-color: transparent;
+      border: 1px solid rgba($blue70, 0.4);
+
+      svg {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0 0 10px 1px #000;
+    }
+  }
+
+  &--small {
+    display: inline-block;
+    padding: 15px 60px 15px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    svg {
+      right: 25px;
+      width: 16px;
+      height: 12px;
+    }
+  }
+}

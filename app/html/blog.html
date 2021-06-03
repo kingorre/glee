@@ -9,12 +9,13 @@
   <div class="wrapper">
     <main class="main">
 
-      @@include('parts/components/_breadcramps.html',{
-      "title": "Blog",
-      "tabindex": "-1",
-      "link": "#",
-      "link-name": ""
-      })
+      <div class="page-top">
+        <h1 class="page-top__title">Blog</h1>
+        @@include('parts/components/_breadcramps.html',{
+          "cur-page": "Blog",
+          "link-name": "Blog"
+        })
+      </div>
 
       @@include('parts/blog/_blog.html')
 

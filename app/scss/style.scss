@@ -1,52 +1,63 @@
-@import 'reset';
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'mixins';
+@import 'reset';
 @import 'libs';
 @import 'global';
 
 // HEADER
 
-@import "components/header";
+@import "parts/buttons/buttons";
+@import "parts/effects/anim-effects";
 
-// MAIN
-@import "components/pagination";
-@import "components/product-card";
-@import "components/lamp-card";
-@import "components/design-card";
-@import "components/article-card";
-@import "shop/recent-card";
-@import "components/breadcramps";
-@import "filters/filter-category";
-@import "filters/filter-brand";
-@import "filters/filter-price";
-@import "components/search-form";
+@import "parts/components/header";
+@import "parts/components/pagination";
+@import "parts/components/breadcramps";
+@import "parts/components/articles";
+@import "parts/components/slider-partners";
+@import "parts/components/page-top";
+@import "parts/components/footer";
+@import "parts/components/side-bar";
+@import "parts/components/blog-head";
 
-@import "index/top-slider";
-@import "index/benefits";
-@import "index/week-products";
-@import "index/lamps";
-@import "index/new-design";
-@import "index/video";
-@import "components/articles";
-@import "components/slider-partners";
+@import "parts/forms/search-form";
+@import "parts/forms/subscribe-form";
+@import "parts/forms/comment-form";
+@import "parts/forms/contact-form";
+@import "parts/forms/login-form";
 
-@import "shop/shop";
-@import "shop/recent-products";
-@import "shop/filters-top";
-@import "about/mission";
-@import "about/achievements";
-@import "about/team";
+@import "parts/filters/filter-price";
+@import "parts/filters/mix-filters";
+@import "parts/filters/main-filter";
 
-@import "blog/blog";
-@import "blog/blog-card";
-@import "blog/recent-post";
-@import "blog/recent-posts";
+@import "parts/cards/team-card";
+@import "parts/cards/product-card";
+@import "parts/cards/lamp-card";
+@import "parts/cards/design-card";
+@import "parts/cards/article-card";
+@import "parts/cards/blog-card";
+@import "parts/cards/recent-card";
+@import "parts/cards/recent-post";
 
+@import "parts/index/top-slider";
+@import "parts/index/benefits";
+@import "parts/index/week-products";
+@import "parts/index/lamps";
+@import "parts/index/new-design";
+@import "parts/index/video";
 
-@import "blog-one/blog-one";
-@import "blog-one/blog-post";
+@import "parts/product-list/product-list";
+@import "parts/product-list/recent-products";
+@import "parts/product-list/filters-top";
 
-// FOOTER
+@import "parts/about/mission";
+@import "parts/about/achievements";
+@import "parts/about/team";
 
-@import "components/footer";
+@import "parts/blog/blog";
+@import "parts/blog/recent-posts";
+
+@import "parts/blog-one/blog-one";
+@import "parts/blog-one/blog-post";
+@import "parts/blog-one/comment";
+@import "parts/blog-one/post-author";

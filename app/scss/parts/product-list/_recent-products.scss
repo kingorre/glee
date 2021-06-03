@@ -1,0 +1,15 @@
+.recent-products {
+  width: 270px;
+
+  @include media-w($md) {
+    display: none;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
