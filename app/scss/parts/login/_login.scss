@@ -1,0 +1,34 @@
+.login {
+  &__top {
+    margin-bottom: 30px;
+
+    @include media-w($xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 23px;
+    font-size: 14px;
+    color: $blue70;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 19px 10px;
+    font-size: 18px;
+    color: $blue80;
+    text-align: center;
+    border: 2px solid $accent;
+    border-radius: 0;
+  }
+}

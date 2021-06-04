@@ -1,0 +1,30 @@
+@@include('parts/components/_head.html', {
+  "title": "Glee - furniture | Contact" 
+  })
+
+<body>
+
+@@include('parts/components/_header.html')
+
+<div class="wrapper">
+  <main class="main">
+
+    <div class="page-top">
+      <h1 class="page-top__title">Contact</h1>
+      @@include('parts/components/_breadcramps.html',{
+        "cur-page": "Contact",
+        "link-name": "Contact"
+      })
+    </div>
+
+    @@include('parts/contact/_contact.html')
+    
+    @@include('parts/components/_articles.html',{
+      "modifier": "term--modifier"
+    })
+    @@include('parts/components/_slider-partners.html')
+  </main>
+@@include('parts/components/_footer.html')
+
+</div>
+@@include('parts/components/_scripts.html')

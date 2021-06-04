@@ -1,0 +1,90 @@
+.contact-form {
+  width: 100%;
+  max-width: 620px;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-w($lg) {
+      display: block;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 300px;
+    margin-bottom: 25px;
+
+    @include media-w($lg) {
+      width: 100%;
+    }
+
+    @include media-w($md) {
+      margin-bottom: 15px;
+    }
+
+    svg {
+      position: absolute;
+      top: 19px;
+      right: 20px;
+      width: 18px;
+      height: 15px;
+      fill: $grey80;
+      transition: transform 0.5s;
+    }
+
+    &--textarea {
+      width: 100%;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    color: $grey90;
+    background-color: $white2;
+    border: 1px solid transparent;
+
+    @include media-w($xs) {
+      padding: 15px 40px 15px 10px;
+    }
+
+    &::placeholder {
+      color: $blue60;
+      text-transform: uppercase;
+    }
+
+    &--textarea {
+      min-height: 175px;
+      resize: none;
+
+      @include media-w($xs) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 16px 35px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+  }
+}

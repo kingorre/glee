@@ -1,0 +1,36 @@
+<form class="contact-form" action="#">
+  <div class="contact-form__box">
+    <label class="contact-form__label contact-form__label--name">
+      <span class="sr-only">type your name</span>
+      <input class="contact-form__item contact-form__item--input basic-effect" type="text" name="name"
+        placeholder="Name" required>
+
+      <svg>
+        <use xlink:href="images/sprites/sprite.svg#name-icon"></use>
+      </svg>
+    </label>
+
+    <label class="contact-form__label contact-form__label--email">
+      <span class="sr-only">type your email address</span>
+      <input class="contact-form__item contact-form__item--input basic-effect" type="email" name="email" placeholder="Email" required>
+
+      <svg>
+        <use xlink:href="images/sprites/sprite.svg#email-icon"></use>
+      </svg>
+    </label>
+  </div>
+
+  <label class="contact-form__label contact-form__label--textarea">
+    <span class="sr-only">type your message</span>
+    <textarea class="contact-form__item contact-form__item--textarea basic-effect" name="Message" placeholder="Message" required>
+    </textarea>
+
+    <svg>
+      <use xlink:href="images/sprites/sprite.svg#textarea-icon"></use>
+    </svg>
+  </label>
+
+  <button class="contact-form__btn main-btn main-btn--grey" type="submit">
+    send message
+  </button>
+</form>

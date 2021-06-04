@@ -1,0 +1,75 @@
+<section class="contact section-padding">
+  <div class="container">
+    <div class="contact__top">
+      <span class="contact__text">Write Here</span>
+      <h2 class="contact__heading">Get In Touch</h2>
+    </div>
+
+    <ul class="contact__middle">
+      <li class="contact__item">
+        <div class="contact__box contact__box--address">
+          <svg>
+            <use xlink:href="images/sprites/sprite.svg#contact-address-icon"></use>
+          </svg>
+        </div>
+
+        <h3 class="contact__title">Address</h3>
+
+        <address class="contact__address">
+          <a class="contact__link click-area anim-line" href="#">
+            2416 Mapleview Drive
+            Tampa, FL 33634
+          </a>
+        </address>
+      </li>
+
+      <li class="contact__item">
+        <div class="contact__box contact__box--email">
+          <svg>
+            <use xlink:href="images/sprites/sprite.svg#contact-email-icon"></use>
+          </svg>
+        </div>
+
+        <h3 class="contact__title">Our Email</h3>
+
+        <address class="contact__address">
+          <a class="contact__link click-area anim-line" href="mailto:contact@website.com">
+            Main Email : contact@website.com
+          </a>
+          <a class="contact__link click-area anim-line" href="mailto:Info@mail.com">
+            Inquiries : Info@mail.com
+          </a>
+        </address>
+      </li>
+
+      <li class="contact__item">
+        <div class="contact__box contact__box--phone">
+          <svg>
+            <use xlink:href="images/sprites/sprite.svg#contact-phone-icon"></use>
+          </svg>
+        </div>
+
+        <h3 class="contact__title">Our Phone</h3>
+
+        <address class="contact__address">
+          <a class="contact__link click-area anim-line" href="tel:0029129102320">
+            Office Telephone : 0029129102320
+          </a>
+          <a class="contact__link click-area anim-line" href="tel:0029129102320">
+            Mobile : 000 2324 39493
+          </a>
+        </address>
+      </li>
+    </ul>
+
+    <div class="contact__bottom">
+      <div class="contact__form">
+        @@include('../forms/_contact-form.html')
+      </div>
+
+      <div class="contact__map">
+        @@include('../contact/_map-script.html')
+      </div>
+    </div>
+  </div>
+</section>

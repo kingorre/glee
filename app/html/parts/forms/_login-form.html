@@ -1,0 +1,32 @@
+<form class="login-form" action="#">
+  <div class="login-form__top">
+    <label class="login-form__label">
+      <span class="login-form__text">Username or email address *</span>
+      <input class="login-form__input basic-effect" type="text" name="user-name" required>
+    </label>
+    <label class="login-form__label">
+      <span class="login-form__text">Password *</span>
+      <input class="login-form__input basic-effect" type="password" name="password" required>
+    </label>
+  </div>
+
+  <button class="login-form__btn main-btn main-btn--grey" type="submit">
+    Login
+  </button>
+
+  <div class="login-form__bottom">
+    <label class="login-form__checkbox-label click-area">
+      <input type="checkbox" class="login-form__checkbox sr-only">
+      <span class="login-form__checkbox-style">
+        <svg>
+          <use xlink:href="images/sprites/sprite.svg#check-icon"></use>
+        </svg>
+      </span>
+      <span class="login-form__text">Remember me</span>
+    </label>
+
+    <a class="login-form__link click-area anim-line" href="#">
+      Lost your password?
+    </a>
+  </div>
+</form>
