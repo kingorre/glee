@@ -81,7 +81,7 @@
     max-width: 230px;
 
     @include media-w($lg) {
-      width: 230px;
+      max-width: 100%;
     }
   }
 

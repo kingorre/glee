@@ -1,0 +1,59 @@
+.social {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include media-w($md) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: transparent;
+
+    @include media-w($md) {
+      &::before {
+        position: absolute;
+        top: -13px;
+        right: -14px;
+        bottom: -13px;
+        left: -14px;
+        content: '';
+        border-radius: 50%;
+        transition: box-shadow 1s;
+      }
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: $white30;
+      object-fit: contain;
+    }
+
+    &:focus {
+      &::before {
+        box-shadow: 0 0 5px 2px $accent;
+      }
+    }
+
+    &:hover {
+      svg {
+        fill: $blue80;
+      }
+    }
+
+    &:active {
+      &::before {
+        box-shadow: inset 0 0 5px 2px $accent;
+      }
+    }
+  }
+}

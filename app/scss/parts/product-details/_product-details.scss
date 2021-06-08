@@ -1,0 +1,277 @@
+.product-details {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+
+    @include media-w($md) {
+      display: block;
+      margin-bottom: 60px;
+    }
+
+    @include media-w($xs) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    margin-right: 65px;
+
+    @include media-w($lg) {
+      margin-right: 40px;
+    }
+
+    @include media-w($md) {
+      justify-content: space-around;
+      margin-right: 0;
+    }
+
+    @include media-w($sm) {
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__small {
+    width: 138px;
+    height: 530px;
+    margin-right: 25px;
+
+    @include media-w($lg) {
+      margin-right: 15px;
+    }
+
+    @include media-w($sm) {
+      order: 1;
+      width: 100%;
+      height: 160px;
+    }
+  }
+
+  &__thumb {
+    width: 138px;
+    height: 160px !important;
+    border: 2px solid $grey10 !important;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    @include media-w($md) {
+      width: 100px;
+    }
+  }
+
+  &__img-small {
+    width: 134px;
+    height: 156px;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  &__big {
+    max-width: 385px;
+    height: 530px;
+    border: 2px solid $grey10;
+
+    @include media-w($sm) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include media-w($sm) {
+      height: 350px;
+    }
+  }
+
+  &__full-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 385px;
+    height: 530px;
+    padding: 40px;
+
+    @include media-w($sm) {
+      max-width: 100%;
+    }
+
+    @include media-w($sm) {
+      height: 350px;
+      padding: 10px;
+    }
+  }
+
+  &__img {
+    max-width: 285px;
+    height: 450px;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+
+    @include media-w($sm) {
+      max-width: 100%;
+      height: 330px;
+    }
+  }
+
+  &__content {
+    max-width: 550px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 400;
+    color: $grey90;
+
+    @include media-w($lg) {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    @include media-w($sm) {
+      font-size: 26px;
+    }
+  }
+
+  &__star {
+    margin-bottom: 30px;
+
+    @include media-w($lg) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__price {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.5;
+    color: $grey90;
+
+    @include media-w($lg) {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    @include media-w($sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    @include l-clamp(6);
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: $blue80;
+
+    @include media-w($lg) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form {
+    margin-bottom: 50px;
+
+    @include media-w($lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 53px;
+    margin-right: 15px;
+
+    @include media-w($md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 53px;
+    padding: 18px 20px;
+    font-size: 15px;
+    color: $grey90;
+    border: 1px solid $accent;
+    border-radius: 0;
+
+    &--minus {
+      left: 0;
+    }
+
+    &--plus {
+      right: 0;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 18px 50px;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include media-w($md) {
+      font-size: 16px;
+    }
+  }
+
+  &__info {
+    color: $blue80;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include media-w($md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    @include media-w($md) {
+      display: inline-block;
+      padding: 12px 0;
+    }
+  }
+
+  .jq-number {
+    &__field {
+      display: inline-block;
+      width: 150px;
+      height: 53px;
+      margin-right: 40px;
+      font-size: 15px;
+      color: $grey90;
+      text-align: center;
+      border-color: $accent;
+      border-radius: 0;
+      box-shadow: none;
+
+      input {
+        height: 100%;
+        font-family: 'Rubik', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+
+    &__spin {
+      display: none;
+    }
+  }
+}

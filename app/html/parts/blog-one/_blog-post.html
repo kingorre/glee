@@ -53,8 +53,10 @@
         @@include('_comment.html')
       </li>
 
-      <li class="post-comment__item">
-        @@include('_comment.html')
+      <li class="post-comment__item post-comment__item--answear">
+        @@include('_comment.html',{
+          "type": "comment--answear"
+        })
       </li>
 
       <li class="post-comment__item">

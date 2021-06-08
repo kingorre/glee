@@ -13,7 +13,6 @@
     width: 100%;
     line-height: 1;
     color: $blue80;
-    cursor: pointer;
     border-radius: 5px;
   }
 
@@ -46,7 +45,7 @@
       right: 20px;
       width: 5px;
       height: 10px;
-      background-image: url('../../images/icons/filter-arrow.svg');
+      background-image: url('../images/icons/filter-arrow.svg');
       transform: translateY(-50%);
     }
   }

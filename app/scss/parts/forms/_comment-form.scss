@@ -48,18 +48,18 @@
     }
 
     &--name::after {
-      background-image: url('../../../images/icons/name-icon.svg');
+      background-image: url('../images/icons/name-icon.svg');
     }
 
     &--email::after {
-      background-image: url('../../../images/icons/email-icon.svg');
+      background-image: url('../images/icons/email-icon.svg');
     }
 
     &--textarea {
       max-width: 100%;
 
       &::after {
-        background-image: url('../../../images/icons/textarea-icon.svg');
+        background-image: url('../images/icons/textarea-icon.svg');
       }
     }
   }
@@ -85,7 +85,7 @@
     }
 
     &--textarea {
-      min-height: 120px;
+      height: 120px;
       margin-bottom: 40px;
       resize: none;
 

@@ -95,6 +95,10 @@ body {
   @include media-w($sm) {
     font-size: 28px;
   }
+
+  @include media-w($xs) {
+    font-size: 22px;
+  }
 }
 
 .pagination-left {

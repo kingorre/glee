@@ -19,6 +19,7 @@
 @import "parts/components/footer";
 @import "parts/components/side-bar";
 @import "parts/components/blog-head";
+@import "parts/components/social";
 
 @import "parts/forms/search-form";
 @import "parts/forms/subscribe-form";
@@ -42,7 +43,6 @@
 @import "parts/index/top-slider";
 @import "parts/index/benefits";
 @import "parts/index/week-products";
-@import "parts/index/lamps";
 @import "parts/index/new-design";
 @import "parts/index/video";
 
@@ -61,9 +61,14 @@
 @import "parts/blog-one/blog-post";
 @import "parts/blog-one/comment";
 @import "parts/blog-one/post-author";
+@import "parts/blog-one/post-comment";
 
 @import "parts/term/term";
 
 @import "parts/login/login";
 
 @import "parts/contact/contact";
+
+@import "parts/product-details/product-details";
+@import "parts/product-details/related-products";
+@import "parts/product-details/tabs";

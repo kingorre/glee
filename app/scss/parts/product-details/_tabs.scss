@@ -1,0 +1,54 @@
+.tabs {
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    @include media-w($sm) {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 13px;
+
+      @include media-w($sm) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    min-width: 240px;
+    padding: 17px 10px;
+    font-size: 18px;
+    color: $blue80;
+    text-align: center;
+    background-color: $accent20;
+    border: none;
+
+    &--active {
+      color: #fff;
+      background-color: $accent;
+    }
+
+    @include media-w($md) {
+      min-width: 220px;
+    }
+
+    @include media-w($sm) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    line-height: 1.9;
+    color: $blue80;
+  }
+}

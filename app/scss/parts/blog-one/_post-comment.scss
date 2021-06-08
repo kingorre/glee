@@ -1,0 +1,54 @@
+.post-comment {
+  max-width: 830px;
+
+  &__item {
+    position: relative;
+    padding-bottom: 15px;
+
+    @include media-w($xs) {
+      padding-bottom: 5px;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      content: '';
+      background-color: $white10;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &--answear {
+      padding-left: 130px;
+
+      @include media-w($sm) {
+        padding-left: 40px;
+      }
+
+      @include media-w($xs) {
+        padding-left: 0;
+      }
+
+      &::after {
+        left: 130px;
+
+        @include media-w($sm) {
+          left: 40px;
+        }
+
+        @include media-w($xs) {
+          left: 0;
+        }
+      }
+    }
+  }
+}

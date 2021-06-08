@@ -1,0 +1,83 @@
+<section class="product-details section-padding">
+  <h2 class="sr-only">Product-details</h2>
+  <div class="container">
+    <div class="product-details__wrapper">
+      <div class="product-details__inner">
+        <ul class="product-details__small">
+          <li class="product-details__thumb">
+            <img class="product-details__img-small" src="images/product-details/small-1.png" alt="describe">
+          </li>
+          <li class="product-details__thumb">
+            <img class="product-details__img-small" src="images/product-details/small-2.png" alt="describe">
+          </li>
+          <li class="product-details__thumb">
+            <img class="product-details__img-small" src="images/product-details/small-3.png" alt="describe">
+          </li>
+        </ul>
+
+        <ul class="product-details__big">
+          <li class="product-details__full-size">
+            <img class="product-details__img" src="images/product-details/big-1.png" alt="describe">
+          </li>
+          <li class="product-details__full-size">
+            <img class="product-details__img" src="images/product-details/big-1.png" alt="describe">
+          </li>
+          <li class="product-details__full-size">
+            <img class="product-details__img" src="images/product-details/big-1.png" alt="describe">
+          </li>
+        </ul>
+      </div>
+
+      <div class="product-details__content">
+        <h3 class="product-details__title">Pendant lamp</h3>
+        <div class="product-details__star" data-rateyo-rating="4"></div>
+        <span class="product-details__price">23$</span>
+        <div class="product-details__text">
+          <p>
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </p>
+        </div>
+
+        <form class="product-details__form" action="#">
+          <label for="" class="product-details__label">
+            <span class="sr-only">choose quantity</span>
+            <input class="product-details__input" type="number" min="1" value="1">
+
+            <button class="product-details__button
+            product-details__button--minus main-btn main-btn--trans" type="button">
+              <span class="sr-only">press to delete 1 peace</span>
+              -
+            </button>
+
+            <button class="product-details__button
+            product-details__button--plus main-btn main-btn--trans" type="button">
+              <span class="sr-only">press to add 1 peace</span>
+              +
+            </button>
+
+          </label>
+          <button class="product-details__btn main-btn main-btn--grey" type="submit">Add to card</button>
+        </form>
+
+        <ul class="product-details__info">
+          <li class="product-details__item">
+            <span class="product-details__name">SKU:</span>
+            <span class="product-details__data">014</span>
+          </li>
+          <li class="product-details__item">
+            <span class="product-details__name">Category:</span>
+            <a class="product-details__link anim-line" href="#">Lights</a>
+          </li>
+          <li class="product-details__item">
+            <span class="product-details__name">Tag:</span>
+            <a class="product-details__link anim-line" href="#">Decorative</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="product-deatils__tabs">
+      @@include('../product-details/_tabs.html')
+    </div>
+  </div>
+</section>

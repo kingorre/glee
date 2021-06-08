@@ -82,4 +82,24 @@
       transform: translateY(-50%);
     }
   }
+
+  &--answear {
+    .comment {
+      &__info {
+        @include media-w($xs) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &__img {
+        margin-left: auto;
+      }
+
+      &__author {
+        @include media-w($xs) {
+          order: 0;
+        }
+      }
+    }
+  }
 }

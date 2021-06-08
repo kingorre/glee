@@ -65,7 +65,7 @@
     }
 
     &--textarea {
-      min-height: 175px;
+      height: 175px;
       resize: none;
 
       @include media-w($xs) {

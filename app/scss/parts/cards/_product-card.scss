@@ -7,12 +7,13 @@
   width: 270px;
   height: 380px;
   padding: 30px 17px;
+  margin: 0 auto;
   font-family: 'DMsans', sans-serif;
   line-height: 2;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
-  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  box-shadow: 0 6px 15px 5px rgba(37, 37, 37, 0.05);
   transition: border-color 0.4s;
 
   &--list {
@@ -27,16 +28,11 @@
     box-shadow: none;
 
     @include media-w($md) {
-      width: 100%;
       max-width: 100%;
     }
 
     @include media-w($sm) {
       display: block;
-    }
-
-    @include media-w($xs) {
-      // display: block;
     }
 
     &:hover {
@@ -54,13 +50,11 @@
         padding: 25px;
         border: 2px solid $grey10;
 
-        @include media-w($lg) {
-          width: 100%;
+        @include media-w($lg) {          
           max-width: 50%;
         }
 
         @include media-w($sm) {
-          width: 100%;
           max-width: 100%;
         }
 
@@ -145,18 +139,6 @@
       &__text {
         @include l-clamp(7);
         display: block;
-
-        @include media-w($md) {
-          max-width: 100%;
-        }
-
-        @include media-w($md) {
-          max-width: 100%;
-        }
-
-        @include media-w($xs) {
-          max-width: 100%;
-        }
 
         p {
           @include l-clamp(7);

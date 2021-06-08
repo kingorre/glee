@@ -9,15 +9,10 @@
 
   @include media-w($sm) {
     padding: 40px 0;
-    line-height: 1.3;
   }
 
   @include media-w($xs) {
     padding: 20px 0;
-  }
-
-  &--modifier {
-    padding-top: 0;
   }
 
   &__item:not(:last-child) {
@@ -32,7 +27,7 @@
     }
   }
 
-  &__title {
+  h3 {
     margin-bottom: 18px;
     font-size: 24px;
     font-weight: 500;
@@ -42,44 +37,52 @@
     @include media-w($sm) {
       margin-bottom: 10px;
       font-size: 20px;
-      line-height: 1.5;
     }
 
     @include media-w($sm) {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 
-  &__list {
+  ol {
     padding-left: 5px;
+    margin-bottom: 60px;
     counter-reset: num;
-  }
 
-  &__list-item {
-    position: relative;
-    padding-left: 36px;
-    list-style-type: none;
-    counter-increment: num;
+    @include media-w($xs) {
+      margin-bottom: 25px;
+    }
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    & li {
+      position: relative;
+      padding-left: 36px;
+      list-style-type: none;
+      counter-increment: num;
 
-      @include media-w($sm) {
-        margin-bottom: 10px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include media-w($sm) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        left: 0;
+        margin-right: 5px;
+        content: '0' counter(num) '.';
       }
     }
-
-    &::before {
-      position: absolute;
-      left: 0;
-      margin-right: 5px;
-      content: '0' counter(num) '.';
-    }
   }
 
-  &__text {
+  p {
     &:not(:last-child) {
-      margin-bottom: 19px;
+      margin-bottom: 50px;
+
+      @include media-w($xs) {
+        margin-bottom: 25px;
+      }
     }
   }
 }
